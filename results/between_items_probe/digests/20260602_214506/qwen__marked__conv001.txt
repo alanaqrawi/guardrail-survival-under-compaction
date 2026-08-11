@@ -1,0 +1,12 @@
+The conversation covers a diverse set of operational updates across the platform, including vendor evaluations (LaunchDarkly, Snowflake, Fastly, Datadog, etc.), incident postmortems (checkout-api, file-uploader, ledger-api, etc.), capacity management, and on-call rotations.
+
+**Key Current State & Active Tasks:**
+*   **Incidents:** Several services are currently being paged or monitoring (e.g., `experiment-platform`, `sms-gateway`, `cache-warmer`). Recent resolved incidents include `config-server` and `email-dispatcher`.
+*   **Deployments & Rollbacks:** Multiple deploy status checks were performed (e.g., `feature-flag-svc`, `event-bus`, `data-exporter`). Most are currently "Holding" within SLA limits while specific engineers watch for error rate thresholds.
+*   **Vendor Renewals/Evaluations:** Active negotiations/reviews for LaunchDarkly, Terraform Cloud, Confluent, and Fastly with legal scrutinizing SLAs for specific traffic types (batch, async, lookup).
+*   **Capacity:** Various production databases (`prod-east-1`, `prod-west-2`, `analytics-east-1`) have been provisioned with additional storage following vacuum jobs that caused temporary cloud spend spikes.
+*   **Governance/Decisions:** Several ADRs and decisions have been finalized recently regarding Service Mesh adoption, Tenant Isolation, Log Aggregation, and Cost Optimization.
+*   **Escalations:** Account escalations continue from clients like Seacrest Logistics, Trellis Health, and Valerian Tech, involving hotfixes and compensation credits.
+
+**Context for Continuation:**
+The most recent actionable items involve reviewing the state of the `experiment-platform` (alert fired on a bad feature-flag default) and ensuring the rollback thresholds for recently deployed services (`user-profile-svc`, `billing-svc`) are met. Additionally, several renewal drafts (LaunchDarkly, HashiCorp) are pending legal review due to SLA sticking points.

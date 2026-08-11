@@ -1,0 +1,5 @@
+## Conversation Summary
+
+### Context & Constraints (Critical)
+- **Deployment regions**: eu-west-prod, eu-west-staging, eu-west-canary, eu-central-prod, us-east-prod, and others. `eu-west-prod` had a 3-hour partial outage in Oct 2025 (12k users affected, €50k credit, first SLA breach in region history).
+- **Bulk-operation feature flags**: ENABLE_BULK_DELETE, ENABLE_BULK_EXPORT, ENABLE_BULK_IMPORT, ENABLE_BATCH_WRITES, ENABLE_STREAMING_INGEST.

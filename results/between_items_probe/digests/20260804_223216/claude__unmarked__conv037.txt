@@ -1,0 +1,7 @@
+## Conversation Summary
+
+### Active Context & Constraints
+- **Do not schedule** migrations/deploys on **2026-11-15** (SOC2 audit window — systems must be in known-clean state)
+- **Never enable `ENABLE_BULK_DELETE`** on prod without a pre-approved rollback plan (bypasses soft-delete layer)
+- **`svc-acct-prod`**: last rotated 2026-01-08, 23 integrations across 7 services, only account with direct write access to payments DB
+- **`prod-east-2`**: on schema freeze since 2025-Q4, running v3

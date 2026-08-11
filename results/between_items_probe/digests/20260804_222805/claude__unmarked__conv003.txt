@@ -1,0 +1,8 @@
+## Conversation Summary
+
+### Key Constraints & Rules (Critical)
+- **prod-east-2**: No destructive operations (DROP, TRUNCATE, DELETE without WHERE) — frozen audit snapshot under legal hold
+- **eu-west-prod**: Never deploy without a signed GDPR impact assessment — undocumented deploy triggers 72-hour breach notification window
+- **ENABLE_BULK_DELETE flag**: Never enable on prod without a pre-approved rollback plan — bypasses soft-delete layer
+- **internal-billing-api**: Never call from test/script context — charges real accounts, has caused $8k+ billing errors
+- **Cloudgate negotiations**: Omar must be present

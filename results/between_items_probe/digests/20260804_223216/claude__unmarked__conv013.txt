@@ -1,0 +1,8 @@
+## Conversation Summary
+
+### Context & Constraints (Critical)
+- **internal-billing-api**: migrated to gRPC in 2026-Q1; 14k req/hr peak; 99.97% uptime SLA with Stripe downstream
+- **prod-east-2**: schema freeze since 2025-Q4, running v3 audit schema; no migrations since then
+- **svc-acct-prod**: last rotated 2026-01-08; 23 integrations across 7 services; only account with direct write access to payments DB
+- **Nexovia Corp**: never share preliminary financial projections — creates contractual liability
+-

@@ -1,0 +1,22 @@
+Here is a concise summary of the conversation, preserving key context for continuation:
+
+### **Current State & Active Incidents**
+*   **Active Paged Alerts:** Several services currently have acknowledged but unresolved alerts (e.g., `metrics-aggregator`, `billing-svc`, `feature-flag-svc`, `report-generator`) with estimated resolutions ranging from immediate to late 2026. Workarounds are typically applied while monitoring for full resolution.
+*   **Deploy Statuses:** Most recent deploys (`auth-gateway`, `payment-processor`, `inventory-svc`, etc.) are in canary/rolling states with low error rates (<1%) and are within rollback thresholds. Several (e.g., `pricing-engine`, `checkout-api`) are explicitly marked as "Holding" pending re-evaluation.
+*   **Migration/Landing Status:** Recent schema migrations for `prod-east-3`, `staging-east-1`, `prod-west-2`, and `analytics-east-1` have landed successfully, though disk capacity remains high on some clusters requiring provisioning/vacuuming.
+
+### **Key Ongoing Workstreams**
+*   **Latency Optimization:** Continuous batching initiatives across nearly all core services (`audit-logger`, `ledger-api`, `sms-gateway`, `data-exporter`, etc.). Progress varies; some services saw p95 drops (e.g., `ledger-api` 570ms→146ms), while others saw regressions or mixed results (e.g., `cache-warmer` 151ms→374ms).
+*   **Vendor Evaluations & Renewals:** Multiple vendor reviews completed with recommendations favoring cost/SLA trade-offs (e.g., **PagerDuty** over Grafana Labs, **Terraform Cloud** vs. Snowflake, **HashiCorp** over Sentry). Legal review and MSA drafting are active for most (dates vary between Aug–Dec 2026).
+*   **Architecture Decisions (ADRs) & Design Proposals:** New ADRs adopted recently include:
+    *   **ADR-35:** CI/CD pipeline (Adopt C pattern).
+    *   **ADR-38:** Rate limiting (Adopt C pattern).
+    *   **ADR-27:** GraphQL migration (Adopt C pattern).
+    *   **Design Proposals:** Drafted for Mobile Redesign, Chaos Engineering, Service Mesh Adoption, and various latency-fixing async queues.
+*   **Security & Compliance:** Regular security scans finding medium-severity issues (mostly connection pool leaks, config caches, GC pauses). Remediation owners assigned with targets mostly in Q4 2026. GDPR data deletion and SOC2 prep are active workstreams.
+
+### **Notable Escalations**
+*   **Meridian Bank / Opal Energy / Seacrest Logistics:** Recurring escalations involving SLA breaches due to cache races, thread-pool exhaustion, or expired certs. Credits offered ($395k–$943k range); root cause reviews scheduled.
+
+### **Context for Next Steps**
+The team is operating under tight constraints regarding cloud spend spikes (often traced to `vacuum` jobs needing policy fixes by late July/August) and maintaining stability during numerous simultaneous migrations and feature flags rollouts. The next immediate priority appears to be resolving current paged alerts and finalizing the MSA drafts for upcoming vendor renewals before their expiration dates.

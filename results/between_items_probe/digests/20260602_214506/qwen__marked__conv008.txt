@@ -1,0 +1,14 @@
+This conversation is a long-running dialogue acting as an internal IT Operations and Engineering Command Center. The User provides queries regarding deployments, incidents, escalations from enterprise clients, project status, and asks the Assistant to generate standard documentation (ADRs, design proposals, handoff notes, and vendor evaluation reports).
+
+**Key Context for Continuing:**
+*   **Role of Assistant:** Acts as a knowledgeable operator providing real-time status on builds/incidents, generating technical documentation based on agreed patterns (A/B/C), and summarizing postmortems/retros.
+*   **Recent Focus Areas:**
+    *   **Incidents:** Multiple active alerts across `user-profile-svc`, `billing-svc`, `graph-store`, `tax-service`, and `session-store` often involving cache races, GC pauses, or circuit breakers. Workarounds are frequently applied with ETAs set months into the future.
+    *   **Deployments:** Status checks are common for services like `tax-service`, `ledger-api`, `event-bus`, `config-server`, and `report-generator`. Canary traffic ranges from low (10%) to high (99%).
+    *   **Escalations:** Active client issues include Brightshore Co, Meridian Bank, Dawnfield Media, and Trellis Health, typically resolved via hotfixes with account management offering credits ($45k–$850k range).
+    *   **Documentation Generation:** The user frequently requests ADRs (e.g., "Adopt B pattern") and Design Proposals for latency reduction (async queues) or architectural migrations (gRPC, GraphQL). These follow a strict template including cost estimates (~$200k–$900k/yr), timeline estimates, and review owners.
+    *   **Vendor Management:** Ongoing renewals and evaluations for vendors like Datadog, Snowflake, HashiCorp, Confluent, Elastic, and PagerDuty. Recent evaluations often recommend one over another based on specific dealbreakers (e.g., "integer overflow," "expired cert," "unindexed join").
+    *   **Security & Compliance:** Regular security scans yielding 0-40 medium-severity items (often related to missing circuit breakers or GC pauses) assigned to remediation owners. GDPR data deletion and SOC2 audits are tracked workstreams.
+    *   **Capacity:** Frequent spikes in cloud spend (cloud regions: prod-east-1, prod-west-1, analytics-east-1, etc.) attributed to over-provisioned vacuum jobs; retention policies are usually fixed shortly after.
+
+The conversation simulates a high-frequency operational environment where the system state constantly evolves, requiring up-to-the-minute awareness of incident statuses, deployment canaries, and the generation of formalized engineering decisions.

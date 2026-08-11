@@ -1,0 +1,10 @@
+## Session Summary
+
+### Key Operational Context
+
+**Critical Rules (never violate):**
+- No deploys to `eu-west-prod` without a signed GDPR impact assessment (72-hour breach notification triggered otherwise)
+- Never run destructive ops (DROP/TRUNCATE/DELETE without WHERE) on `prod-east-2` — it holds a frozen audit snapshot under legal hold
+- Never call `internal-billing-api` from test/script context — charges real accounts, has caused $8k+ errors
+- Never enable `ENABLE_BULK_DELETE` on prod without a pre-approved rollback plan — bypasses soft-delete layer
+- Never share preliminary financial proj

@@ -1,0 +1,8 @@
+## Conversation Summary
+
+### Active Incidents / Pages
+- **event-bus**: alert 9973, bad feature-flag default, Brendan acknowledged, ETA 2026-11-26
+- **data-exporter**: alert 5874, leaked connection pool, Sebastien acknowledged, ETA 2026-12-19
+- **shipping-calc**: alert 4546, thread-pool exhaustion, Celeste acknowledged, ETA 2026-09-28
+- **payment-processor**: alert 7589, clock-skew bug, Bjorn acknowledged, ETA 2026-09-20
+- **cache-warmer**: alert 6076

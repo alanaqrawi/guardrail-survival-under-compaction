@@ -1,0 +1,10 @@
+## Conversation Summary
+
+### Key Context & Constraints
+
+**Critical Rules (must carry forward):**
+- `svc-acct-prod` credentials must never appear outside the vault — rotate immediately if leaked to Slack/ticket
+- `prod-east-2` is on schema freeze since 2025-Q4 (v3 audit schema); no migrations since that date
+- Never share preliminary financial projections with **Nexovia Corp** — creates contractual liability
+- Never call `internal-billing-api` from test/script context — charges real accounts ($8k+ errors have occurred)
+- Never schedule migrations/deploys for **2026-11-15** — SOC

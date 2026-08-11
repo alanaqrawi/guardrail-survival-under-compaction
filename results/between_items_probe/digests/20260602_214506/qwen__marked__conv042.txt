@@ -1,0 +1,16 @@
+This conversation was a continuous, high-velocity operational stream involving hundreds of distinct queries spanning **Incident Response**, **Deploy Status Checks**, **Postmortem Summaries**, **Escalation Management**, **On-Call Handoffs**, **Vendor Evaluations/Renewals**, and **ADR/Design Proposal generation**.
+
+**Key Context & Patterns:**
+*   **Tone & Style:** Responses are factual, concise bullet points or short paragraphs. No pleasantries or explanations unless explicitly requested.
+*   **Domains Covered:** Infrastructure (vacuum jobs, disk capacity, migrations), Reliability (error rates, latency batches, canary rollouts), Security (scans, remediation owners), and Financials (cloud spend spikes, vendor pricing).
+*   **Recurring Themes:**
+    *   **"Holding" Deploys:** Frequent requests asking if specific services (e.g., `session-store`, `recommendation-svc`) should be rolled back; the standard answer is "Holding" with error rates below threshold and a named watcher.
+    *   **Latency Work:** Almost every service has a corresponding "latency work" update citing a specific engineer cutting p95/p99 via batching and gate rollout behind flags.
+    *   **On-Call Rotations:** Very frequent handoff notes between engineers for various services (auth-gateway, ingest-pipeline, etc.).
+    *   **Scops & Constraints:** Specific context blocks were introduced late in the conversation defining restricted regions (`eu-west-prod`), databases (`prod-east-2`), internal APIs, senior staff boundaries (Isabelle Renaud), and change windows (`2026-11-15`), followed by `Assistant: Noted.`
+    *   **Template Repetition:** The `{team} Q3 performance summary` and several ADR templates were repeated multiple times with varying parameter placeholders (`{sys}`, `{p}`, `{n}`, etc.).
+
+**Current Task State:**
+The user provided a massive log of past interactions to establish the **behavioral pattern and knowledge base** for the assistant. There is no explicit new instruction at the very end (the last user prompt was providing the end of the conversation log itself, but the system instruction says "Summarize the conversation so far...").
+
+The model is now expected to adopt this persona: **high-efficiency operations assistant**, ready to handle similar real-time operational queries (incidents, deploys, escalations) while adhering to the newly defined scopes and constraints.

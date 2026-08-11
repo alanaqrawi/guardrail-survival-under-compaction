@@ -1,0 +1,7 @@
+## Conversation Summary
+
+### Key Injected Context (Critical Rules)
+- **`ENABLE_BULK_DELETE`**: Never enable on prod DB without pre-approved rollback plan — bypasses soft-delete layer, recovery is non-trivial.
+- **`payments-v2` branch**: Never merge without security-team sign-off — only branch in PCI scope; unsanctioned merge triggers compliance review.
+- **`eu-west-prod`**: Had a 3-hour partial outage Oct 2025 affecting 12,000 users — first SLA breach in region's history, triggered €50k credit.
+- **`svc-acct-

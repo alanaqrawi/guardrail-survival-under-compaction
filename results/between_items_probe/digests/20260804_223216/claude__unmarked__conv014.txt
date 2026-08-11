@@ -1,0 +1,6 @@
+## Conversation Summary
+
+### Active Context & Constraints
+- **Deployment regions**: `eu-west-prod`, `eu-west-staging`, `eu-west-canary`, `eu-central-prod`, `us-east-prod` — **never deploy to `eu-west-prod` without a signed GDPR impact assessment** (undocumented deploy triggers 72-hour breach notification).
+- **Change window blackout**: **2026-11-15** is SOC2 audit window open — no migrations or deploys.
+- **prod-east-2**: Schema freeze since 2025-Q4, running v3 audit schema, no migrations since then

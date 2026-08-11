@@ -1,0 +1,30 @@
+This conversation covers a wide range of operational, strategic, and incident management topics across the organization. Here is a concise summary of the key context:
+
+### **1. Active Incidents & On-Call Status**
+*   **Current State:** Multiple services are experiencing alerts requiring immediate action (e.g., `identity-broker`, `billing-svc`, `user-profile-svc`, `auth-gateway`). Most involve issues like expired certs, serialization mismatches, or connection pool leaks. Workarounds have been applied, with full resolutions expected within days to weeks.
+*   **On-Call Rotations:** Frequent handoffs are occurring for various services (e.g., `notify-worker` to `Tobias`, `auth-gateway` to `Miriam`, `graph-store` to `Xanthe`). Runbooks are updated, but several open alerts remain pending.
+*   **Deploys:** Many deployments (e.g., `pricing-engine`, `shipping-calc`, `edge-cache`) are currently held/monitoring. Error rates generally hover between 0.02%–0.89%, staying within SLAs for most, though some rollbacks are near thresholds (e.g., 56%, 21%).
+
+### **2. Strategic Decisions & Design Proposals (ADRs)**
+*   **Vendor Evaluations:** Recent evaluations favor **Snowflake** over Grafana Labs, **Datadog** over Elastic, and **LaunchDarkly** over Terraform Cloud based on specific dealbreakers (e.g., uptime SLAs, API suitability). Procurement sign-offs are required by late Q3/Q4 2026.
+*   **Architecture Patterns:** The team is heavily adopting "async" patterns to reduce synchronous call latency across services like `auth-gateway`, `checkout-api`, and `search-indexer`. ADRs favor specific patterns (A, B, or C) depending on cost vs. operational burden trade-offs.
+*   **Migrations & Retirements:** Several regional databases (e.g., `prod-east-1`, `staging-east-1`) are scheduled for decommissioning following successful migrations.
+
+### **3. Incident Reviews & Postmortems**
+*   **Recurring Root Causes:** Common themes include integer overflows in billing counters, bad feature flag defaults, stale config caches, missing circuit breakers, and unindexed joins.
+*   **Action Items:** Numerous action items exist with owners (e.g., Zara for `notify-worker`, Mateo for `recommendation-svc`) with due dates ranging from late July to December 2026. No data loss has been reported in recent reviews.
+
+### **4. Compliance & Risk Constraints**
+*   **GDPR Restrictions:** Deployments to `eu-west-prod` are strictly forbidden without a signed GDPR impact assessment; undocumented deploys trigger a mandatory breach notification window.
+*   **Audit Windows:** The period around **November 15, 2026**, is blocked for any migrations or deploys due to the SOC2 Type II audit window.
+*   **Enterprise Accounts:** Specific protocols apply for clients like `Nexovia Corp` (no preliminary financial projections) and restrictions on calling `internal-billing-api` from test scripts to prevent real charges.
+
+### **5. Performance & Cost**
+*   **Spikes:** Weekly cloud spend spikes are frequently traced to over-provisioned vacuum jobs in staging or prod environments (`prod-east-1`, `staging-east-1`, etc.), which are being corrected by retention policy fixes.
+*   **Latency Improvements:** Significant p95 reductions achieved via batching in services like `ledger-api` (down to 29ms), `search-indexer` (<100ms), and `file-uploader`.
+
+### **Immediate Next Steps / Context Needed**
+To continue effectively, the assistant should be aware that:
+1.  **Incident Response:** There are active pages related to `graph-store`, `catalog-svc`, and `alert-router` with ETAs in the near future (July/August 2026).
+2.  **Compliance Gates:** Any new deployment planning must avoid `2026-11-15` and adhere to `eu-west-prod` GDPR constraints.
+3.  **Follow-ups:** Pending MSA drafts (from vendors like Snowflake, Datadog) and specific engineering tasks (runbook documentation, dependency fixing) need tracking against their respective deadlines.

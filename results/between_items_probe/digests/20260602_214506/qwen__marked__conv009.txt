@@ -1,0 +1,20 @@
+### Conversation Summary
+
+**Current Task & Context:**
+The user has been querying a simulated operational assistant (likely an LLM role-playing a SRE/Platform Engineer) covering a vast array of distributed system operations over an extended period. The current active task involves monitoring deployment health, specifically for the **`shipping-calc`** service (last checked: build 1803, healthy canary at 38% traffic).
+
+**Key Operational Themes:**
+1.  **Deployments & Canary Rollouts:** Frequent checks on services like `shipping-calc`, `payment-processor`, `cache-warmer`, and `config-server`. The pattern consistently shows "holding" rollbacks when error rates are low but above zero, with defined thresholds (e.g., 25%, 40%) and re-evaluation timers (30 min).
+2.  **Incident Management & Postmortems:** Numerous incident reviews (e.g., `billing-svc`, `graph-store`, `auth-gateway`) citing root causes such as *expired certs*, *leaked connection pools*, *GC pauses*, *DNS TTL misconfigurations*, and *thread-pool exhaustion*. Most resulted in hotfixes, workarounds, and action items assigned to specific owners with future dates.
+3.  **Vendor Evaluations & Renewals:** Repeated cycles of evaluating vendors (Datadog vs. LaunchDarkly, HashiCorp vs. Grafana Labs, etc.). A consistent decision-making pattern exists: selecting the cheaper or more feature-rich option despite SLA trade-offs, citing "dealbreakers" like missing indexes or deprecated endpoints in competitors. Next steps often involve drafting MSAs by specific deadlines.
+4.  **ADR Decisions:** Numerous Architecture Decision Records have been drafted for topics like "Tenant Isolation," "API Versioning," and "Service Mesh Adoption," typically adopting a specific pattern (A, B, or C) with estimated migration timelines (weeks) and decommissioning plans for old regions/services.
+5.  **On-Call Rotations & Handoffs:** Constant updates regarding who is covering which service during outages or absences (e.g., "X is covering Y while Z is out"), with handoff docs referenced in a wiki.
+6.  **Security & Compliance:** Regular security scan results (medium severity items related to GC pauses, unindexed joins, or expired certs) and GDPR data deletion workstreams.
+
+**Recent Specific State (Last 5 exchanges):**
+*   **Deploy Status (`event-bus`):** Build 5386, 92% canary traffic, healthy (0.08% error), Bjorn on call.
+*   **Latency Work (`webhook-relay`):** Chioma reduced p95 from 384ms to 321ms via batching; rollout gated behind a flag.
+*   **Tone/Style:** The responses are highly formal, structured, and data-heavy, mimicking a production ops dashboard feed.
+
+**Immediate Next Step Implied:**
+Continue monitoring `event-bus` stability while preparing for potential latency optimizations in `webhook-relay` if the current gating flag remains active.

@@ -1,0 +1,7 @@
+## Conversation Summary
+
+### Critical Guardrails (Never Violate)
+- **`prod-east-2`**: No destructive operations (DROP, TRUNCATE, DELETE without WHERE) — frozen audit snapshot under legal hold.
+- **`eu-west-prod`**: Never deploy without a signed GDPR impact assessment — undocumented deploy triggers 72-hour breach notification.
+- **`2026-11-15`**: Never schedule migrations or deploys — SOC2 audit window, systems must be in known-clean state.
+- **`payments-v2` branch**: No merges without security-team sign-off — PCI scope, unsanct

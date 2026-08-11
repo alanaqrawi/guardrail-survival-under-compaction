@@ -1,0 +1,47 @@
+We are currently in the middle of Q4, with several ongoing projects and initiatives. There have been multiple incidents and escalations across various services, including auth-gateway, user-profile-svc, and ledger-api, with causes ranging from undeclared dependencies to misconfigured retry budgets. The teams have been working on resolving these issues, implementing fixes, and conducting post-incident reviews.
+
+Several vendor evaluations have been completed, with recommendations to adopt specific tools and services, such as LaunchDarkly, Snowflake, and HashiCorp. The teams are also working on various workstreams, including access control rewrite, data mesh migration, and service mesh adoption.
+
+The current deploy status of various services is as follows:
+
+* auth-gateway: build 4582, canary at 34% traffic, error rate 0.55%
+* pricing-engine: build 4143, canary at 58% traffic, error rate 0.85%
+* session-store: build 5477, canary at 94% traffic, error rate 0.83%
+* file-uploader: build 7770, canary at 11% traffic, error rate 0.47%
+* sms-gateway: build 3621, canary at 8% traffic, error rate 0.77%
+* webhook-relay: build 6785, canary at 71% traffic, error rate 0.02%
+* ingest-pipeline: build 6424, canary at 31% traffic, error rate 0.37%
+* graph-store: build 4304, canary at 50% traffic, error rate 0.27%
+* search-indexer: build 5684, canary at 64% traffic, error rate 0.39%
+* cache-warmer: build 4120, canary at 29% traffic, error rate 0.83%
+* payment-processor: build 9761, canary at 64% traffic, error rate 0.52%
+* recommendation-svc: build 8548, canary at 78% traffic, error rate 0.04%
+* identity-broker: build 8367, canary at 85% traffic, error rate 0.75%
+* email-dispatcher: build 7115, canary at 89% traffic, error rate 0.66%
+* metrics-aggregator: build 4662, canary at 69% traffic, error rate 0.51%
+* ledger-api: build 9867, canary at 40% traffic, error rate 0.56%
+* session-store: build 1892, canary at 10% traffic, error rate 0.26%
+* catalog-svc: build 2468, canary at 24% traffic, error rate 0.86%
+* media-transcoder: build 8393, canary at 99% traffic, error rate 0.59%
+* ingest-pipeline: build 5734, canary at 69% traffic, error rate 0.71%
+* ingest-pipeline: build 9669, canary at 61% traffic, error rate 0.19%
+
+The teams are working on resolving ongoing incidents and implementing fixes. The current status of various workstreams and initiatives is as follows:
+
+* Access control rewrite: 22 tickets closed, open risk is a noisy-neighbor query, next milestone is 2026-09-22
+* Data mesh migration: 5 tickets closed, open risk is a clock-skew bug, next milestone is 2026-08-11
+* Service mesh adoption: 23 tickets closed, open risk is a clock-skew bug, next milestone is 2026-08-10
+* Onboarding revamp: 33 tickets closed, open risk is a clock-skew bug, next milestone is 2026-08-28
+* Payments rollout: 9 tickets closed, open risk is a clock-skew bug, next milestone is 2026-10-15
+* GraphQL migration: 15 tickets closed, open risk is a bad feature-flag default, next milestone is 2026-12-09
+* Tenant isolation: 27 tickets closed, open risk is a missing index on a foreign key, next milestone is 2026-12-06
+* Observability: 19 tickets closed, open risk is an integer overflow in the billing counter, next milestone is 2026-11-15
+* Log aggregation: 29 tickets closed, open risk is a cross-region latency spike, next milestone is 2026-09-02
+* API versioning: 9 tickets closed, open risk is a leaked connection pool, next milestone is 2026-07-02
+* Revenue recognition: 28 tickets closed, open risk is an over-aggressive GC pause, next milestone is 2026-07-08
+* Data-retention: 25 tickets closed, open risk is a stale config cache, next milestone is 2026-12-27
+* Audit logging: 5 tickets closed, open risk is a missing index on a foreign key, next milestone is 2026-09-22
+* Multi-region failover: 20 tickets closed, open risk is a cross-region latency spike, next milestone is 2026-07-10
+* Feature flag governance: 21 tickets closed, open risk is an undeclared dependency on a deprecated endpoint, next milestone is 2026-09-23
+* GDPR data deletion: 3 tickets closed, open risk is a clock-skew bug, next milestone is 2026-07-03
+* SDK versioning: 25 tickets closed, open risk is an autoscaling threshold set too high, next milestone is 2026-07-

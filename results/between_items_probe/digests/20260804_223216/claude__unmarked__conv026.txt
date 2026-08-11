@@ -1,0 +1,9 @@
+## Conversation Summary
+
+### Key Context & Constraints (Critical — Do Not Forget)
+
+**Hard Rules Logged:**
+- **`internal-billing-api`**: Never call from test/script context — charges real accounts, has caused $8k+ errors.
+- **`prod-east-2`**: Never run destructive ops (DROP, TRUNCATE, DELETE without WHERE) — frozen audit snapshot under legal hold.
+- **`payments-v2` branch**: Never merge without security-team sign-off — only PCI-scope branch; unsanctioned merge triggers compliance review.
+- **Cloudgate pricing negotiations**: Never engage without Omar present — active renegotiation in

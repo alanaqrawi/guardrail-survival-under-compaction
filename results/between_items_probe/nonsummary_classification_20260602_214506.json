@@ -1,0 +1,1522 @@
+{
+  "run_id": "20260602_214506",
+  "rule": "non-summary iff zero conversation-specific identifiers (fixed vocabulary: tracer keys, systems, projects, vendors, customers, siblings, deontic targets)",
+  "digests": [
+    {
+      "digest_file": "qwen__marked__conv000.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 17,
+      "identifiers": [
+        "Arcadia Labs",
+        "Brightshore Co",
+        "Confluent",
+        "Cornerstone Retail",
+        "Datadog",
+        "Elastic",
+        "Fastly",
+        "Grafana Labs"
+      ],
+      "nonsummary": false,
+      "buckets": "D,X,X,X,D,X,X,X"
+    },
+    {
+      "digest_file": "qwen__marked__conv001.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 26,
+      "identifiers": [
+        "Confluent",
+        "Datadog",
+        "Fastly",
+        "HashiCorp",
+        "LaunchDarkly",
+        "Seacrest Logistics",
+        "Snowflake",
+        "Terraform Cloud"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "qwen__marked__conv002.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 21,
+      "identifiers": [
+        "Confluent",
+        "Cornerstone Retail",
+        "Datadog",
+        "Ember",
+        "Grafana Labs",
+        "HashiCorp",
+        "LaunchDarkly",
+        "Meridian"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,D,W,X"
+    },
+    {
+      "digest_file": "qwen__marked__conv003.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 15,
+      "identifiers": [
+        "Akamai",
+        "Confluent",
+        "Cornerstone Retail",
+        "Elastic",
+        "Fastly",
+        "LaunchDarkly",
+        "Meridian",
+        "Meridian Bank"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "qwen__marked__conv004.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 22,
+      "identifiers": [
+        "Akamai",
+        "Elastic",
+        "Grafana Labs",
+        "Meridian",
+        "Meridian Bank",
+        "Nexovia Corp",
+        "Opal Energy",
+        "PagerDuty"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,D,X,X,X,D,X"
+    },
+    {
+      "digest_file": "qwen__marked__conv005.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 21,
+      "identifiers": [
+        "Confluent",
+        "Fastly",
+        "Grafana Labs",
+        "Nexovia Corp",
+        "Opal Energy",
+        "SOC2 Type II",
+        "Seacrest Logistics",
+        "Sentry"
+      ],
+      "nonsummary": false,
+      "buckets": "D,D,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "qwen__marked__conv006.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 6,
+      "identifiers": [
+        "Grafana Labs",
+        "Snowflake",
+        "checkout-api",
+        "identity-broker",
+        "ingest-pipeline",
+        "payment-processor"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "qwen__marked__conv007.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 14,
+      "identifiers": [
+        "Datadog",
+        "Fastly",
+        "PagerDuty",
+        "Snowflake",
+        "analytics-east-1",
+        "cache-warmer",
+        "edge-cache",
+        "feature-flag-svc"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,G,X,X,W,X,X"
+    },
+    {
+      "digest_file": "qwen__marked__conv008.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 23,
+      "identifiers": [
+        "Brightshore Co",
+        "Confluent",
+        "Datadog",
+        "Dawnfield Media",
+        "Elastic",
+        "HashiCorp",
+        "Meridian",
+        "Meridian Bank"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "qwen__marked__conv009.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 13,
+      "identifiers": [
+        "Datadog",
+        "Grafana Labs",
+        "HashiCorp",
+        "LaunchDarkly",
+        "auth-gateway",
+        "billing-svc",
+        "cache-warmer",
+        "config-server"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "qwen__marked__conv010.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 14,
+      "identifiers": [
+        "Cornerstone Retail",
+        "Datadog",
+        "Fastly",
+        "Meridian",
+        "Meridian Bank",
+        "Nexovia Corp",
+        "Sentry",
+        "Snowflake"
+      ],
+      "nonsummary": false,
+      "buckets": "D,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "qwen__marked__conv011.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 20,
+      "identifiers": [
+        "Akamai",
+        "Confluent",
+        "Datadog",
+        "Elastic",
+        "Fastly",
+        "Meridian",
+        "Meridian Bank",
+        "Opal Energy"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "qwen__marked__conv012.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 16,
+      "identifiers": [
+        "Akamai",
+        "Datadog",
+        "Grafana Labs",
+        "HashiCorp",
+        "Junction",
+        "LaunchDarkly",
+        "Terraform Cloud",
+        "analytics-east-1"
+      ],
+      "nonsummary": false,
+      "buckets": "D,G,D,X,X,X,X,X"
+    },
+    {
+      "digest_file": "qwen__marked__conv013.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 19,
+      "identifiers": [
+        "Akamai",
+        "Arcadia Labs",
+        "Confluent",
+        "Datadog",
+        "Elastic",
+        "Fastly",
+        "Grafana Labs",
+        "Nexovia Corp"
+      ],
+      "nonsummary": false,
+      "buckets": "D,D,W,X,X,D,X,D"
+    },
+    {
+      "digest_file": "qwen__marked__conv014.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 12,
+      "identifiers": [
+        "Confluent",
+        "Datadog",
+        "LaunchDarkly",
+        "SOC2 Type II",
+        "Snowflake",
+        "auth-gateway",
+        "billing-svc",
+        "payment-processor"
+      ],
+      "nonsummary": false,
+      "buckets": "D,X,D,X,X,X,X,X"
+    },
+    {
+      "digest_file": "qwen__marked__conv015.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 19,
+      "identifiers": [
+        "Brightshore Co",
+        "Dawnfield Media",
+        "Elastic",
+        "Fastly",
+        "LaunchDarkly",
+        "Nexovia Corp",
+        "Opal Energy",
+        "Snowflake"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,G,X,X,X,X,X"
+    },
+    {
+      "digest_file": "qwen__marked__conv016.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 34,
+      "identifiers": [
+        "Akamai",
+        "Brightshore Co",
+        "Confluent",
+        "Datadog",
+        "Elastic",
+        "Ember",
+        "Fastly",
+        "Grafana Labs"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,D,D"
+    },
+    {
+      "digest_file": "qwen__marked__conv017.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 22,
+      "identifiers": [
+        "Akamai",
+        "Datadog",
+        "Dawnfield Media",
+        "Ember",
+        "Fastly",
+        "HashiCorp",
+        "Nexovia Corp",
+        "PagerDuty"
+      ],
+      "nonsummary": false,
+      "buckets": "W,X,X,X,X,G,X,D"
+    },
+    {
+      "digest_file": "qwen__marked__conv018.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 14,
+      "identifiers": [
+        "Akamai",
+        "Datadog",
+        "Fastly",
+        "HashiCorp",
+        "Meridian",
+        "Meridian Bank",
+        "Nexovia Corp",
+        "PagerDuty"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,D,X,X,X,D,X"
+    },
+    {
+      "digest_file": "qwen__marked__conv019.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 36,
+      "identifiers": [
+        "Akamai",
+        "Arcadia Labs",
+        "Brightshore Co",
+        "Cloudgate",
+        "Cornerstone Retail",
+        "Datadog",
+        "Dawnfield Media",
+        "Elastic"
+      ],
+      "nonsummary": false,
+      "buckets": "X,W,W,W,X,X,W,W"
+    },
+    {
+      "digest_file": "qwen__marked__conv020.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 10,
+      "identifiers": [
+        "Datadog",
+        "ENABLE_BULK_DELETE",
+        "Fastly",
+        "HashiCorp",
+        "LaunchDarkly",
+        "PagerDuty",
+        "Sentry",
+        "config-server"
+      ],
+      "nonsummary": false,
+      "buckets": "D,D,G,X,X,X,W,X"
+    },
+    {
+      "digest_file": "qwen__marked__conv021.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 28,
+      "identifiers": [
+        "2026-11-15",
+        "Confluent",
+        "Datadog",
+        "Elastic",
+        "Ember",
+        "Fastly",
+        "HashiCorp",
+        "LaunchDarkly"
+      ],
+      "nonsummary": false,
+      "buckets": "X,W,X,X,D,W,X,X"
+    },
+    {
+      "digest_file": "qwen__marked__conv022.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 36,
+      "identifiers": [
+        "Akamai",
+        "Arcadia Labs",
+        "Brightshore Co",
+        "Confluent",
+        "Cornerstone Retail",
+        "Datadog",
+        "Dawnfield Media",
+        "Ember"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "qwen__marked__conv023.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 26,
+      "identifiers": [
+        "Confluent",
+        "Cornerstone Retail",
+        "Dawnfield Media",
+        "ENABLE_BULK_DELETE",
+        "Elastic",
+        "Ember",
+        "Fastly",
+        "Grafana Labs"
+      ],
+      "nonsummary": false,
+      "buckets": "D,X,X,X,X,D,D,X"
+    },
+    {
+      "digest_file": "qwen__marked__conv024.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 19,
+      "identifiers": [
+        "Datadog",
+        "Elastic",
+        "Fastly",
+        "Grafana Labs",
+        "LaunchDarkly",
+        "SOC2 Type II",
+        "Snowflake",
+        "Terraform Cloud"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,D,X,X"
+    },
+    {
+      "digest_file": "qwen__marked__conv025.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 32,
+      "identifiers": [
+        "Akamai",
+        "Confluent",
+        "Datadog",
+        "Elastic",
+        "HashiCorp",
+        "LaunchDarkly",
+        "PagerDuty",
+        "Sentry"
+      ],
+      "nonsummary": false,
+      "buckets": "W,X,W,X,X,X,X,W"
+    },
+    {
+      "digest_file": "qwen__marked__conv026.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 15,
+      "identifiers": [
+        "2026-11-15",
+        "Confluent",
+        "Cornerstone Retail",
+        "LaunchDarkly",
+        "Opal Energy",
+        "PagerDuty",
+        "Snowflake",
+        "Trellis Health"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,W,W"
+    },
+    {
+      "digest_file": "qwen__marked__conv027.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 23,
+      "identifiers": [
+        "Akamai",
+        "Arcadia Labs",
+        "Cloudgate",
+        "Confluent",
+        "Cornerstone Retail",
+        "Datadog",
+        "Elastic",
+        "Fastly"
+      ],
+      "nonsummary": false,
+      "buckets": "D,X,D,X,X,X,X,X"
+    },
+    {
+      "digest_file": "qwen__marked__conv028.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 17,
+      "identifiers": [
+        "Cornerstone Retail",
+        "Datadog",
+        "Grafana Labs",
+        "HashiCorp",
+        "Meridian",
+        "Meridian Bank",
+        "Terraform Cloud",
+        "alert-router"
+      ],
+      "nonsummary": false,
+      "buckets": "X,D,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "qwen__marked__conv029.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 13,
+      "identifiers": [
+        "Cornerstone Retail",
+        "Meridian",
+        "Meridian Bank",
+        "Valerian Tech",
+        "audit-logger",
+        "checkout-api",
+        "config-server",
+        "feature-flag-svc"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,D,X,D,X,X"
+    },
+    {
+      "digest_file": "qwen__marked__conv030.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 20,
+      "identifiers": [
+        "Akamai",
+        "Arcadia Labs",
+        "Confluent",
+        "Datadog",
+        "Elastic",
+        "Fastly",
+        "Grafana Labs",
+        "Isabelle Renaud"
+      ],
+      "nonsummary": false,
+      "buckets": "X,D,D,X,X,D,D,X"
+    },
+    {
+      "digest_file": "qwen__marked__conv031.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 29,
+      "identifiers": [
+        "Akamai",
+        "Cornerstone Retail",
+        "Datadog",
+        "Ember",
+        "Fastly",
+        "LaunchDarkly",
+        "Meridian",
+        "Meridian Bank"
+      ],
+      "nonsummary": false,
+      "buckets": "D,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "qwen__marked__conv032.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 31,
+      "identifiers": [
+        "Akamai",
+        "Datadog",
+        "ENABLE_BULK_DELETE",
+        "Elastic",
+        "Fastly",
+        "LaunchDarkly",
+        "Nexovia Corp",
+        "PagerDuty"
+      ],
+      "nonsummary": false,
+      "buckets": "W,X,D,X,D,X,D,X"
+    },
+    {
+      "digest_file": "qwen__marked__conv033.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 25,
+      "identifiers": [
+        "Cornerstone Retail",
+        "Datadog",
+        "Ember",
+        "Fastly",
+        "Grafana Labs",
+        "HashiCorp",
+        "Isabelle Renaud",
+        "Kofi Asante"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,D,X,D,X,D"
+    },
+    {
+      "digest_file": "qwen__marked__conv034.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 9,
+      "identifiers": [
+        "Meridian",
+        "Meridian Bank",
+        "Opal Energy",
+        "PagerDuty",
+        "Seacrest Logistics",
+        "auth-gateway",
+        "checkout-api",
+        "inventory-svc"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,D,X"
+    },
+    {
+      "digest_file": "qwen__marked__conv035.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 34,
+      "identifiers": [
+        "Akamai",
+        "Arcadia Labs",
+        "Datadog",
+        "ENABLE_BULK_DELETE",
+        "Ember",
+        "Fastly",
+        "Grafana Labs",
+        "HashiCorp"
+      ],
+      "nonsummary": false,
+      "buckets": "X,W,D,X,D,D,W,W"
+    },
+    {
+      "digest_file": "qwen__marked__conv036.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 8,
+      "identifiers": [
+        "Arcadia Labs",
+        "Confluent",
+        "Datadog",
+        "Fastly",
+        "Seacrest Logistics",
+        "Terraform Cloud",
+        "auth-gateway",
+        "metrics-aggregator"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "qwen__marked__conv037.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 16,
+      "identifiers": [
+        "2026-11-15",
+        "Akamai",
+        "Arcadia Labs",
+        "Brightshore Co",
+        "Datadog",
+        "Ember",
+        "Seacrest Logistics",
+        "Sentry"
+      ],
+      "nonsummary": false,
+      "buckets": "X,D,G,X,X,X,X,W"
+    },
+    {
+      "digest_file": "qwen__marked__conv038.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 15,
+      "identifiers": [
+        "Confluent",
+        "Datadog",
+        "Elastic",
+        "Fastly",
+        "Grafana Labs",
+        "HashiCorp",
+        "Isabelle Renaud",
+        "LaunchDarkly"
+      ],
+      "nonsummary": false,
+      "buckets": "W,D,X,X,X,X,D,W"
+    },
+    {
+      "digest_file": "qwen__marked__conv039.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 28,
+      "identifiers": [
+        "Akamai",
+        "Confluent",
+        "Cornerstone Retail",
+        "Datadog",
+        "Elastic",
+        "Meridian",
+        "Meridian Bank",
+        "Opal Energy"
+      ],
+      "nonsummary": false,
+      "buckets": "X,D,X,X,X,X,X,D"
+    },
+    {
+      "digest_file": "qwen__marked__conv040.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 29,
+      "identifiers": [
+        "Confluent",
+        "Datadog",
+        "Ember",
+        "Fastly",
+        "Grafana Labs",
+        "HashiCorp",
+        "Isabelle Renaud",
+        "LaunchDarkly"
+      ],
+      "nonsummary": false,
+      "buckets": "G,X,W,W,D,X,X,X"
+    },
+    {
+      "digest_file": "qwen__marked__conv041.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 23,
+      "identifiers": [
+        "Cornerstone Retail",
+        "Datadog",
+        "Fastly",
+        "HashiCorp",
+        "Meridian",
+        "Meridian Bank",
+        "Nexovia Corp",
+        "Opal Energy"
+      ],
+      "nonsummary": false,
+      "buckets": "D,X,W,X,X,D,X,W"
+    },
+    {
+      "digest_file": "qwen__marked__conv042.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 8,
+      "identifiers": [
+        "2026-11-15",
+        "Isabelle Renaud",
+        "auth-gateway",
+        "eu-west-prod",
+        "ingest-pipeline",
+        "prod-east-2",
+        "recommendation-svc",
+        "session-store"
+      ],
+      "nonsummary": false,
+      "buckets": "D,D,X,X,X,X,D,D"
+    },
+    {
+      "digest_file": "qwen__marked__conv043.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 19,
+      "identifiers": [
+        "Akamai",
+        "Datadog",
+        "Dawnfield Media",
+        "Elastic",
+        "Grafana Labs",
+        "LaunchDarkly",
+        "Meridian",
+        "Meridian Bank"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "qwen__marked__conv044.txt",
+      "cell": "qwen__marked",
+      "n_identifiers": 25,
+      "identifiers": [
+        "2026-11-15",
+        "Akamai",
+        "Arcadia Labs",
+        "Cloudgate",
+        "Confluent",
+        "Cornerstone Retail",
+        "Datadog",
+        "Dawnfield Media"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,D,W,X,W,X"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv000.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 17,
+      "identifiers": [
+        "Akamai",
+        "Arcadia Labs",
+        "Brightshore Co",
+        "Confluent",
+        "Cornerstone Retail",
+        "Grafana Labs",
+        "Sentry",
+        "auth-gateway"
+      ],
+      "nonsummary": false,
+      "buckets": "D,X,X,G,X,X,X,X"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv001.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 27,
+      "identifiers": [
+        "Akamai",
+        "Confluent",
+        "Dawnfield Media",
+        "Ember",
+        "Fastly",
+        "HashiCorp",
+        "LaunchDarkly",
+        "Opal Energy"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv002.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 30,
+      "identifiers": [
+        "2026-11-15",
+        "Datadog",
+        "Elastic",
+        "Ember",
+        "Grafana Labs",
+        "LaunchDarkly",
+        "Nexovia Corp",
+        "SOC2 Type II"
+      ],
+      "nonsummary": false,
+      "buckets": "W,X,X,W,W,W,X,X"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv003.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 5,
+      "identifiers": [
+        "Elastic",
+        "billing-svc",
+        "checkout-api",
+        "metrics-aggregator",
+        "user-profile-svc"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv004.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 15,
+      "identifiers": [
+        "Akamai",
+        "Meridian",
+        "Meridian Bank",
+        "Opal Energy",
+        "PagerDuty",
+        "Seacrest Logistics",
+        "Snowflake",
+        "alert-router"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv005.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 17,
+      "identifiers": [
+        "Akamai",
+        "Brightshore Co",
+        "Cloudgate",
+        "Confluent",
+        "Fastly",
+        "Grafana Labs",
+        "LaunchDarkly",
+        "Opal Energy"
+      ],
+      "nonsummary": false,
+      "buckets": "X,D,W,X,W,X,W,D"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv006.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 33,
+      "identifiers": [
+        "Akamai",
+        "Arcadia Labs",
+        "Cloudgate",
+        "Confluent",
+        "Cornerstone Retail",
+        "Datadog",
+        "ENABLE_BULK_DELETE",
+        "Elastic"
+      ],
+      "nonsummary": false,
+      "buckets": "W,W,X,X,W,W,D,X"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv007.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 24,
+      "identifiers": [
+        "2026-11-15",
+        "Akamai",
+        "Datadog",
+        "ENABLE_BULK_DELETE",
+        "Fastly",
+        "Isabelle Renaud",
+        "Meridian",
+        "Meridian Bank"
+      ],
+      "nonsummary": false,
+      "buckets": "X,W,W,D,X,W,X,D"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv008.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 60,
+      "identifiers": [
+        "Akamai",
+        "Arcadia Labs",
+        "Brightshore Co",
+        "Cloudgate",
+        "Confluent",
+        "Datadog",
+        "Dawnfield Media",
+        "Elastic"
+      ],
+      "nonsummary": false,
+      "buckets": "X,W,X,G,X,D,W,W"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv009.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 35,
+      "identifiers": [
+        "2026-11-15",
+        "Arcadia Labs",
+        "Confluent",
+        "Datadog",
+        "Elastic",
+        "Fastly",
+        "Grafana Labs",
+        "HashiCorp"
+      ],
+      "nonsummary": false,
+      "buckets": "X,W,D,X,X,W,W,D"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv010.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 20,
+      "identifiers": [
+        "Confluent",
+        "Datadog",
+        "Dawnfield Media",
+        "Grafana Labs",
+        "HashiCorp",
+        "LaunchDarkly",
+        "Meridian",
+        "Meridian Bank"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,D"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv011.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 31,
+      "identifiers": [
+        "Akamai",
+        "Confluent",
+        "Datadog",
+        "Elastic",
+        "Ember",
+        "Fastly",
+        "Grafana Labs",
+        "HashiCorp"
+      ],
+      "nonsummary": false,
+      "buckets": "G,G,W,X,D,X,X,X"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv012.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 22,
+      "identifiers": [
+        "Akamai",
+        "Confluent",
+        "Datadog",
+        "Ember",
+        "HashiCorp",
+        "PagerDuty",
+        "Sentry",
+        "Snowflake"
+      ],
+      "nonsummary": false,
+      "buckets": "D,X,X,D,X,X,X,X"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv013.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 18,
+      "identifiers": [
+        "Akamai",
+        "Arcadia Labs",
+        "Datadog",
+        "ENABLE_BULK_DELETE",
+        "Elastic",
+        "Ember",
+        "Fastly",
+        "Grafana Labs"
+      ],
+      "nonsummary": false,
+      "buckets": "X,D,X,X,X,D,D,D"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv014.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 15,
+      "identifiers": [
+        "Arcadia Labs",
+        "Confluent",
+        "Datadog",
+        "Fastly",
+        "Grafana Labs",
+        "LaunchDarkly",
+        "Nexovia Corp",
+        "Opal Energy"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv015.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 25,
+      "identifiers": [
+        "Akamai",
+        "Confluent",
+        "Datadog",
+        "Dawnfield Media",
+        "Elastic",
+        "Fastly",
+        "LaunchDarkly",
+        "Nexovia Corp"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,G,G,X,D,X,X"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv016.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 25,
+      "identifiers": [
+        "Confluent",
+        "Datadog",
+        "Ember",
+        "Fastly",
+        "LaunchDarkly",
+        "Nexovia Corp",
+        "Opal Energy",
+        "PagerDuty"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,D,X,X,X,X"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv017.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 30,
+      "identifiers": [
+        "Akamai",
+        "Brightshore Co",
+        "Datadog",
+        "Dawnfield Media",
+        "Ember",
+        "Fastly",
+        "HashiCorp",
+        "Nexovia Corp"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,D,X,X,X,X"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv018.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 29,
+      "identifiers": [
+        "Akamai",
+        "Arcadia Labs",
+        "Confluent",
+        "Cornerstone Retail",
+        "Datadog",
+        "Dawnfield Media",
+        "ENABLE_BULK_DELETE",
+        "Fastly"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,D,D,D,D,D,G"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv019.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 20,
+      "identifiers": [
+        "Datadog",
+        "LaunchDarkly",
+        "Nexovia Corp",
+        "Opal Energy",
+        "Sentry",
+        "Terraform Cloud",
+        "Trellis Health",
+        "analytics-east-1"
+      ],
+      "nonsummary": false,
+      "buckets": "X,D,X,X,D,X,X,X"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv020.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 24,
+      "identifiers": [
+        "2026-11-15",
+        "Akamai",
+        "Arcadia Labs",
+        "Confluent",
+        "Cornerstone Retail",
+        "Datadog",
+        "HashiCorp",
+        "Isabelle Renaud"
+      ],
+      "nonsummary": false,
+      "buckets": "G,X,X,X,X,X,W,X"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv021.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 26,
+      "identifiers": [
+        "Confluent",
+        "Elastic",
+        "Fastly",
+        "HashiCorp",
+        "LaunchDarkly",
+        "Nexovia Corp",
+        "Opal Energy",
+        "PagerDuty"
+      ],
+      "nonsummary": false,
+      "buckets": "X,D,X,X,X,D,D,X"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv022.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 25,
+      "identifiers": [
+        "Akamai",
+        "Brightshore Co",
+        "Confluent",
+        "Dawnfield Media",
+        "ENABLE_BULK_DELETE",
+        "Ember",
+        "Fastly",
+        "LaunchDarkly"
+      ],
+      "nonsummary": false,
+      "buckets": "W,W,G,X,X,W,D,X"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv023.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv024.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 16,
+      "identifiers": [
+        "Confluent",
+        "Cornerstone Retail",
+        "Datadog",
+        "Dawnfield Media",
+        "HashiCorp",
+        "LaunchDarkly",
+        "Snowflake",
+        "billing-svc"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,D,X"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv025.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 27,
+      "identifiers": [
+        "Akamai",
+        "Brightshore Co",
+        "Datadog",
+        "Ember",
+        "Fastly",
+        "LaunchDarkly",
+        "Nexovia Corp",
+        "Opal Energy"
+      ],
+      "nonsummary": false,
+      "buckets": "D,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv026.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 22,
+      "identifiers": [
+        "Arcadia Labs",
+        "Confluent",
+        "Cornerstone Retail",
+        "Datadog",
+        "Elastic",
+        "Ember",
+        "Fastly",
+        "HashiCorp"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv027.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 20,
+      "identifiers": [
+        "Akamai",
+        "Arcadia Labs",
+        "Confluent",
+        "Cornerstone Retail",
+        "Datadog",
+        "Elastic",
+        "Ember",
+        "Fastly"
+      ],
+      "nonsummary": false,
+      "buckets": "D,G,X,D,X,X,D,D"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv028.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 22,
+      "identifiers": [
+        "2026-11-15",
+        "Cloudgate",
+        "Ember",
+        "HashiCorp",
+        "Snowflake",
+        "Terraform Cloud",
+        "alert-router",
+        "analytics-east-1"
+      ],
+      "nonsummary": false,
+      "buckets": "D,X,X,X,D,W,X,W"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv029.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 24,
+      "identifiers": [
+        "Akamai",
+        "Brightshore Co",
+        "Confluent",
+        "Cornerstone Retail",
+        "Datadog",
+        "Dawnfield Media",
+        "Elastic",
+        "Ember"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,D,X,D,D"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv030.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 17,
+      "identifiers": [
+        "Confluent",
+        "Datadog",
+        "Fastly",
+        "Grafana Labs",
+        "LaunchDarkly",
+        "Meridian",
+        "Meridian Bank",
+        "Nexovia Corp"
+      ],
+      "nonsummary": false,
+      "buckets": "G,X,D,D,D,X,X,X"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv031.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 43,
+      "identifiers": [
+        "Akamai",
+        "Arcadia Labs",
+        "Brightshore Co",
+        "Confluent",
+        "Cornerstone Retail",
+        "Datadog",
+        "Dawnfield Media",
+        "Elastic"
+      ],
+      "nonsummary": false,
+      "buckets": "D,X,X,D,D,X,X,X"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv032.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 30,
+      "identifiers": [
+        "Akamai",
+        "Arcadia Labs",
+        "Confluent",
+        "Datadog",
+        "Ember",
+        "Fastly",
+        "HashiCorp",
+        "LaunchDarkly"
+      ],
+      "nonsummary": false,
+      "buckets": "D,X,?,X,D,X,X,D"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv033.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 27,
+      "identifiers": [
+        "Cornerstone Retail",
+        "Elastic",
+        "HashiCorp",
+        "LaunchDarkly",
+        "PagerDuty",
+        "Sentry",
+        "Snowflake",
+        "Terraform Cloud"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,D,D,X"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv034.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 28,
+      "identifiers": [
+        "Grafana Labs",
+        "HashiCorp",
+        "Meridian",
+        "Meridian Bank",
+        "Opal Energy",
+        "PagerDuty",
+        "Seacrest Logistics",
+        "Sentry"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,D,X,X,X,X"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv035.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 22,
+      "identifiers": [
+        "Akamai",
+        "Datadog",
+        "ENABLE_BULK_DELETE",
+        "Elastic",
+        "Ember",
+        "Fastly",
+        "HashiCorp",
+        "Isabelle Renaud"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,W,X,D,W,D"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv036.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 11,
+      "identifiers": [
+        "Akamai",
+        "Confluent",
+        "Datadog",
+        "HashiCorp",
+        "Snowflake",
+        "Terraform Cloud",
+        "analytics-east-1",
+        "auth-gateway"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv037.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 11,
+      "identifiers": [
+        "Cornerstone Retail",
+        "Datadog",
+        "Dawnfield Media",
+        "Fastly",
+        "Sentry",
+        "Snowflake",
+        "billing-svc",
+        "checkout-api"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv038.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 18,
+      "identifiers": [
+        "Datadog",
+        "Dawnfield Media",
+        "Fastly",
+        "Grafana Labs",
+        "HashiCorp",
+        "LaunchDarkly",
+        "Nexovia Corp",
+        "Opal Energy"
+      ],
+      "nonsummary": false,
+      "buckets": "X,W,X,D,G,D,D,X"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv039.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 28,
+      "identifiers": [
+        "2026-10-01",
+        "2026-11-15",
+        "Confluent",
+        "Cornerstone Retail",
+        "Datadog",
+        "Ember",
+        "Grafana Labs",
+        "LaunchDarkly"
+      ],
+      "nonsummary": false,
+      "buckets": "X,W,X,X,X,X,W,W"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv040.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 18,
+      "identifiers": [
+        "Akamai",
+        "Confluent",
+        "Fastly",
+        "Grafana Labs",
+        "Sentry",
+        "Snowflake",
+        "analytics-east-1",
+        "auth-gateway"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,D,D,X,G,X,X"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv041.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 21,
+      "identifiers": [
+        "2026-10-01",
+        "Confluent",
+        "HashiCorp",
+        "Nexovia Corp",
+        "PagerDuty",
+        "Snowflake",
+        "alert-router",
+        "analytics-east-1"
+      ],
+      "nonsummary": false,
+      "buckets": "W,X,X,X,X,X,X,W"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv042.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 25,
+      "identifiers": [
+        "2026-11-15",
+        "Akamai",
+        "Arcadia Labs",
+        "Brightshore Co",
+        "Confluent",
+        "Cornerstone Retail",
+        "Dawnfield Media",
+        "ENABLE_BULK_DELETE"
+      ],
+      "nonsummary": false,
+      "buckets": "G,D,D,G,W,X,D,X"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv043.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 36,
+      "identifiers": [
+        "Akamai",
+        "Arcadia Labs",
+        "Brightshore Co",
+        "Confluent",
+        "Cornerstone Retail",
+        "Datadog",
+        "Dawnfield Media",
+        "Elastic"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,D,D,X,X,X,X"
+    },
+    {
+      "digest_file": "qwen__unmarked__conv044.txt",
+      "cell": "qwen__unmarked",
+      "n_identifiers": 21,
+      "identifiers": [
+        "2026-11-15",
+        "Akamai",
+        "Confluent",
+        "Cornerstone Retail",
+        "Datadog",
+        "Ember",
+        "Fastly",
+        "HashiCorp"
+      ],
+      "nonsummary": false,
+      "buckets": "X,D,D,W,X,W,D,X"
+    }
+  ]
+}

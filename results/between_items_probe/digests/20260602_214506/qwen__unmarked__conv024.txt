@@ -1,0 +1,11 @@
+The conversation is a high-frequency stream of operational updates, incident management, design proposals, and decision logs for a distributed cloud-native system. The context is highly dynamic, with repeated requests for service status (e.g., `catalog-svc`, `notify-worker`), Q3 performance summaries, and retro analysis across multiple teams (infra, search, mobile, security, growth, data-eng).
+
+Key recurring themes include:
+- **Incidents & Escalations:** Frequent postmortems and hotfixes for services like `user-profile-svc`, `email-dispatcher`, `media-transcoder`, and `billing-svc`. Common root causes involve cache layer races, serialization mismatches, and over-aggressive GC pauses. Enterprise escalations (e.g., Cornerstone Retail, Dawnfield Media) often result in credits ranging from $50k to $700k.
+- **Deployments & Migrations:** Ongoing schema changes on production clusters (`prod-east-1`, `prod-west-2`, etc.), usually verified via smoke tests by rotating owners. Rollbacks are frequently held pending metric validation.
+- **Vendor Management:** Continuous renewal negotiations for Datadog, Snowflake, Confluent, LaunchDarkly, and HashiCorp, typically stalled at legal review regarding SLAs or pricing traffic.
+- **Design Proposals & ADRs:** Repeated generation of design docs (runbook standardization, tenant isolation, async messaging) and Architecture Decision Records adopting patterns A, B, or C, with estimated costs ranging from ~$64k/yr to ~$896k/yr.
+- **On-Call Handoffs:** Rotating ownership for specific services due to team absences, with standardized handoff notes including open alerts and runbook status.
+- **Cost Anomalies:** Recurring spikes in cloud spend attributed to over-provisioned vacuum jobs on various clusters, followed by retention policy fixes.
+
+**Current State:** The conversation ends mid-task during an assessment of the `graph-store` deployment rollback, which is currently on hold (error rate 0.83%, within SLA) with Cyrus monitoring. No immediate critical blockages were identified in the final turn.

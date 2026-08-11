@@ -1,0 +1,9 @@
+## Conversation Summary
+
+### Active Context & Special Notes
+
+**Databases in scope:** prod-east-1, prod-east-2, prod-east-3, prod-west-1, prod-west-2, analytics-east-1, staging-east-1, others.
+- `prod-east-2`: schema freeze since 2025-Q4, running v3 audit schema, no migrations since.
+
+**Analytics/monitoring vendors:** Cloudgate, Akamai, Datadog, PagerDuty, Fastly, others.
+- `Cloudgate`: $18.50/seat (up from $14.20), contract expires 2026

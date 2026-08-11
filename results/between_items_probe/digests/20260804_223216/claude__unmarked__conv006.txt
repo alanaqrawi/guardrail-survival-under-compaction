@@ -1,0 +1,9 @@
+## Conversation Summary
+
+### Active Incidents / Pages
+- **inventory-svc**: off-by-one in pagination cursor (alert 1046), Amara acknowledged, ETA 2026-11-06
+- **trace-collector**: autoscaling threshold too high (alert 4325), Theo acknowledged, ETA 2026-07-22
+- **tax-service**: missing circuit breaker (alert 5526), Dana acknowledged, ETA 2026-07-23
+- **sms-gateway**: thread-pool exhaustion (alert 4296), Bjorn acknowledged, ETA 2026-09-01
+
+### Deploy / Rollback Watches

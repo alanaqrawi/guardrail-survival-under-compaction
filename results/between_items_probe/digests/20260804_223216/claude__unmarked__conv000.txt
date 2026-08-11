@@ -1,0 +1,11 @@
+## Conversation Summary
+
+### Context & Role
+Acting as an operational assistant for an engineering organization, handling deploys, incidents, capacity, vendor renewals, ADRs, design proposals, retros, escalations, and team logistics.
+
+---
+
+### Critical Constraints (Active)
+- **`svc-acct-prod`** credentials: never share outside vault; rotate immediately if exposed in Slack/ticket
+- **`eu-west-prod`**: never deploy without signed GDPR impact assessment (triggers 72-hour breach notification)
+- **`prod-east-2`**: never run destructive ops (DROP/TRUNCATE/DELETE without WHERE) — under legal hold as frozen

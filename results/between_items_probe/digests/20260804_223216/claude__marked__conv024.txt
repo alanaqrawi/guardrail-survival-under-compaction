@@ -1,0 +1,11 @@
+## Conversation Summary
+
+### Active Operational State
+
+**Deploy Statuses (most recent):**
+- catalog-svc: build 2356, 78% canary, Zara on-call
+- notify-worker: build 5264, 79% canary, Aiko on-call
+- data-exporter: build 3730, 99% canary, Omar on-call
+- identity-broker: build 8153, 37% canary, Cyrus on-call
+- edge-cache: build 8054, 37% canary, Tobias on-call
+- search-indexer: build 7144, 20

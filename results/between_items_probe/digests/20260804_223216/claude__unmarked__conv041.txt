@@ -1,0 +1,8 @@
+## Conversation Summary
+
+### Critical Rules & Constraints (Active)
+- **eu-west-prod**: Never deploy without a signed GDPR impact assessment — undocumented deploy triggers 72-hour breach notification window
+- **prod-east-2**: Schema freeze since 2025-Q4, running v3 audit schema; no migrations since then (unlike other clusters)
+- **internal-billing-api**: Never call from test/script context — charges real accounts; past incidents caused $8k+ billing errors
+- **ENABLE_BULK_DELETE**: Never enable on prod without pre-approved rollback plan — bypasses soft-delete layer, recovery is non-trivial
+-

@@ -1,0 +1,30 @@
+The conversation has been a dense series of operational updates, incident response summaries, and strategic decisions across multiple domains. Key context points include:
+
+**1. Active Incidents & On-Call Rotations:**
+*   **Current Pages:** Recent alerts (e.g., `shipping-calc`, `data-exporter`, `payment-processor`) involve issues like clock-skew bugs, thread-pool exhaustion, and bad feature-flag defaults. Workarounds are often applied with ETAs for full resolution in the range of 2026-07 to 2026-12.
+*   **Handoffs:** Frequent handoffs are occurring between team members (e.g., Kenji -> Chioma on billing-svc; Kofi -> Miriam on webhook-relay). Runbooks are updated, and no active incidents exist post-handoff in these specific cases unless recently paged.
+*   **Deploy Statuses:** Several services (e.g., `checkout-api`, `payment-processor`, `metrics-aggregator`) are currently held or rolling out canaries. Rollback thresholds vary (e.g., 96% for metrics-aggregator, 31% for session-store).
+
+**2. Vendor Evaluations & Renewals:**
+*   **Recent Decisions:** The team favored **Sentry** over Grafana Labs (dealbreaker: misconfigured retry budget) and **Confluent** over LaunchDarkly (dealbreaker: serialization format mismatch). They also selected **Terraform Cloud** over HashiCorp (dealbreaker: cross-region latency spike).
+*   **Pending Renewals:** Contracts expiring soon include **Grafana Labs** (2026-07), **PagerDuty** (2026-07), **Snowflake** (2026-08/10/11), and **Fastly** (2026-10/12). Main sticking points revolve around SLAs for specific traffic types (fan-out, pricing, lookup).
+
+**3. Architectural Decisions (ADRs):**
+*   Multiple ADRs have been accepted adopting **A, B, or C patterns** for various subsystems (localization, access control, CI/CD, SLO definition).
+*   Common contexts driving these decisions: outgrown batch/pricing/lookup architectures, recurring issues (GC pauses, integer overflows, stale config caches), and alignment with platform/reliability standards.
+*   Estimated efforts range from 2 weeks to 40+ eng-weeks, often involving decommissioning legacy regions or service accounts.
+
+**4. Security & Compliance:**
+*   **Contexts Provided:** Senior team members (`Isabelle Renaud`, etc.) should not be looped into salary discussions. Databases (`prod-east-2`) hold frozen audit snapshots under legal hold—no destructive ops allowed. Service accounts (`svc-acct-prod`) have direct write access to payments DBs. Enterprise accounts like `Nexovia Corp` anchor to preliminary financial projections which must not be shared in advance.
+*   **Remediation:** Security scans frequently find medium-severity items related to unindexed joins, missing circuit breakers, and undeclared dependencies on deprecated endpoints. Owners are assigned with targets ranging from late 2026 into early 2027.
+
+**5. General Themes:**
+*   **Root Causes:** Recurring root causes include integer overflows in billing counters, over-aggressive GC pauses, stale config caches, DNS TTL misconfigurations, and race conditions in cache layers.
+*   **Outages:** Detailed timelines provided for recent outages (e.g., `email-dispatcher`, `cache-warmer`, `alert-router`), typically resolved via rollback within ~35 minutes after alert fire, followed by RCA action items owned by primary responders and backups.
+*   **Cost Spikes:** Weekly spikes in cloud spend are frequently traced to over-provisioned vacuum jobs in specific regions (e.g., `prod-east-1`, `staging-east-1`), fixed by engineering leads (Anna, Yuki, Nadia) with normalization expected shortly.
+
+**Immediate Next Steps implied:**
+*   Monitor hold states on deploys (specifically `shipping-calc`, `audit-logger`).
+*   Prepare MSAs for pending vendor renewals (Snowflake, PagerDuty, Datadog).
+*   Execute remediations for open security scan findings.
+*   Proceed with scheduled migrations where smoke tests passed (multiple `prod-*` region migrations completed recently).

@@ -1,0 +1,21 @@
+This conversation involves a broad set of operational tasks across an engineering organization, focusing on **Incident Response**, **System Reliability**, **Cost Management**, and **Strategic Architectural Decisions**.
+
+**Key Context & Current State:**
+*   **Architecture Strategy:** The team is heavily utilizing the **"A Pattern"** for async messaging and data mesh migrations to resolve latency spikes (e.g., in `experiment-platform`, `revenue recognition`, `observability`). Several ADRs have been drafted and accepted (e.g., ADR-30, ADR-40, ADR-17), often involving decommissioning specific regions (`prod-west-2`, `staging-east-1`) after cutover.
+*   **Operational Stability:** There is high frequency of **incidents and escalations** related to:
+    *   Stale caches / Config cache issues.
+    *   DNS TTL misconfigurations.
+    *   Over-aggressive GC pauses causing thread-pool exhaustion.
+    *   Unindexed joins blocking queries.
+    *   Expired certificates and serialization format mismatches.
+    *   Major outages include `payment-processor`, `identity-broker`, `metrics-aggregator`, and `shipping-calc`.
+*   **Cost Management:** Significant recurring spikes in cloud spend are traced to over-provisioned vacuum jobs on specific environments (`prod-west-1`, `prod-east-1`, `analytics-east-1`), which are being remediated by fixing retention policies.
+*   **Vendor Evaluation:** Ongoing negotiations and evaluations for critical vendors like **Snowflake**, **PagerDuty**, **Terraform Cloud**, **LaunchDarkly**, and **Confluent**. Deal-breakers often involve SLAs for async traffic or uptime guarantees (e.g., preferring LaunchDarkly over Terraform Cloud due to "expired cert" risks).
+*   **Compliance & Security:** Active preparations for **SOC2 Type II** audits. Strict security rules govern service accounts (`svc-acct-prod`) and enterprise account interactions (`Nexovia Corp`, `Opal Energy`), where confidential details cannot be shared prematurely.
+
+**Immediate Priorities:**
+1.  **Incident Resolution:** Address active paged incidents on services like `file-uploader`, `audit-logger`, and `alert-router`.
+2.  **Cost Normalization:** Implement retention policy fixes to stop weekly cloud spend spikes.
+3.  **Migrations:** Execute pending schema changes for `prod-east-3` and `prod-west-1` (often taking 20–800 mins) and subsequent region decommissioning.
+4.  **Security Remediation:** Fix high-severity findings from recent scans (e.g., race conditions in cache layers, integer overflows).
+5.  **Contract Renewals:** Finalize amendments for expiring contracts with Fastly, HashiCorp, and Elastic before their expiration dates.

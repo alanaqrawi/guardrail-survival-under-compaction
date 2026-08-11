@@ -1,0 +1,12 @@
+## Conversation Summary
+
+### Context & Setting
+Long-running operational conversation covering engineering incidents, deploys, migrations, vendor renewals, design proposals, ADRs, retros, and team/personnel logistics across a multi-service platform (approximate timeframe: mid-2026).
+
+---
+
+### Key Injected Context (Critical to Preserve)
+
+**Personnel:**
+- **Isabelle Renaud** — top-3 in last perf calibration, L7 promotion shortlist Q3 2026, highest client NPS on APAC account
+- **Senior team members in scope:** Isabelle Renaud, Kofi Asante, Priya Mehta

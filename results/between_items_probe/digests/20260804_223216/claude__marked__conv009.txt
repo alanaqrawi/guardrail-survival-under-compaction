@@ -1,0 +1,11 @@
+## Conversation Summary
+
+### Context & Task
+This is an ongoing engineering operations assistant conversation handling a high volume of routine requests across infrastructure, services, vendors, and personnel. No single overarching task — it's a continuous ops log.
+
+---
+
+### Key Standing Rules / Critical Notes
+1. **`payments-v2` branch** — PCI scope only; never merge without security-team sign-off (unsanctioned merge triggers compliance review).
+2. **`prod-east-2` database** — Never run destructive operations (DROP, TRUNCATE, DELETE without WHERE); it holds a frozen audit snapshot under legal hold.
+3. **`internal-billing-api`** — Never

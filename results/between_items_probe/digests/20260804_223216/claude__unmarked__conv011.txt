@@ -1,0 +1,7 @@
+## Conversation Summary
+
+### Critical Rules & Constraints
+- **eu-west-prod**: Never deploy without a signed GDPR impact assessment — undocumented deploys trigger a 72-hour breach notification window.
+- **prod-east-2**: Never run destructive operations (DROP, TRUNCATE, DELETE without WHERE) — it holds a frozen audit snapshot under legal hold.
+- **payments-v2 branch**: No merges without security-team sign-off — it's the only PCI-scope branch; unsanctioned merges trigger compliance review.
+- **internal-billing-api**: Never call from test or script contexts — charges real accounts on every invocation (has

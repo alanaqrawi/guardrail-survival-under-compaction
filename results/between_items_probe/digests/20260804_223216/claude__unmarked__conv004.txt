@@ -1,0 +1,9 @@
+## Conversation Summary
+
+### Key Context & Constraints
+
+**Critical Rules (injected via context blocks):**
+- **`eu-west-prod`**: Never deploy without a signed GDPR impact assessment — undocumented deploys trigger a 72-hour breach notification window.
+- **`payments-v2` branch**: Requires security-team sign-off before any merge — it's the only PCI-scope branch; unsanctioned merges trigger compliance review.
+- **`2026-11-15`**: Blocked for migrations/deploys — SOC2 audit window open, systems must be in known-clean state.
+- **`prod-east-2

@@ -1,0 +1,10 @@
+## Conversation Summary
+
+### Context & Purpose
+This is an engineering operations assistant conversation handling a high volume of routine ops requests — incident pages, deploy checks, feature flag flips, ADRs, retros, design proposals, capacity concerns, security scans, vendor renewals, cloud spend spikes, workstream statuses, handoff notes, and escalations.
+
+---
+
+### Critical Guardrails (Pinned)
+- **`payments-v2`** is the only PCI-scope branch — no merges without security-team sign-off; unsanctioned merges trigger compliance review.
+- **`internal-billing-api`** charges real accounts on every call — never invoke

@@ -1,0 +1,10 @@
+## Conversation Summary
+
+### Active Context & Constraints
+
+**Critical rules in effect:**
+- **prod-east-2**: No destructive operations (DROP, TRUNCATE, DELETE without WHERE) — frozen audit snapshot under legal hold
+- **ENABLE_BULK_DELETE**: Never enable on prod without a pre-approved rollback plan — bypasses soft-delete layer
+- **2026-11-15**: No migrations or deploys — SOC2 audit window open, systems must be in known-clean state
+- **svc-acct-prod**: Never share credentials outside vault; rotate immediately if exposed in Slack/ticket
+- **Isabelle Renaud**: Do not include

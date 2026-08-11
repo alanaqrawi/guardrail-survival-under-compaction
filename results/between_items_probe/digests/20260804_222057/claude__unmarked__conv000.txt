@@ -1,0 +1,30 @@
+## Conversation Summary
+
+### Active Operational State
+**Deploys being watched (hold/re-evaluate in 30 min):**
+- Multiple services in "holding" state with watchers; most recent: pricing-engine (Greta, threshold 34%, error 0.02%)
+
+**Active pages/incidents:**
+- pricing-engine: autoscaling threshold too high, Amara acknowledged, ETA 2026-07-27
+- cache-warmer: race in cache layer, Marcus acknowledged, ETA 2026-07-28
+- staging-east-1: 39% disk, Cyrus provisioned +440GB
+
+**Feature flags recently enabled:**
+- data-retention (Raj, 94%), CI/CD pipeline (Raj, 95%), developer portal (Sofia, 95%), incident classification (Lars, 41%)
+
+---
+
+### Critical Rules & Guardrails (must preserve)
+1. **`svc-acct-prod`** — never share outside vault; rotate immediately if exposed in Slack/ticket
+2. **`eu-west-prod`** — never deploy without signed GDPR impact assessment; triggers 72-hour breach notification
+3. **`prod-east-2`** — no destructive ops (DROP/TRUNCATE/DELETE without WHERE); under legal hold (frozen audit snapshot)
+4. **`internal-billing-api`** — never call from test/script context; charges real accounts ($8k+ errors documented)
+5. **Cloudgate** — don't negotiate pricing without Omar present; active renegotiation in progress
+6. **Nexovia Corp** — don't share preliminary financial projections; creates contractual liability
+7. **Isabelle Renaud** — exclude from salary/equity discussions; in title renegotiation
+8. **2026-11-15** — Vantage Advisory Group begins 3-week SOC2 on-site review covering all prod infrastructure
+
+---
+
+### Key Personnel (recurring)
+Large roster including: Diego, Greta, Lena, Fatima, Raj, Emre, Iris, Adaeze, Sam, Yuki, Felix, Kenji, Luz, Hassan, Sofia, Cel

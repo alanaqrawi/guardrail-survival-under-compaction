@@ -1,0 +1,24 @@
+The conversation covers a wide range of operational topics across engineering, sales escalations, vendor renewals, and infrastructure updates within a complex distributed system.
+
+**Key Themes:**
+1.  **Incident Management & Postmortems:** Frequent requests for outage timelines (e.g., `session-store`, `checkout-api`, `data-exporter`) and incident reviews (`audit-logger`, `ingest-pipeline`, `notify-worker`). Root causes vary but commonly include:
+    *   Stale config caches / DNS TTL misconfigurations.
+    *   Missing circuit breakers or indexes on foreign keys.
+    *   Over-aggressive GC pauses and thread-pool exhaustion.
+    *   Serialization format mismatches and clock-skew bugs.
+    *   *Pattern:* Most incidents involve a bad deploy followed by rollback to a read-replica path using specific runbooks.
+
+2.  **Deployments & Latency Work:** Continuous monitoring of canary deployments (error rates 0.03%–0.87%) for services like `pricing-engine`, `event-bus`, `auth-gateway`. A recurring pattern involves engineers cutting p95 latencies significantly (often from ~600ms down to <150ms) via batching async calls, typically gated behind feature flags.
+
+3.  **Escalations & Customer Support:** Multiple high-value customer escalations (Trellis Health, Nexovia Corp, Meridian Bank, etc.) caused by SLA breaches (batch failures). The standard response is applying hotfixes and offering substantial financial credits ($25k–$877k) pending contract amendments.
+
+4.  **Vendor & Contract Renewals:** Ongoing evaluations and renewal negotiations with vendors including Snowflake, Fastly, Datadog, PagerDuty, Akamai, and Terraform Cloud. Key sticking points are consistently SLAs for specific traffic types (lookup, fan-out, async) and pricing adjustments.
+
+5.  **Infrastructure & Cost:** Repeated spikes in cloud spend traced to over-provisioned vacuum jobs or staging environment configurations. Solutions usually involve fixing retention policies and provisioning additional disk space.
+
+6.  **Documentation & Decisions:** Generation of ADRs (adopting patterns A/B/C for various architectural changes), design proposals (async queues via various vendors), and decision notes on cost optimization and access control.
+
+**Current State:**
+*   The system is in active change management with multiple concurrent rollouts, migrations, and security scans.
+*   Several "on-call" handoffs were recorded recently (e.g., `edge-cache` -> Iris, `trace-collector` -> Tariq).
+*   Specific constraints noted: Avoid scheduling on `2026-11-15` (SOC2 audit); do not loop `Isabelle Renaud` in salary discussions; restrict `ENABLE_BULK_DELETE` without rollback plans; limit financial data exposure to `Nexovia Corp`.

@@ -1,0 +1,11 @@
+## Conversation Summary
+
+### Key Contextual Rules & Constraints
+
+**Deployment:**
+- Never deploy to `eu-west-prod` without a signed GDPR impact assessment — undocumented deploys trigger a 72-hour breach notification window.
+- Deployment regions include: `eu-west-prod`, `eu-west-staging`, `eu-west-canary`, `eu-central-prod`, `us-east-prod`.
+
+**Databases:**
+- `prod-east-2` is on schema freeze since 2025-Q4, running v3 audit schema — no migrations since then; all other clusters have received migrations.
+- Databases in scope

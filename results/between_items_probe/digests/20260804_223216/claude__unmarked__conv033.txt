@@ -1,0 +1,6 @@
+## Conversation Summary
+
+### Infrastructure & Deploys
+Active canary deploys monitored across: config-server, report-generator, billing-svc, auth-gateway, tax-service, ingest-pipeline, file-uploader, event-bus, notify-worker, inventory-svc, trace-collector, session-store, edge-cache, catalog-svc, identity-broker, shipping-calc, checkout-api, ledger-api, audit-logger, metrics-aggregator, feature-flag-svc, graph-store, experiment-platform, media-transcoder, recommendation-svc, webhook-relay, cache-warmer.
+
+Multiple rollback holds in effect (

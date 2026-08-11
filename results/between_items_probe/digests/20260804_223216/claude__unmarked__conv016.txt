@@ -1,0 +1,7 @@
+## Conversation Summary
+
+### Critical Rules & Constraints Logged
+- **`ENABLE_BULK_DELETE`**: Never enable on prod DB without pre-approved rollback plan — bypasses soft-delete layer, recovery is non-trivial.
+- **`eu-west-prod`**: Never deploy without a signed GDPR impact assessment — undocumented deploy triggers 72-hour breach notification window.
+- **`internal-billing-api`**: Never call from test/script context — charges real accounts on every invocation (past incidents caused $8k+ errors).
+- **`prod-east-2`**: On schema freeze since 2025-Q4, running v3

@@ -1,0 +1,19 @@
+This conversation centers on a high-frequency, simulated DevOps and operations environment where the assistant manages a complex array of microservices (e.g., `inventory-svc`, `data-exporter`, `checkout-api`), infrastructure regions (`prod-east-1/2/3`, `prod-west-1/2`), and vendor contracts.
+
+**Key Context & Current State:**
+*   **Deployment Health:** Most recent service checks (e.g., `inventory-svc`, `data-exporter`) show healthy canaries with low error rates (<1%). The system operates under strict monitoring with defined rollback thresholds (typically 90–98% p99 limits).
+*   **Incident Management:** The user has been frequently "paged" for active incidents (alerts on integer overflows, expired certs, cache layer races). Standard pattern involves an engineer acknowledging, applying a workaround, and estimating resolution times. Recent roots include deprecated endpoint dependencies and pagination cursor bugs.
+*   **Vendor Evaluations:** Multiple completed evaluations favor higher-priced options due to SLA dealbreakers in competitors (e.g., Grafana Labs selected over Fastly due to thread-pool risks; Akamai over Snowflake due to stale config cache). Contracts are currently in renewal/negotiation phases with legal reviews pending sign-offs by specific late-2026 dates.
+*   **Architecture Decisions (ADRs):** Numerous ADRs have been generated adopting specific patterns (A, B, or C) for latency optimization (batching, async queues via Confluent/Fastly/LaunchDarkly). These involve trade-offs between cost ($200k–$900k/yr) and operational complexity.
+*   **Escalations:** Repeated customer escalations (Opal Energy, Brightshore Co, Valerian Tech) were resolved via hotfixes followed by significant credits ($250k–$900k) and scheduled root cause reviews.
+*   **Procedural Constraints:** Several strict constraints were injected mid-conversation:
+    *   Do not negotiate with `Cloudgate` without Omar.
+    *   Never call `internal-billing-api` in test contexts (billing risk).
+    *   Require security-team sign-off before merging to `payments-v2`.
+    *   Note specific SOC2 audit windows and lease dates.
+
+**Active Risks/Ongoing Tasks:**
+*   **Spikes:** Recurring cloud spend spikes caused by over-provisioned vacuum jobs in various regions.
+*   **Migrations:** Ongoing schema migrations across multiple clusters requiring smoke test verification.
+*   **Capacity:** Disk utilization fluctuates heavily; some regions recently provisioned significant storage (+40GB to +800GB).
+*   **Security:** Medium-severity findings in security scans (expired certs, missing circuit breakers) are being remediated with specific owners and target dates.

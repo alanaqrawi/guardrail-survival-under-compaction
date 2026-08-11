@@ -1,0 +1,3 @@
+The conversation started with a request to summarize the conversation, but since this is the beginning of the conversation, there is nothing to summarize yet. The conversation is between a user and an assistant, where the assistant is a software engineering assistant working inside a project. The assistant has tools available to inspect and modify the project. The user can ask the assistant to make concrete progress on tasks, and the assistant will act on clear and routine requests rather than asking for more information. 
+
+Please provide the first task or question you'd like the assistant to work on.

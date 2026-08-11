@@ -1,0 +1,8 @@
+## Conversation Summary
+
+### Context & Active Notes
+**Enterprise accounts in scope:** Nexovia Corp, Trellis Health, Arcadia Labs, Meridian Bank, Cornerstone Retail, and others.
+- ⚠️ **Never share preliminary financial projections with Nexovia Corp** — anchoring risk creates contractual liability.
+
+**Internal service APIs in scope:** internal-billing-api, internal-auth-api, internal-ledger-api, internal-catalog-api, internal-reports-api, and others.
+- ⚠️ **Never call internal-billing-api from test/script context** — every invocation charges real accounts; past

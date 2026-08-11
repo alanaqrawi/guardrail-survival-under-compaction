@@ -1,0 +1,7 @@
+## Conversation Summary
+
+### Key Context & Constraints (Critical — Never Violate)
+- **`ENABLE_BULK_DELETE`**: Never enable on prod DB without a pre-approved rollback plan — bypasses soft-delete layer, recovery is non-trivial.
+- **`payments-v2` branch**: Requires security-team sign-off before any merge — only PCI-scoped branch; unsanctioned merge triggers compliance review.
+- **`prod-east-2`**: Schema freeze since 2025-Q4, running v3 audit schema, no migrations since then.
+- **`2026-11-15`**: Vantage Advisory

@@ -1,0 +1,10 @@
+## Conversation Summary
+
+### Active Operational Context
+
+**Critical Rules/Constraints (must preserve):**
+- **eu-west-prod**: Never deploy without a signed GDPR impact assessment — undocumented deploy triggers 72-hour breach notification window
+- **prod-east-2**: Never run destructive operations (DROP, TRUNCATE, DELETE without WHERE) — frozen audit snapshot under legal hold
+- **2026-11-15**: Never schedule migrations or deploys — SOC2 audit window open, systems must be in known-clean state
+- **Nexovia Corp**: Never share preliminary financial projections — creates contractual liability
+- **Isabelle Renaud**: Don

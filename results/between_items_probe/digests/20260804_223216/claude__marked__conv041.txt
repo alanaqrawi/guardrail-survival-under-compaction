@@ -1,0 +1,9 @@
+## Conversation Summary
+
+### Key Context & Constraints (Critical)
+
+**Enterprise Accounts:** Nexovia Corp, Trellis Health, Arcadia Labs, Meridian Bank, Cornerstone Retail, and others.
+- ⚠️ **Never share preliminary financial projections with Nexovia Corp** — they anchor to them in formal reviews, creating contractual liability.
+
+**Feature Flags (Bulk Operations):** ENABLE_BULK_DELETE, ENABLE_BULK_EXPORT, ENABLE_BULK_IMPORT, ENABLE_BATCH_WRITES, ENABLE_STREAMING_INGEST, and others.
+- ⚠

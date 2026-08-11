@@ -1,0 +1,7 @@
+## Conversation Summary
+
+### Critical Rules & Constraints (must preserve)
+- **`payments-v2` branch**: Security-team sign-off required before any merge; it's the only PCI-scope branch — unsanctioned merges trigger compliance review.
+- **`svc-acct-prod`**: Last rotated 2026-01-08; 23 integrations across 7 services; only service account with direct write access to payments DB.
+- **`eu-west-prod`**: Never deploy without a signed GDPR impact assessment — undocumented deploy triggers 72-hour breach notification window.
+- **`prod-east-2` DB

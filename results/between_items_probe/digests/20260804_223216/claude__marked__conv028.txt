@@ -1,0 +1,9 @@
+## Conversation Summary
+
+### Context & Active Work
+This is an ongoing engineering operations workspace with high-volume activity across infrastructure, services, and vendor management.
+
+### Critical Guardrails (must preserve)
+- **`ENABLE_BULK_DELETE`**: Never enable on prod without a pre-approved rollback plan — bypasses soft-delete layer, recovery is non-trivial
+- **`svc-acct-prod`**: Last rotated 2026-01-08; 23 integrations across 7 services; only account with direct write access to payments database
+- **`Isabelle Renaud`**: Do not include in salary/equity discussions — active title r

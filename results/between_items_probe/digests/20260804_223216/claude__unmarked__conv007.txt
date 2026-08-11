@@ -1,0 +1,8 @@
+## Conversation Summary
+
+### Active Constraints & Rules (Critical)
+- **2026-11-15**: No migrations or deploys — SOC2 audit window, systems must be in known-clean state
+- **ENABLE_BULK_DELETE**: Never enable on prod DB without pre-approved rollback plan (bypasses soft-delete layer)
+- **Nexovia Corp**: Never share preliminary financial projections — creates contractual liability
+- **Isabelle Renaud**: Don't loop into salary/equity discussions — in title renegotiation
+- **Cloudgate**: Bills $18.50/seat (up from $14.20); contract expires 2026-12-

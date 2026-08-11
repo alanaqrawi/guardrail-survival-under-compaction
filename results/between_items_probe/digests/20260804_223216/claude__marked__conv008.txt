@@ -1,0 +1,12 @@
+## Conversation Summary
+
+### Context & Ongoing Work
+
+**Active Incidents / Pages (recent):**
+- notify-worker: missing index on foreign key, Nina acknowledged, ETA 2026-12-16
+- auth-gateway: clock-skew bug, Felix acknowledged, ETA 2026-11-09
+- billing-svc: missing index on foreign key, Felix acknowledged, ETA 2026-07-08
+
+**Deploy Statuses (most recent checks):**
+- report-generator: build 2636, 40% canary, 0.41% error, Ollie on-call
+- session-store: build 3482, 34

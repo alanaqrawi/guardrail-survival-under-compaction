@@ -1,0 +1,15 @@
+The conversation centers around a large-scale software engineering organization (circa Q3-Q4 2026) managing operations, incidents, architectural decisions, and vendor negotiations.
+
+**Key Themes:**
+*   **Incident Management & Postmortems:** Frequent pagers for service outages (e.g., `auth-gateway`, `notify-worker`, `search-indexer`). Common root causes include integer overflows in billing counters, leaked connection pools, stale config caches, bad feature-flag defaults, and misconfigured retries. Rollbacks are frequently held or executed based on error rates vs. SLAs.
+*   **Architectural Decisions (ADRs):** Numerous ADRs document shifts from synchronous patterns to **async queues** (via vendors like Confluent, Grafana Labs, Datadog) to reduce latency and coupling. Patterns adopted often include "A", "B", or "C" strategies depending on cost, operational burden, and alignment with team standards.
+*   **Vendor Evaluations & Renewals:** Extensive evaluations comparing vendors (e.g., Snowflake vs. Grafana, Terraform Cloud vs. PagerDuty, LaunchDarkly vs. HashiCorp). A recurring theme is rejecting cheaper options due to critical dealbreakers (e.g., "bad feature-flag default," "stale config cache") despite lower costs.
+*   **Operations & Capacity:** Constant monitoring of disk capacity across clusters (`prod-east-1`, `analytics-east-1`, etc.), triggering vacuum jobs and storage provisioning. Cloud spend spikes are regularly traced to over-provisioned vacuum jobs, which are then remediated via retention policy fixes.
+*   **On-Call & Handoffs:** Detailed logs of team members taking over on-call rotations for various services, including runbook updates and alert status handovers.
+*   **Client Escalations:** Repeated minor SLA breaches with enterprise clients (Meridian Bank, Nexovia Corp, Cornerstone Retail) caused by API issues, typically resolved via hotfixes and compensation credits.
+
+**Current State Needed to Continue:**
+*   The most recent activity involves checking the deploy status of `file-uploader` (healthy), analyzing `graph-store` latency improvements, and evaluating a Confluent vs. Grafana Labs decision.
+*   There is an active context regarding **internal service APIs** (specifically `internal-billing-api`) that must not be called from tests/scripts due to real charging risks.
+*   Multiple security scans have identified medium-severity items related to threading, caching, and indexing issues requiring remediation by specific owners (e.g., Yuki, Lars, Nadia).
+*   Several feature flags (observability, incident classification, async messaging) are mid-rollout or ready for rollout pending pre-flight checks.

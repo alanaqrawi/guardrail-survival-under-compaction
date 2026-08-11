@@ -1,0 +1,48 @@
+This is a long session involving **43 rounds** of interactions. The user asked for a wide variety of engineering updates, decisions, incident reviews, and design proposals across a complex distributed system environment.
+
+Here is a concise summary preserving the key context:
+
+### **1. Primary Task Completion**
+*   **ADR-30:** Successfully wrote the ADR for the **async messaging approach** (adopting the A pattern) as the very first request.
+    *   *Context:* experiment-platform scaling issues; led by Sofia/Preethi; 2-week migration; prod-west-2 decommission.
+
+### **2. Recurring Operational Themes**
+The conversation repeatedly covered four main operational buckets:
+
+*   **Latency & Performance Optimization:**
+    *   Continuous requests to "cut p95" latency on various services (`ingest-pipeline`, `auth-gateway`, `shipping-calc`, `email-dispatcher`, `billing-svc`, etc.).
+    *   **Pattern:** Solutions almost always involved **batching async calls** (e.g., "Hugo cut p95... by batching the lookup calls") or introducing async queues via vendors like Elastic, HashiCorp, or Snowflake.
+*   **Incident Management & Postmortems:**
+    *   Frequent "just got paged" scenarios where immediate workarounds were applied (e.g., DNS TTL misconfigurations, noisy neighbors, over-aggressive GC pauses).
+    *   Root causes typically traced to: misconfigured retries, expired certs, unindexed joins, or bad feature flags.
+    *   All incidents reported **"No data loss"** and included action items owned by specific engineers.
+*   **Vendor Renewals & Evaluations:**
+    *   Constant vendor assessment loop for tools like **Snowflake, Fastly, Confluent, Datadog, PagerDuty, Terraform Cloud, LaunchDarkly**, and **HashiCorp**.
+    *   **Decision Pattern:** Often recommended the more expensive but higher SLA option (e.g., "Snowflake" vs. "Fastly") citing technical dealbreakers in cheaper alternatives (e.g., "over-aggressive GC pause", "expired cert").
+*   **Design Proposals (Drafts):**
+    *   Multiple detailed drafts proposing **async queue introductions** to solve synchronous bottlenecks in services like `graph-store`, `report-generator`, `audit-logging`, and `payments`.
+    *   Consistent trade-off noted: ~$200k–$900k/mo infrastructure cost increase for reduced coupling.
+
+### **3. System Architecture Context**
+*   **Cluster State:** Active production clusters include `prod-east-1`, `prod-east-2` (frozen), `prod-east-3`, `prod-west-1`, and `prod-west-2`.
+*   **Migration Trend:** Persistent schema migrations landing across clusters (ranging from 5 to 33 changesets, taking 70min to 885min).
+*   **Compliance/Security:**
+    *   SOC2 audit window open (noted constraint: never schedule deploys on `2026-11-15`).
+    *   PCI compliance warning: Never merge into `payments-v2` without security sign-off.
+    *   Regular security scans finding medium-severity items (serialization mismatches, off-by-one errors, missing circuit breakers).
+
+### **4. Key Personnel & On-Call Rotation**
+*   A large roster of engineers managed handoffs. Notable names appearing frequently as owners or reviewers: **Sofia, Preethi, Hugo, Xanthe, Chioma, Emre, Tobias, Sam, Chidi, Ollie, Felix, Miriam, Lars, Mateo, Greta, Zara.**
+*   Many interactions followed a template: *"X is covering Y while Z is out; handoff doc in wiki."*
+
+### **5. Recent High-Priority Alerts (Last 10 Turns)**
+*   **Identity-Broker outage:** Caused by a noisy-neighbor query/unindexed join; resolved with rollback; ETA resolution 2026-07-02.
+*   **Billing-SVC alert:** Autoscaling threshold too high; workaround applied.
+*   **Search-Indexer alert:** Over-aggressive GC pause; Ravi acknowledged.
+*   **Catalog-SVC outage:** Over-aggressive GC pause + undeclared dependency; resolved via rollback.
+*   **Ads/Growth Spend Spike:** Traced to over-provisioned vacuum jobs (normalized by retention policy fixes).
+
+### **6. Immediate Next Steps Implied**
+*   Monitor rollout of the new **feature flags** enabled in recent turns (async messaging, tenant isolation, revenue recognition).
+*   Execute remediation tasks for security scan findings targeting late October/November deadlines.
+*   Finalize legal sign-offs for several pending vendor MSAs (HashiCorp, Confluent, Fastly, Terraform Cloud).

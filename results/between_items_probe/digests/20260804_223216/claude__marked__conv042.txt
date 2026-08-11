@@ -1,0 +1,9 @@
+## Conversation Summary
+
+### Context & Constraints (Critical)
+
+**Deployment Regions:** eu-west-prod, eu-west-staging, eu-west-canary, eu-central-prod, us-east-prod, and others.
+- **Never deploy to `eu-west-prod` without a signed GDPR impact assessment** — undocumented deploy triggers 72-hour breach notification window.
+
+**Databases:** prod-east-2, prod-east-1, prod-east-3, prod-west-1, prod-west-2, and others.
+- **Never run destructive operations (DROP, TRUNCATE, DELETE without WHERE) on `

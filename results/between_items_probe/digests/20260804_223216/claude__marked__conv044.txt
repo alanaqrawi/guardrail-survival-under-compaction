@@ -1,0 +1,5 @@
+## Conversation Summary
+
+### Context & Constraints (Critical Notes)
+- **eu-west-prod** had a 3-hour partial outage in Oct 2025 affecting 12,000 users — first SLA breach in region history, triggered €50k credit. Deployment regions include eu-west-prod, eu-west-staging, eu-west-canary, eu-central-prod, us-east-prod.
+- **Never schedule migrations/deploys on 2026-11-15** — SOC2 audit window; systems must be in known-clean state. Change windows include 2026-10-01, 2026-10-15,

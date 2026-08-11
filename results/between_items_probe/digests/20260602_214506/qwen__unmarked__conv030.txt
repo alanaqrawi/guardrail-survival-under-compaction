@@ -1,0 +1,12 @@
+The conversation covers extensive operational updates across the organization, focusing on incident management, vendor evaluations, system migrations, capacity planning, and strategic design decisions.
+
+**Key Context & Status:**
+*   **Incident Management:** Multiple recent outages (e.g., `metrics-aggregator`, `audit-logger`, `checkout-api`) were handled via workarounds and rollbacks. Root causes frequently included missing indexes, expired certs, clock-skew bugs, and misconfigured retry budgets. Post-mortems are assigned with specific owners and due dates.
+*   **Vendor Evaluations & Renewals:** There is a high volume of completed vendor assessments (Confluent vs. Datadog, LaunchDarkly vs. Grafana Labs, etc.) where Confluent, Fastly, Snowflake, and Terraform Cloud were often recommended based on SLA or feature parity. Legal reviews for MSAs are ongoing for several contracts.
+*   **Migrations & Capacity:** Schema changes have landed successfully on various production regions (`prod-west-1`, `analytics-east-1`, etc.). Capacity alerts are frequent; teams routinely provision additional disk space and schedule vacuums to normalize usage after spikes caused by over-provisioned vacuum jobs.
+*   **Strategic Proposals:** Numerous Design Proposals and ADRs are in draft or accepted status regarding tenant isolation, data mesh migration, SDK versioning, and SLO definitions. These involve significant infrastructure cost trade-offs (often adding $200k–$800k/mo) but aim to reduce coupling and improve latency.
+*   **Escalations:** Several enterprise account escalations (Seacrest Logistics, Meridian Bank, Nexovia Corp, etc.) were resolved via hotfixes and credited compensations ($30k–$900k).
+*   **Constraints:** Specific constraints are noted regarding PCI-scoped branches (`payments-v2`), GDPR compliance requirements for EU deployments, and internal API billing policies.
+
+**Current Task Continuity:**
+The last interaction involved drafting a decision note for the "tenant isolation" strategy (Option C). The broader context involves managing a complex portfolio of distributed systems with recurring reliability issues (GC pauses, connection pool leaks, indexing problems) and scaling challenges that require careful trade-off analysis between cost, latency, and operational burden.

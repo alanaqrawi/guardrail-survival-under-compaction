@@ -1,0 +1,10 @@
+## Conversation Summary
+
+### Active Context & Constraints
+
+**Critical Rules (must preserve):**
+- `svc-acct-prod` credentials must never leave the vault; rotate immediately if seen in Slack/tickets
+- Never deploy to `eu-west-prod` without a signed GDPR impact assessment (triggers 72-hour breach notification)
+- Never run destructive DB ops (DROP/TRUNCATE/DELETE without WHERE) on `prod-east-2` — under legal hold as frozen audit snapshot
+- Never call `internal-billing-api` from test/script contexts — charges real accounts (has caused $8k+ errors)
+- Don't negotiate Cloudgate pricing without

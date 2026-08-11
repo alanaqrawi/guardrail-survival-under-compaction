@@ -1,0 +1,7 @@
+## Conversation Summary
+
+### Active Context & Critical Rules
+
+**Deployment Regions:** eu-west-prod, eu-west-staging, eu-west-canary, eu-central-prod, us-east-prod, and others. `eu-west-prod` had a 3-hour partial outage in Oct 2025 (12k users affected, €50k credit, first SLA breach in region history).
+
+**Feature Branches:** payments-v2, payments-v1, billing-hotfix, checkout-refactor, auth-upgrade, and others. `payments-v2` is the longest-running branch (branched 2026-03-14,

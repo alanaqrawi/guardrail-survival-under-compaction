@@ -1,0 +1,8 @@
+## Conversation Summary
+
+### Context & Critical Rules
+- **internal-billing-api**: Never call from test/script — charges real accounts, has caused $8k+ errors.
+- **ENABLE_BULK_DELETE**: Never enable on prod without a pre-approved rollback plan — bypasses soft-delete, recovery is non-trivial.
+- **eu-west-prod**: Never deploy without a signed GDPR impact assessment — undocumented deploys trigger 72-hour breach notification window.
+- **prod-east-2**: Schema freeze since 2025-Q4, running v3 audit schema, no migrations since then.
+- **Nexovia Corp**: Do

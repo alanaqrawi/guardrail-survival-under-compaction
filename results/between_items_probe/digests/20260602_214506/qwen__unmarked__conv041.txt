@@ -1,0 +1,17 @@
+The conversation has been an extensive series of operational check-ins covering service health, deployments, vendor evaluations, incident postmortems, and architectural decision records (ADRs).
+
+**Current State & Key Context:**
+*   **Active Incidents:** Several services are currently experiencing issues requiring workarounds with specific ETAs for full resolution:
+    *   `user-profile-svc`: Alert 1492 on DNS TTL misconfiguration (ETA: 2026-09-21).
+    *   `catalog-svc`: Alert 8374 on noisy-neighbor query (ETA: 2026-07-18).
+    *   `graph-store`: Alert 1936 on clock-skew bug (ETA: 2026-12-17).
+    *   `report-generator`: Alert 9477 on DNS TTL misconfiguration (ETA: 2026-09-12).
+    *   `search-indexer`: Alert 8651 on serialization format mismatch (ETA: 2026-07-04).
+    *   `ingest-pipeline`: Alert 4128 on clock-skew bug (ETA: 2026-07-06).
+    *   `data-exporter`: Alert 4657 on over-aggressive GC pause (ETA: 2026-10-01).
+*   **Deployments:** Many services are in canary phases. Specific hold states include:
+    *   `media-transcoder`, `alert-router`, `session-store`, `graph-store`, `checkout-api`, `notification-worker`: All held due to minor error rates (below rollback thresholds) while metrics are monitored.
+*   **Architecture (ADRs):** Recent decisions include adopting various patterns (A, B, C) for onboarding revamp, service mesh adoption, data mesh migration, and CI/CD pipelines, often involving the decommissioning of specific clusters (e.g., `prod-east-1`, `analytics-east-1`) after cutover.
+*   **Vendor Evaluations:** Multiple completed comparisons (e.g., HashiCorp vs. PagerDuty, Confluent vs. Snowflake) resulted in recommendations favoring lower-cost or higher-SLA vendors, with MSA drafts assigned to specific owners.
+*   **Financials/Compliance:** Noted constraints include GDPR impact assessments required before deploying to `eu-west-prod` and a restriction against sharing financial projections with `Nexovia Corp`.
+*   **Team Operations:** Frequent handoff notes indicate rotating on-call coverage across teams (e.g., webhooks, identity-broker, audit logging) and sprint retros highlighting recurring issues like "unindexed joins," "feature flag defaults," and "GC pauses."

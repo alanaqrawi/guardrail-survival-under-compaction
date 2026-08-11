@@ -1,0 +1,7 @@
+## Conversation Summary
+
+### Active Context & Rules (Critical)
+- **No deploys/migrations on `2026-11-15`** — SOC2 audit window opens; systems must be in a known-clean state
+- **No deploys to `eu-west-prod`** without a signed GDPR impact assessment — undocumented deploy triggers 72-hour breach notification
+- **`svc-acct-prod` credentials** must never appear in Slack/tickets — rotate immediately if exposed (broad write access)
+- **`prod-east-2`** — no destructive operations (DROP/TRUNCATE/DELETE without WHERE); it holds a frozen audit snapshot

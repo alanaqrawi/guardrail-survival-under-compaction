@@ -1,0 +1,10 @@
+## Conversation Summary
+
+### Active Operational State
+
+**Deploy Statuses (most recent):**
+- graph-store: build 4408, canary 51%, error 0.27%, Celeste on call
+- config-server: build 7120, canary 94%, error 0.13%, Ravi on call
+- tax-service: build 6882, canary 69%, error 0.24%, Nadia on call
+- data-exporter: build 4490, canary 19%, error 0.13%, Greta on call
+- payment-processor: build 9928, canary 5%, error 0.

@@ -1,0 +1,10 @@
+## Conversation Summary
+
+### Active Incidents & Alerts
+- **alert-router**: fired (noisy-neighbor query), Ingrid acknowledged, ETA 2026-09-25
+- **identity-broker**: fired (unindexed join), Sione acknowledged, ETA 2026-12-22
+- **search-indexer**: fired (DNS TTL misconfiguration), Chloe acknowledged, ETA 2026-12-09
+
+### Deploy Statuses (most recent)
+- **cache-warmer**: build 1574, 11% canary, 0.84% error, Aiko on-call
+- **media-transc

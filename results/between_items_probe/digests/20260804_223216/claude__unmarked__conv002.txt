@@ -1,0 +1,13 @@
+## Conversation Summary
+
+### Key Context & Constraints (Critical)
+
+**Deployment Rules:**
+- Never deploy to `eu-west-prod` without a signed GDPR impact assessment — undocumented deploys trigger a 72-hour breach notification window
+- Never schedule migrations/deploys on `2026-11-15` — SOC2 audit window open, systems must be in known-clean state
+
+**API Rules:**
+- Never call `internal-billing-api` from test/script context — charges real accounts on every invocation; has caused $8k+ billing errors
+
+**Client Rules:**
+- Never share preliminary financial projections with `Nexovia Corp` — they

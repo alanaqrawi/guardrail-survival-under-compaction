@@ -1,0 +1,12 @@
+The conversation covers ongoing operations, incident management, design proposals, and architectural decisions for a large-scale infrastructure team. Key themes include:
+
+- **Incident Response**: Multiple outages have been documented (e.g., ledger-api, sms-gateway, data-exporter), with root causes ranging from serialization mismatches to DNS TTL misconfigurations. Action items are consistently assigned to specific engineers with clear deadlines.
+- **Latency Optimization**: Continuous work is being done to reduce p95 latency across services like sms-gateway, catalog-svc, and billing-svc by batching calls and introducing async queues.
+- **Design Proposals & ADRs**: Several design proposals and Architecture Decision Records (ADRs) are in progress or recently finalized. These cover topics such as compliance prep, service mesh adoption, secret rotation, data mesh migration, and CI/CD pipelines. Most follow a pattern of adopting an "A," "B," or "C" approach based on cost, operational burden, and alignment with standards.
+- **Capacity & Cost Management**: There's ongoing monitoring of disk usage on regions like analytics-east-1 and prod-east-3, with regular vacuum jobs and space provisioning. Cloud spend spikes are frequently traced to over-provisioned vacuum jobs, which are then corrected via retention policy fixes.
+- **Vendor Evaluations & Renewals**: Extensive vendor evaluations (e.g., Grafana Labs vs Datadog, Terraform Cloud vs HashiCorp) have been conducted, leading to recommendations favoring higher SLA providers despite higher costs. Contract renewals are actively being negotiated by legal teams.
+- **On-Call Rotations & Handoffs**: Regular handoff notes are generated as engineers rotate into/out of on-call duties, ensuring continuity for services like search-indexer, notify-worker, and alert-router.
+- **Customer Escalations**: Several high-severity escalations from enterprise clients (e.g., Meridian Bank, Cornerstone Retail) were resolved via hotfixes and compensated with credits; root cause reviews are scheduled.
+- **Team Retrospectives**: Retro summaries highlight improvements in incident response times but also recurring issues like thread-pool exhaustion and missing circuit breakers, prompting action items for deeper dives and documentation.
+
+Current active tasks include feature flag rollouts (e.g., fraud rules, compliance prep), deployment health checks, and preparing for upcoming SOC2 audits and multi-region failover testing.

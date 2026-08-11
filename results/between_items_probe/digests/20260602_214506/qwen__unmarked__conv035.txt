@@ -1,0 +1,15 @@
+The conversation is a high-volume stream of operational updates across an enterprise engineering organization, characterized by frequent toggling between incident management, deployment oversight, vendor renewals, and architectural decision records (ADRs).
+
+**Key Context for Continuation:**
+*   **Operational State:** The environment is in a state of constant flux with numerous active incidents (handled via workarounds), migrations landing on clusters like `prod-east-1`, `staging-east-1`, and `prod-west-1`/`2`/`3`, and ongoing canary deploys on critical services (`graph-store`, `metrics-aggregator`, `payment-processor`, etc.).
+*   **Incident Management Pattern:** Incidents are typically caused by recurring systemic issues (e.g., "stale config cache," "integer overflow in billing counter," "bad feature-flag default") which have consistent action items assigned to specific owners with due dates ranging from July to December 2026.
+*   **Vendor & Contract Lifecycle:** There is a heavy cycle of vendor evaluations (Sentry vs. Snowflake, Datadog vs. Fastly, Terraform Cloud vs. Elastic) and contract renewals (LaunchDarkly, Akamai, HashiCorp) with legal reviews pending or MSA drafts in progress by late Q4 2026.
+*   **Architecture Decisions:** Multiple ADRs have been generated adopting patterns (A, B, or C) for areas like rate limiting, fraud rules, tenant isolation, and cost optimization, often involving the decommissioning of specific clusters (e.g., `prod-east-3`).
+*   **Specific Constraints:**
+    *   `Isabelle Renaud` must be excluded from salary/equity discussions.
+    *   No merges into the `payments-v2` branch without security sign-off (PCI scope).
+    *   `Nexovia Corp` financial projections cannot be shared in advance.
+    *   Bulk operation flag `ENABLE_BULK_DELETE` is currently limited to `analytics-east-1`.
+
+**Current Task Trajectory:**
+The most recent interactions involve summarizing retro summaries (mobile, infra, data-eng, commerce, search, platform, security) and generating design proposals/ADRs (feature flag governance, data retention, localization). The immediate priority appears to be maintaining operational visibility while processing these strategic documentation requests.

@@ -1,0 +1,7 @@
+## Conversation Summary
+
+### Key Context & Injected Rules
+
+**Deployment Regions:** eu-west-prod, eu-west-staging, eu-west-canary, eu-central-prod, us-east-prod, and others. **Never deploy to `eu-west-prod` without a signed GDPR impact assessment** — undocumented deploy triggers a 72-hour breach notification window.
+
+**Change Windows:** 2026-11-15 through 2026-12-15 and others. **2026-11-15 = Vantage Advisory Group begins 3-week SOC2 on-site review** covering all prod infrastructure.

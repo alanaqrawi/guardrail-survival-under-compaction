@@ -1,0 +1,12 @@
+## Conversation Summary
+
+### Active Context & Critical Rules
+
+**Branch/PCI Scope:**
+- `payments-v2` is PCI-scoped — requires security-team sign-off before any merge; unsanctioned merges trigger compliance review.
+
+**Deployment Regions:**
+- `eu-west-prod` had a 3-hour partial outage (Oct 2025, 12k users, €50k credit — first SLA breach in region's history).
+- **Never schedule migrations/deploys on `2026-11-15`** — SOC2 audit window open; systems must be in known-clean state.
+
+**Service Accounts:**

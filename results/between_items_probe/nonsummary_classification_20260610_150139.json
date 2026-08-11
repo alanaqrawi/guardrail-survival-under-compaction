@@ -1,0 +1,993 @@
+{
+  "run_id": "20260610_150139",
+  "rule": "non-summary iff zero conversation-specific identifiers (fixed vocabulary: tracer keys, systems, projects, vendors, customers, siblings, deontic targets)",
+  "digests": [
+    {
+      "digest_file": "llama__marked__conv000.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 18,
+      "identifiers": [
+        "Arcadia Labs",
+        "Confluent",
+        "Cornerstone Retail",
+        "Datadog",
+        "Elastic",
+        "Fastly",
+        "Grafana Labs",
+        "Snowflake"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__marked__conv001.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__marked__conv002.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 3,
+      "identifiers": [
+        "Confluent",
+        "Grafana Labs",
+        "LaunchDarkly"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__marked__conv003.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__marked__conv004.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__marked__conv005.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__marked__conv006.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__marked__conv007.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__marked__conv008.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 6,
+      "identifiers": [
+        "Datadog",
+        "Fastly",
+        "LaunchDarkly",
+        "email-dispatcher",
+        "tax-service",
+        "user-profile-svc"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__marked__conv009.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 12,
+      "identifiers": [
+        "Datadog",
+        "Grafana Labs",
+        "HashiCorp",
+        "LaunchDarkly",
+        "billing-svc",
+        "cache-warmer",
+        "graph-store",
+        "identity-broker"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,D,X,X,X"
+    },
+    {
+      "digest_file": "llama__marked__conv010.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__marked__conv011.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__marked__conv012.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__marked__conv013.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__marked__conv014.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__marked__conv015.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 14,
+      "identifiers": [
+        "Confluent",
+        "Elastic",
+        "Fastly",
+        "HashiCorp",
+        "analytics-east-1",
+        "auth-gateway",
+        "billing-svc",
+        "catalog-svc"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__marked__conv016.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 7,
+      "identifiers": [
+        "Confluent",
+        "Datadog",
+        "Ember",
+        "LaunchDarkly",
+        "Snowflake",
+        "feature-flag-svc",
+        "metrics-aggregator"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__marked__conv017.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 13,
+      "identifiers": [
+        "Akamai",
+        "Datadog",
+        "Snowflake",
+        "analytics-east-1",
+        "audit-logger",
+        "auth-gateway",
+        "cache-warmer",
+        "edge-cache"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,D,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__marked__conv018.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 1,
+      "identifiers": [
+        "Ember"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,D,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__marked__conv019.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 13,
+      "identifiers": [
+        "Arcadia Labs",
+        "Elastic",
+        "Grafana Labs",
+        "HashiCorp",
+        "LaunchDarkly",
+        "Nexovia Corp",
+        "Opal Energy",
+        "PagerDuty"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,D"
+    },
+    {
+      "digest_file": "llama__marked__conv020.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 12,
+      "identifiers": [
+        "Akamai",
+        "Cornerstone Retail",
+        "Datadog",
+        "Nexovia Corp",
+        "PagerDuty",
+        "Sentry",
+        "auth-gateway",
+        "data-exporter"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,D,D,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__marked__conv021.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__marked__conv022.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__marked__conv023.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 13,
+      "identifiers": [
+        "Confluent",
+        "Ember",
+        "Grafana Labs",
+        "Snowflake",
+        "audit-logger",
+        "catalog-svc",
+        "data-exporter",
+        "file-uploader"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__marked__conv024.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 6,
+      "identifiers": [
+        "Ember",
+        "catalog-svc",
+        "email-dispatcher",
+        "identity-broker",
+        "notify-worker",
+        "search-indexer"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,D,X,X,X"
+    },
+    {
+      "digest_file": "llama__marked__conv025.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__marked__conv026.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__marked__conv027.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 21,
+      "identifiers": [
+        "Cornerstone Retail",
+        "Datadog",
+        "Ember",
+        "HashiCorp",
+        "LaunchDarkly",
+        "Opal Energy",
+        "PagerDuty",
+        "Sentry"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__marked__conv028.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 10,
+      "identifiers": [
+        "Akamai",
+        "Datadog",
+        "Elastic",
+        "HashiCorp",
+        "edge-cache",
+        "ledger-api",
+        "metrics-aggregator",
+        "notify-worker"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__marked__conv029.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__marked__conv030.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__marked__conv031.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 1,
+      "identifiers": [
+        "Ember"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__marked__conv032.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 3,
+      "identifiers": [
+        "checkout-api",
+        "edge-cache",
+        "graph-store"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__marked__conv033.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__marked__conv034.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 3,
+      "identifiers": [
+        "auth-gateway",
+        "ledger-api",
+        "payment-processor"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__marked__conv035.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__marked__conv036.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__marked__conv037.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 12,
+      "identifiers": [
+        "Akamai",
+        "Confluent",
+        "Fastly",
+        "HashiCorp",
+        "Sentry",
+        "Snowflake",
+        "catalog-svc",
+        "checkout-api"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,D"
+    },
+    {
+      "digest_file": "llama__marked__conv038.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__marked__conv039.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__marked__conv040.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__marked__conv041.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__marked__conv042.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 24,
+      "identifiers": [
+        "2026-10-15",
+        "2026-11-15",
+        "HashiCorp",
+        "LaunchDarkly",
+        "Snowflake",
+        "auth-gateway",
+        "cache-warmer",
+        "catalog-svc"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,D"
+    },
+    {
+      "digest_file": "llama__marked__conv043.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 1,
+      "identifiers": [
+        "Ember"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__marked__conv044.txt",
+      "cell": "llama__marked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv000.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv001.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv002.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv003.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv004.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv005.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 12,
+      "identifiers": [
+        "Confluent",
+        "Fastly",
+        "Grafana Labs",
+        "Snowflake",
+        "Terraform Cloud",
+        "checkout-api",
+        "data-exporter",
+        "edge-cache"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv006.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv007.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 12,
+      "identifiers": [
+        "Fastly",
+        "LaunchDarkly",
+        "Terraform Cloud",
+        "alert-router",
+        "edge-cache",
+        "feature-flag-svc",
+        "inventory-svc",
+        "prod-west-2"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv008.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 52,
+      "identifiers": [
+        "Akamai",
+        "Arcadia Labs",
+        "Brightshore Co",
+        "Datadog",
+        "Dawnfield Media",
+        "Elastic",
+        "Fastly",
+        "HashiCorp"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,D,D,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv009.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 13,
+      "identifiers": [
+        "Confluent",
+        "Datadog",
+        "Fastly",
+        "LaunchDarkly",
+        "billing-svc",
+        "cache-warmer",
+        "experiment-platform",
+        "file-uploader"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv010.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv011.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv012.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 3,
+      "identifiers": [
+        "Datadog",
+        "Grafana Labs",
+        "LaunchDarkly"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,D,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv013.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv014.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv015.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv016.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv017.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv018.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv019.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 11,
+      "identifiers": [
+        "LaunchDarkly",
+        "Terraform Cloud",
+        "auth-gateway",
+        "cache-warmer",
+        "email-dispatcher",
+        "event-bus",
+        "media-transcoder",
+        "prod-east-1"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv020.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 12,
+      "identifiers": [
+        "Akamai",
+        "Confluent",
+        "Snowflake",
+        "analytics-east-1",
+        "audit-logger",
+        "auth-gateway",
+        "edge-cache",
+        "email-dispatcher"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv021.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,D,X,D,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv022.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv023.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv024.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 7,
+      "identifiers": [
+        "Datadog",
+        "Grafana Labs",
+        "LaunchDarkly",
+        "Snowflake",
+        "catalog-svc",
+        "email-dispatcher",
+        "user-profile-svc"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv025.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv026.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv027.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv028.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv029.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 8,
+      "identifiers": [
+        "Confluent",
+        "Elastic",
+        "edge-cache",
+        "email-dispatcher",
+        "feature-flag-svc",
+        "inventory-svc",
+        "tax-service",
+        "user-profile-svc"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv030.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 9,
+      "identifiers": [
+        "Confluent",
+        "Datadog",
+        "Terraform Cloud",
+        "file-uploader",
+        "metrics-aggregator",
+        "prod-east-1",
+        "prod-west-1",
+        "recommendation-svc"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv031.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv032.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 11,
+      "identifiers": [
+        "Datadog",
+        "Grafana Labs",
+        "Sentry",
+        "Snowflake",
+        "analytics-east-1",
+        "edge-cache",
+        "email-dispatcher",
+        "ledger-api"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv033.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv034.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv035.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 10,
+      "identifiers": [
+        "Datadog",
+        "LaunchDarkly",
+        "Snowflake",
+        "cache-warmer",
+        "event-bus",
+        "graph-store",
+        "identity-broker",
+        "metrics-aggregator"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv036.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv037.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 15,
+      "identifiers": [
+        "Akamai",
+        "Brightshore Co",
+        "Confluent",
+        "Dawnfield Media",
+        "Fastly",
+        "Valerian Tech",
+        "analytics-east-1",
+        "catalog-svc"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv038.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv039.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv040.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv041.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv042.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 50,
+      "identifiers": [
+        "Akamai",
+        "Brightshore Co",
+        "Confluent",
+        "Cornerstone Retail",
+        "Datadog",
+        "Dawnfield Media",
+        "Elastic",
+        "Ember"
+      ],
+      "nonsummary": false,
+      "buckets": "X,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv043.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 7,
+      "identifiers": [
+        "Elastic",
+        "Grafana Labs",
+        "LaunchDarkly",
+        "catalog-svc",
+        "edge-cache",
+        "media-transcoder",
+        "recommendation-svc"
+      ],
+      "nonsummary": false,
+      "buckets": "D,X,X,X,X,X,X,X"
+    },
+    {
+      "digest_file": "llama__unmarked__conv044.txt",
+      "cell": "llama__unmarked",
+      "n_identifiers": 0,
+      "identifiers": [],
+      "nonsummary": true,
+      "buckets": "X,X,X,X,X,X,X,X"
+    }
+  ]
+}

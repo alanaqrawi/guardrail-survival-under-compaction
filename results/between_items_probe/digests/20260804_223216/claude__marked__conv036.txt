@@ -1,0 +1,6 @@
+## Conversation Summary
+
+### Context & Ongoing Work
+
+**Active Systems Under Discussion:**
+- Multiple services monitored: auth-gateway, metrics-aggregator, event-bus, billing-svc, ledger-api, checkout-api, ingest-pipeline, session-store, trace-collector, feature-flag-svc, graph-store, inventory-svc, shipping-calc, email-dispatcher, user-profile-svc, sms-gateway, catalog-svc, notify-worker, payment-processor, recommendation-svc, search-indexer, media-transcoder, data-exporter, audit-logger, edge-cache, config-server, webhook-relay,

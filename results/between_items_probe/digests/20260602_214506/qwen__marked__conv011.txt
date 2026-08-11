@@ -1,0 +1,19 @@
+### Conversation Summary
+
+The conversation consists of a long, repetitive sequence of operational updates and status checks typical for an on-call engineering assistant. The context spans numerous services (e.g., `webhook-relay`, `checkout-api`, `user-profile-svc`), infrastructure regions (`prod-east-1`, `prod-west-2`, `analytics-east-1`), vendor evaluations (Elastic, Datadog, Confluent, Fastly, Akamai), and incident response timelines.
+
+**Key Themes & Patterns:**
+*   **Deploy Status Checks:** Frequent queries regarding canary rollout percentages, error rates, and specific build numbers for various services.
+*   **Incident Reviews & Outages:** Detailed postmortems citing root causes like "leaked connection pools," "integer overflows in billing counters," "bad feature-flag defaults," and "DNS TTL misconfigurations." All actions typically involve rollbacks or traffic shifting to read-replicas with specific owners and deadlines.
+*   **Performance/Latency Work:** Repeated mentions of reducing p95 latency via batching calls (e.g., `sms-gateway`, `payment-processor`, `edge-cache`).
+*   **Vendor Evaluations & Renewals:** Multiple completed evaluations comparing vendors (often recommending cheaper or higher-uptime options despite tradeoffs) with associated MSA drafting deadlines.
+*   **On-Call Coverage Handoffs:** Constant updates on who is covering specific services during staff absences, referencing wiki runbooks and rotation dates.
+*   **Capacity & Cost:** Recurring alerts about disk usage approaching critical thresholds (e.g., 90%+) requiring storage provisioning and vacuum jobs, alongside spikes in cloud spend attributed to over-provisioned vacuum jobs.
+*   **Escalations:** Customer incidents (Opal Energy, Seacrest Logistics, Meridian Bank) involving SLA breaches, hotfixes, and financial credits.
+*   **Design Proposals & ADRs:** Draft proposals and Architectural Decision Records for adopting async patterns, queue introductions, and service mesh access control rewrites.
+
+**Current Task State:**
+There is no single active task being worked on; the user has been querying across a wide range of independent topics. The most recent interaction involves drafting a **design proposal for revenue recognition** (Owner: Lena, focusing on introducing an async queue via Snowflake to reduce latency in `catalog-svc`). Prior to that, there were multiple requests for Q3 performance summaries containing placeholder variables (`{sys}`, `{p}`, etc.).
+
+**Immediate Context Needed to Continue:**
+To resume assisting effectively, you need to know which specific domain you want to focus on next (e.g., investigating a specific incident mentioned in the logs, drafting the pending revenue recognition design details, checking a specific deploy status, or addressing a recurring security scan finding).

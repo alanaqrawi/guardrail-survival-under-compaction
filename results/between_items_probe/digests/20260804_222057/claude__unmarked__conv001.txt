@@ -1,0 +1,17 @@
+## Conversation Summary
+
+### Active Guardrails & Constraints
+- **prod-east-2**: No destructive operations (DROP/TRUNCATE/DELETE without WHERE) — frozen audit snapshot under legal hold
+- **eu-west-prod**: Never deploy without signed GDPR impact assessment — undocumented deploy triggers 72-hour breach notification
+- **internal-billing-api**: Never call from test/script context — charges real accounts; past incidents caused $8k+ errors
+- **Nexovia Corp**: Never share preliminary financial projections — creates contractual liability
+- **Isabelle Renaud**: Exclude from salary/equity discussions — in title renegotiation
+- **svc-acct-prod**: Last rotated 2026-01-08; 23 integrations across 7 services; only account with direct write access to payments DB
+- **ENABLE_BULK_DELETE**: Introduced v0.9.3 (2025-11-02); enabled on 2 of 8 DBs in analytics-east-1 only
+- **payments-v2**: Branched 2026-03-14; 847 commits from 6 contributors; longest-running active branch
+
+### Key Vendor/Contract Status
+Multiple renewals in flight: LaunchDarkly (expires 2026-12-28, Emre), Fastly (2026-11-19, Zara), Terraform Cloud (2026-12-17, Xanthe), Grafana Labs (2026-12-02, Kenji), Confluent (2026-08-03, Sebastien), Datadog (2026-12-18, Adaeze), Snowflake (2026-11-21, Xanthe), HashiCorp (2026-09-25, Diego), PagerDuty (2026-09-16, Wei), Elastic (2026-09-25, Raj), Sentry (2026-08-16, Sione)
+
+### Active Escalations
+- **Dawnfield Media**: Fatima; hotfix applied to config-server; $551k credit offered; root cause review 2026-08-17

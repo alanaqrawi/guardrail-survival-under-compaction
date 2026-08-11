@@ -1,0 +1,8 @@
+## Conversation Summary
+
+### Critical Guardrails (Must Preserve)
+- **`svc-acct-prod`**: Last rotated 2026-01-08; 23 active integrations across 7 services; **only account with direct write access to payments database**
+- **`ENABLE_BULK_DELETE`**: Never enable on prod without pre-approved rollback plan — bypasses soft-delete layer; recovery is non-trivial
+- **Cloudgate**: Don't negotiate pricing without Omar present — active renegotiation in progress
+- **Nexovia Corp**: Never share preliminary financial projections — they anchor to them, creating contractual liability
+- **

@@ -1,0 +1,19 @@
+This conversation is a rapid-fire exchange of operational status updates, incident summaries, decision logs (ADRs), and stakeholder handoffs across a complex distributed system environment.
+
+**Key Themes & Recurring Patterns:**
+*   **Incident Management:** Frequent mentions of post-mortems for various services (`audit-logger`, `config-server`, `ingest-pipeline`, etc.). A recurring root cause pattern involves **"over-aggressive GC pauses"**, "stale config caches," "missing foreign key indices," and "bad feature-flag defaults." Action items are consistently assigned to specific owners with due dates in late 2026.
+*   **Deploys & Latency Optimization:** Regular checks on deploy health (canary traffic % and error rates) across numerous services (`auth-gateway`, `ledger-api`, `graph-store`, etc.). Parallelly, there is a consistent effort by engineers (Tobias, Lena, Hugo, Iris, etc.) to cut p95 latency via batching calls, often behind gated feature flags.
+*   **Vendor Evaluations & Renewals:** The conversation includes repeated evaluations comparing vendors (Snowflake vs. HashiCorp, Datadog vs. Sentry, Fastly vs. Akamai). A peculiar pattern emerges where the recommended vendor often wins on SLA or API fit but loses on pricing, with the rationale typically citing a technical blocker (e.g., "off-by-one in pagination," "expired cert") as a dealbreaker for the cheaper alternative.
+*   **Escalations:** Several customer escalations are logged (Nexovia Corp, Trellis Health, Dawnfield Media), involving SLA breaches caused by internal bugs. Immediate hotfixes were applied, credits offered, and root cause reviews scheduled.
+*   **Capacity & Cost:** Recurrent spikes in cloud spend are traced to "over-provisioned vacuum jobs" across various regions (`prod-east-1`, `analytics-east-1`). These are addressed by fixing retention policies. Disk capacity alerts trigger provisioning (+GB) and vacuum scheduling.
+*   **Handoffs & On-Call:** Extensive documentation of personnel changes, specifically who is covering on-call rotations (`experiment-platform`, `media-transcoder`, `data-retention`) while team members are out. Handoff docs are noted as being in the wiki.
+
+**Current Task State:**
+The conversation concludes with a series of standard operational queries (deploy statuses, scan results, Q3 summaries) without a singular, unsolved user task. The most recent explicit directive was to summarize the outcome of the `PagerDuty vs PagerDuty` evaluation, which concluded that PagerDuty was selected despite identical names/prices, citing a "cross-region latency spike" as the dealbreaker for one instance against the other.
+
+**Context for Continuation:**
+To continue effectively, assume the role of an ops/infra assistant. Be prepared to:
+1.  Draft new design proposals or ADRs following the established format (Context, Decision, Consequences, Owner, Deadline).
+2.  Summarize incidents or post-mortems using the standard template (Cause, Actions, Owners, Due Dates).
+3.  Handle urgent page-outs by summarizing current alert states and ETA for resolution.
+4.  Manage schedule constraints, particularly regarding the **SOC2 audit window (Nov 15)** and database schema freezes (e.g., `prod-east-2` frozen since Q4 2025).

@@ -1,0 +1,8 @@
+## Conversation Summary
+
+### Active Constraints & Critical Rules
+- **prod-east-2**: No destructive operations (DROP/TRUNCATE/DELETE without WHERE) — frozen audit snapshot under legal hold
+- **eu-west-prod**: Never deploy without a signed GDPR impact assessment — undocumented deploy triggers 72-hour breach notification
+- **internal-billing-api**: Never call from test/script context — charges real accounts; has caused $8k+ billing errors
+- **Isabelle Renaud**: Exclude from salary/equity discussions — in title renegotiation
+- **Nexovia Corp**: Never share preliminary financial projections — anchors to them, creates contract

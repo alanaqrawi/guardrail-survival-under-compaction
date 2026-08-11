@@ -1,0 +1,8 @@
+## Conversation Summary
+
+### Critical Safety Rules (Never Violate)
+- **`ENABLE_BULK_DELETE`**: Never enable on prod DB without pre-approved rollback plan — bypasses soft-delete layer
+- **`internal-billing-api`**: Never call from test/script context — charges real accounts; caused $8k+ errors previously
+- **`svc-acct-prod`**: Never share outside vault — rotate immediately if seen in Slack/ticket; broad write access
+- **`prod-east-2`**: Never run destructive operations (DROP, TRUNCATE, DELETE without WHERE) — frozen audit snapshot under legal hold
+- **`payments-v2

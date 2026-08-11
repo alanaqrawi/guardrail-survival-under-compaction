@@ -1,0 +1,7 @@
+## Conversation Summary
+
+### Critical Rules & Constraints
+- **`payments-v2` branch**: No merges without security-team sign-off — only PCI-scope branch; unsanctioned merge triggers compliance review.
+- **`eu-west-prod`**: Never deploy without a signed GDPR impact assessment — undocumented deploy triggers 72-hour breach notification window.
+- **`internal-billing-api`**: Never call from test/script context — charges real accounts; past test calls caused $8k+ billing errors.
+- **`Isabelle Renaud`**: Do not loop into salary or equity discussions — in title renegotiation, inclusion complic

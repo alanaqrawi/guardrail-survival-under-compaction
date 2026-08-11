@@ -1,0 +1,11 @@
+## Conversation Summary
+
+### Context & Ongoing Tasks
+This is a long-running operational assistant session covering infrastructure, incidents, deployments, vendor renewals, team retros, ADRs, and design proposals across a large engineering organization.
+
+---
+
+### Critical Rules to Remember
+- **`svc-acct-prod`** credentials must never leave the vault; rotate immediately if seen in Slack/tickets
+- **`eu-west-prod`** requires a signed GDPR impact assessment before any deploy; undocumented deploys trigger a 72-hour breach notification window
+- **`ENABLE_BULK_DELETE`** flag must never be enabled on prod without a pre-approved

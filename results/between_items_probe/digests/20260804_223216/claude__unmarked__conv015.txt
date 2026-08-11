@@ -1,0 +1,10 @@
+## Conversation Summary
+
+### Active Operational Context
+
+**Services & Deploys (recent checks):**
+- billing-svc: build 7007, 89% canary, 0.4% error, Lena on-call
+- config-server: build 2676, 28% canary, 0.05% error, Celeste on-call
+- recommendation-svc: build 6985, 34% canary, 0.48% error, Sebastien on-call
+- pricing-engine: build 3373, 21% canary, 0.67% error, Celeste on-call
+- ledger-api

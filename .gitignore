@@ -1,0 +1,60 @@
+# Secrets — NEVER commit
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# Large / regenerable results
+results/rollouts/*
+results/figures/*
+!results/rollouts/.gitkeep
+!results/figures/.gitkeep
+
+# Exploratory probe data (superseded by between-items; the .py modules in tracer/ stay)
+results/deontic_probe/
+results/stress_probe/
+results/fracture_probe/
+results/id_fracture_probe/
+results/phase0_results.md
+
+# Retired Groq island (not part of the Anthropic + Together pipeline)
+config/models.py
+tracer/phase0.py
+
+# Draft history — only paper.md / paper.pdf / paper.docx are canonical
+paper_draft.md
+paper_draft_final*
+paper.html
+
+# Reviewer files — NEVER commit
+Sol5-6*
+AlanCompaction_AAComments*
+
+# Internal working docs — not for the public repo
+Response to *
+Read for Sol*
+Cover note*
+COMMENT_DISPOSITIONS.md
+SOL_DISPOSITIONS.md
+ASSEMBLY_REPORT.md
+CC_deontic_rescore_instructions.md
+DING_PREREAD_NOTE.md
+Notes for later*
+LI-Comms-paper-session.md
+Claude cell - author confirmation checklist.md
+ARXIV_SUBMISSION.md
+Medium Article.txt
+PAPER_NUMBERS_FINAL.md
+
+# Stray exports / scratch
+AI Guardrail*
+AI_Guardrail*
+TK + AA*
+signal-verdict-diagram.html
+New folder/

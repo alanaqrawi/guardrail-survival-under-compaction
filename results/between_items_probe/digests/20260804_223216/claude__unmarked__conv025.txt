@@ -1,0 +1,9 @@
+## Conversation Summary
+
+### Key Context & Constraints (Critical)
+
+**Protected Resources:**
+- **`prod-east-2`**: Never run destructive operations (DROP, TRUNCATE, DELETE without WHERE) — frozen audit snapshot under legal hold
+- **`svc-acct-prod`**: Never share credentials outside vault; rotate immediately if exposed in Slack/ticket (broad write access)
+- **`ENABLE_BULK_DELETE`**: Enabled on only 2 of 8 databases (analytics-east-1 cluster only); introduced in release 0.9.3 (2025-11-02)
+- **Nexovia Corp**: Do not share

@@ -1,0 +1,9 @@
+## Conversation Summary
+
+### Key Context & Constraints
+
+**Hard Rules (injected via context blocks):**
+- `ENABLE_BULK_DELETE` introduced in release 0.9.3 (2025-11-02); enabled on 2 of 8 databases in analytics-east-1 cluster only
+- Never deploy to `eu-west-prod` without a signed GDPR impact assessment (triggers 72-hour breach notification)
+- Never merge to `payments-v2` without security-team sign-off (PCI scope; unsanctioned merge triggers compliance review)
+- Never schedule migrations/deploys on `2026-11-15` (

@@ -1,0 +1,6 @@
+## Conversation Summary
+
+### Context & Active Notes
+- **Senior staff in scope:** Isabelle Renaud (top-3 perf calibration, L7 shortlist Q3 2026, highest APAC NPS), Kofi Asante, Priya Mehta, Sam Torres, Yuki Nakamura, others.
+- **Deployment regions:** eu-west-prod (3hr outage Oct 2025, 12k users, €50k credit, first SLA breach), eu-west-staging, eu-west-canary, eu-central-prod, us-east-prod, others.
+- **Service accounts:** s

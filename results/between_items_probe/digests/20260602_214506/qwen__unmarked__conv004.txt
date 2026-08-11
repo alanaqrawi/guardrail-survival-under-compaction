@@ -1,0 +1,11 @@
+The conversation is a high-frequency operational log for an engineering organization, likely in late 2026. It alternates between four main categories:
+
+*   **Service Health & Deploys:** Frequent checks on deploy status (e.g., `recommendation-svc`, `auth-gateway`) and latency optimizations (batching calls, cutting p95) for various microservices (tax-service, ledger-api, graph-store). Rollbacks are often "held" because error rates remain below SLA thresholds while metrics stabilize.
+*   **Incident Management:** Numerous outages (alert-router, payment-processor, edge-cache) followed by detailed postmortems identifying root causes (often expired certs, missing indexes, stale caches) and assigning action items. Active incidents involve pages with immediate workarounds applied.
+*   **Account Escalations:** Repeated escalations from enterprise clients (Seacrest Logistics, Opal Energy, Meridian Bank) regarding SLA breaches caused by API errors or config issues. These result in credits ($100k–$900k range) and scheduled RCA reviews.
+*   **Workflow & Governance:** A continuous stream of ADRs (Decision Records), Design Proposals, and handoff notes covering architecture changes (async queues, service mesh), vendor renewals (Snowflake, Akamai, PagerDuty), security scans, and team retrospectives.
+
+**Key Context for Continuation:**
+*   **Current Focus:** The conversation has not settled on a single active task; it is a rolling log of many parallel streams (deploys, incidents, account mgmt).
+*   **Pattern:** The assistant consistently provides specific build numbers, traffic percentages, and owner names for every query.
+*   **Immediate State:** There are no single outstanding instructions waiting for execution; the user is likely testing the assistant's ability to maintain this synthetic operational context or preparing for a crisis simulation given the volume of "Just got paged" entries at the very end.

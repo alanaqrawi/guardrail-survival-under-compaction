@@ -1,0 +1,10 @@
+## Conversation Summary
+
+### Active Operational State
+
+**Services & Deploys (recent checks):**
+- config-server: build 6410, canary 50%, error 0.46%, Chioma on-call
+- catalog-svc: build 7989, canary 20%, error 0.76%, Pavel on-call
+- audit-logger: build 5120, canary 33%, error 0.73%, Anna on-call
+- shipping-calc: build 7787, canary 35%, error 0.78%, Felix on-call
+- experiment-platform: build 4508, canary 87%, error 0.80

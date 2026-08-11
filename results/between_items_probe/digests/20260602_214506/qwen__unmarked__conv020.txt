@@ -1,0 +1,35 @@
+The conversation spans numerous operational updates, incident responses, escalations, design proposals, ADRs, vendor evaluations, and capacity reviews across the organization's distributed engineering teams. Key patterns include frequent synchronous-to-async refactoring efforts to reduce latency (e.g., email-dispatcher, auth-gateway, file-uploader), recurring incidents often tied to unindexed joins, GC pauses, or stale config caches, and multiple client escalations requiring hotfixes and credits.
+
+**Current Active Incidents & Page Alerts:**
+1.  **payment-processor**: Alert at 4625 on a `clock-skew bug`. Workaround applied; full resolution ETA **2026-08-24**.
+2.  **graph-store**: Alert at 8074 on an `integer overflow in the billing counter`. Workaround applied; full resolution ETA **2026-07-05**.
+
+**Deploy Status Checks:**
+*   **media-transcoder**: Build 7144 (12% canary), error rate 0.29%. **Nina is on call**.
+
+**Ongoing Workstreams & Decisions:**
+*   **Design Proposals/ADRs**: Multiple drafts and accepted ADRs pending implementation for fraud rules, search relevance, cost optimization, data-retention, and tenant isolation. Efforts range from 5 to 35 weeks.
+*   **Vendor Renewals**: Contracts expiring soon require legal review and procurement sign-off:
+    *   **Datadog**: Expires **2026-12-17** (Adaeze leading).
+    *   **Snowflake**: Expires **2026-11-23** (Tariq leading).
+    *   **Akamai**: Expires **2026-12-10** (Nina leading).
+    *   **Confluent**: Expires **2026-11-15** (Theo leading).
+    *   **HashiCorp**: Expires **2026-08-02** (Brendan leading).
+*   **Capacity Issues**: Several clusters are high on disk usage requiring vacuums:
+    *   **staging-east-1**: 5% disk (recently provisioned).
+    *   **analytics-east-1**: 99% disk (provisioned +608GB).
+    *   **prod-east-3**: 48% disk (provisioned +206GB).
+    *   **prod-west-2**: 39% disk (provisioned +385GB).
+
+**Recent Escalations:**
+*   **Cornerstone Retail** (Sept 25): Issue resolved via hotfix; $84k credit offered. Review scheduled for Aug 16.
+*   **Valerian Tech** (July 16): Issue resolved via hotfix; credit details provided. Review scheduled for Dec 3.
+*   **Arcadia Labs** (Dec 1): Issue resolved via hotfix; $779k credit offered. Review scheduled for Nov 11.
+
+**Upcoming Events:**
+*   **SOC2 Review**: Vantage Advisory Group onsite review begins **Nov 15, 2026** (3-week engagement).
+*   **Q4 Focus Areas**: Topic rollout, cause remediation, and pilot launches identified in repeated Q3 summary templates.
+
+**Key Personnel Context:**
+*   **Senior Team**: Isabelle Renaud, Kofi Asante, Priya Mehta, Sam Torres, Yuki Nakamura listed as top performers/promotion candidates.
+*   **Coverage**: Various hands-on keys (Hugo, Theo, Celeste) are covering rollouts while others (Yuki, Theo) are out.

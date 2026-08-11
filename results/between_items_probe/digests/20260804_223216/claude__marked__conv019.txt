@@ -1,0 +1,10 @@
+## Conversation Summary
+
+### Active Incidents / Pages
+- **ingest-pipeline**: missing index on foreign key; Chidi acknowledged, workaround applied, ETA 2026-09-25
+- **media-transcoder**: off-by-one in pagination cursor; Luz acknowledged, ETA 2026-12-17
+- **user-profile-svc**: serialization format mismatch; Wei acknowledged, ETA 2026-12-04
+- **auth-gateway**: thread-pool exhaustion; Cyrus acknowledged, ETA 2026-10-20
+
+### Deploys Being Monitored (Hold/Watch)
+- **audit-logger

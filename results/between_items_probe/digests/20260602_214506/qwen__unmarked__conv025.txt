@@ -1,0 +1,24 @@
+Here is a concise summary of the conversation, preserving key context for continuation:
+
+### **Current Status & Active Incidents**
+*   **Active Incidents:** Several services are currently alerting or under investigation. The most recent paged incident involves `experiment-platform` (thread-pool exhaustion), followed by issues in `auth-gateway` (leaked connection pool) and `trace-collector` (autoscaling threshold). Previous incidents involved `media-transcoder`, `ingest-pipeline`, and various payment/recommendation services. Workarounds have been applied; full resolutions have varying ETAs through late Q4 2026.
+*   **Recent Deploys:** Most canary deploys (`billing-svc`, `shipping-calc`, `email-dispatcher`, etc.) are currently healthy with low error rates (<1%), though some are being closely watched due to slightly elevated metrics (e.g., `email-dispatcher` at 0.85% error rate). Rollbacks are generally held pending evaluation within 30 minutes if thresholds are breached.
+
+### **Key Decisions & Strategic Initiatives (ADRs/Designs)**
+The team has recently finalized several architectural decisions (ADRs) adopting specific patterns to address scaling and latency issues across different domains (async messaging, cost optimization, vendor consolidation, data mesh, GDPR deletion, etc.). These migrations involve decommissioning old regions/clusters (e.g., `analytics-east-1`, `prod-west-1`) and shifting costs/effort to new owners (typically senior engineers like Greta, Zara, Celeste, or Dana).
+
+*   **Recent Decisions Include:** ADRs for async messaging (Pattern A/C), cost optimization (Pattern B/C), vendor consolidation (Pattern B/C), and access control rewrites.
+*   **Ongoing Design Proposals:** Drafts exist for localization, audit logging, capacity planning, GDPR data deletion, and multi-region failover. Owners include Nadia, Cyrus, Lars, and others, with review deadlines ranging from July to December 2026.
+
+### **Operational Context**
+*   **Vendor Management:** Multiple renewal evaluations are underway or completed (Terraform Cloud, Sentry, LaunchDarkly, Snowflake, Fastly, Akamai, Datadog, PagerDuty). Procurement sign-offs are required before specific dates in late 2026/early 2027. Contracts often face sticking points regarding SLAs for specific traffic types (pricing, lookup, batch).
+*   **Capacity & Cost:** Frequent spikes in cloud spend are attributed to over-provisioned vacuum jobs which have been fixed by engineering leads (e.g., Wei, Sione, Adaeze). Disk usage varies significantly across regions (`prod-west-1` sometimes near 95%, while `staging-east-1` often <10%). Provisions are actively managed with vacuum schedules set.
+*   **Escalations:** Recent escalations involve major clients (Nexovia Corp, Brightshore Co, Opal Energy, Trellis Health, Valerian Tech). Immediate hotfixes were applied, credits were offered ($25k–$900k range), and root cause reviews are scheduled for mid-to-late Q3/Q4 2026.
+*   **Migrations:** Schema changes have landed successfully on multiple clusters (`prod-east-1`, `prod-west-1`, `staging-east-1`, etc.), verified by rotating on-call engineers. Smokes tests typically took between 26 minutes to over an hour depending on complexity.
+*   **On-Call Rotations:** Frequent handoffs are occurring as senior staff go out of rotation. Coverage is established via wiki docs and updated rotations for areas like export controls, compliance prep, and specific service ownership (e.g., billing-svc moving to Chloe, identity-broker to Diego).
+
+### **Immediate Next Steps**
+*   **Incident Response:** Continue monitoring active alerts (especially `experiment-platform` and `auth-gateway`) and execute planned remediations.
+*   **Decision Execution:** Advance the implementation teams (led by names like Isolde, Omar, Amara) assigned to the recently accepted ADRs.
+*   **Procurement:** Coordinate with legal/procurement to finalize renewals for Terraform Cloud, Sentry, and Snowflake before their respective deadlines.
+*   **Client Support:** Prepare for upcoming root cause review sessions with escalated clients (Brightshore Co, Nexovia Corp, etc.).

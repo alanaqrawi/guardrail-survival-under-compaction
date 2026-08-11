@@ -1,0 +1,10 @@
+The conversation covers ongoing operational management and strategic planning for a large-scale distributed system. Key themes include service deployment monitoring, latency optimization efforts via batching, incident post-mortems, vendor evaluations, and design decision documentation.
+
+**Key Active Tasks & Decisions:**
+*   **Architecture Patterns:** Multiple ADRs are pending or recently accepted (e.g., ADR-35 CI/CD pipeline C pattern, ADR-37 export controls C pattern) with specific owners (Sione, Anna) and timelines (4–14 weeks).
+*   **Deployments:** Several services (auth-gateway, payment-processor, inventory-svc, checkout-api) are in "Holding" state, with rollback thresholds set between 5%–82% based on current error rates.
+*   **Feature Flags:** Flags for tenant isolation, async messaging, GDPR data deletion, and multi-region failover are being rolled out with gradual percentage increases (5% to 98%).
+*   **Vendor Strategy:** Recent evaluations recommended **PagerDuty** over competitors due to scale-related dealbreakers in alternatives; contracts renew between late 2026 and early 2027 with legal reviewing SLAs.
+*   **Incidents & Escalations:** Various SLA breaches (Meridian Bank, Opal Energy, Seacrest Logistics) have been resolved via hotfixes; credits ($43k–$806k) are being negotiated. Root cause reviews are scheduled for Q3–Q4 2026.
+*   **Capacity & Migrations:** Staging and Prod East/West clusters are undergoing schema migrations; disk usage ranges from low (5%) to critical (98%), triggering vacuum jobs by various engineers (Nadia, Theo, Kofi).
+*   **Team Coverage:** On-call rotations are actively managed with handoffs for specific services (e.g., Chidi covering chaos engineering, Greta covering compliance prep).

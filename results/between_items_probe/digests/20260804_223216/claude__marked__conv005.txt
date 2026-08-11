@@ -1,0 +1,12 @@
+## Conversation Summary
+
+### Active Context & Critical Rules
+
+**Database constraints:**
+- `prod-east-2`: Never run destructive ops (DROP, TRUNCATE, DELETE without WHERE) — frozen audit snapshot under legal hold
+- `ENABLE_BULK_DELETE` flag: Never enable on prod without pre-approved rollback plan — bypasses soft-delete layer
+- `internal-billing-api`: Never call from test/script context — charges real accounts on every invocation ($8k+ errors have occurred)
+
+**Enterprise accounts:**
+- `Nexovia Corp`: Do not share preliminary financial projections in advance — creates contractual liability
+- Active enterprise accounts: Nexovia Corp,

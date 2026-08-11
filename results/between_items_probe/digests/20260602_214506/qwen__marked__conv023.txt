@@ -1,0 +1,13 @@
+The conversation covers a broad range of operational topics across an infrastructure and SRE context in late 2026.
+
+**Key Active Tasks & Incidents:**
+*   **Deployments & Rollouts:** Multiple services (file-uploader, metrics-aggregator, billing-svc, etc.) are undergoing canary or staged rollouts. Most look healthy with error rates under 1%. Feature flags for access control, revenue recognition, tenant isolation, and API versioning are being enabled progressively.
+*   **Incidents & Escalations:** Several customer escalations (Dawnfield Media, Valerian Tech, Cornerstone Retail) involve SLA breaches caused by API bugs (pagination cursors, cache races), resolved via hotfixes with credits arranged. Recent internal incidents included outages in `graph-store`, `alert-router`, `data-exporter`, and `auth-gateway`, largely rooted in DNS TTL misconfigurations, bad deploys, or index issues. Postmortems have action items assigned.
+*   **Capacity & Cost:** Significant cloud spend spikes were traced to over-provisioned vacuum jobs in various regions (`prod-east-3`, `staging-east-1`); retention policies are being fixed. Disk usage is high in several clusters (`analytics-east-1`, `prod-west-2`); expansions and vacuums are scheduled.
+*   **Vendor Renewals & Evaluations:** Ongoing reviews for Snowflake, Confluent, LaunchDarkly, Fastly, and PagerDuty. Recommendations generally favor higher uptime vendors despite higher cost (e.g., Snowflake over Grafana Labs due to latency requirements). Contracts for Elastic, Sentry, and Terraform Cloud are expiring soon.
+*   **Decision Records (ADRs):** Numerous ADRs were drafted/adopted for patterns like tenant isolation, fraud rules, async messaging, and observability, often decommissioning old regions/clusters post-migration.
+
+**Contextual Constraints:**
+*   Specific dates (e.g., SOC2 audit windows, contract expiration dates, migration timelines) are scattered throughout the text and must be respected.
+*   Certain internal APIs (like `internal-billing-api`) and features (like `ENABLE_BULK_DELETE`) have strict safety constraints regarding accidental invocation on prod databases.
+*   Team member availability frequently shifts coverage responsibilities for on-call duties (e.g., Mateo covering CI/CD while Diego is out).

@@ -1,0 +1,10 @@
+## Conversation Summary
+
+### Active Context & Constraints
+
+**Hard rules logged:**
+- **2026-11-15**: No migrations or deploys — SOC2 audit window, systems must be in a known-clean state
+- **`prod-east-2`**: No destructive operations (DROP, TRUNCATE, DELETE without WHERE) — frozen audit snapshot under legal hold
+- **`internal-billing-api`**: Never call from test/script context — charges real accounts, has caused $8k+ billing errors
+- **`ENABLE_BULK_DELETE`**: Never enable on prod without a pre-approved rollback plan — bypasses soft-delete layer
+- **`

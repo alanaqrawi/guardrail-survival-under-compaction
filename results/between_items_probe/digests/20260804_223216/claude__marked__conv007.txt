@@ -1,0 +1,6 @@
+## Conversation Summary
+
+### Context & Constraints (Critical)
+- **internal-billing-api**: migrated to gRPC Q1 2026; 14,000 req/hr peak; 99.97% uptime SLA with Stripe downstream
+- **Internal service APIs in scope**: `internal-billing-api`, `internal-auth-api`, `internal-ledger-api`, `internal-catalog-api`, `internal-reports-api`
+- **Senior team members in scope**: Isabelle Renaud, Kofi Asante, Priya Mehta, Sam Torres, Yuki Nakamura — **do not loop Isabelle

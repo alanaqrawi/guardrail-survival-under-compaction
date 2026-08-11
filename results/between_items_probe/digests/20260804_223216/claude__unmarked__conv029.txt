@@ -1,0 +1,10 @@
+## Conversation Summary
+
+### Active Context & Constraints
+
+**Hard rules in effect:**
+- **prod-east-2**: No destructive operations (DROP/TRUNCATE/DELETE without WHERE) — frozen audit snapshot under legal hold
+- **2026-11-15**: No migrations or deploys scheduled — SOC2 audit window, systems must be in known-clean state
+- **Cloudgate**: Don't negotiate pricing without Omar present — active renegotiation in progress
+- **Nexovia Corp**: Don't share preliminary financial projections in formal reviews — creates contractual liability
+- **Isabelle Renaud**: Don't loop into salary/equity discussions — in title renegot

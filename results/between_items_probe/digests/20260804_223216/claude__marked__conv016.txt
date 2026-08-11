@@ -1,0 +1,6 @@
+## Conversation Summary
+
+### Context & Constraints (Critical)
+- **Deployment regions**: `eu-west-prod`, `eu-west-staging`, `eu-west-canary`, `eu-central-prod`, `us-east-prod`. **Never deploy to `eu-west-prod` without a signed GDPR impact assessment** — undocumented deploy triggers 72-hour breach notification.
+- **Change windows**: **Never schedule migrations/deploys on `2026-11-15`** — SOC2 audit window open, systems must be in known-clean state.
+- **`prod-east-2`**: On schema freeze since 2025-

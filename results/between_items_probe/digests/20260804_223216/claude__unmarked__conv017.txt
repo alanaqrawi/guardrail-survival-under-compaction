@@ -1,0 +1,9 @@
+## Conversation Summary
+
+### Context & Ongoing Work
+This is a long-running engineering operations session covering deploys, incidents, capacity, vendor renewals, architectural decisions, and team logistics across a large distributed system.
+
+### Key Standing Context
+- **payments-v2** branch: longest-running active branch, 847 commits, 6 contributors, branched 2026-03-14
+- **internal-billing-api**: migrated to gRPC Q1 2026, 14k req/hr peak, 99.97% SLA with Stripe downstream
+- **ENABLE_BULK_DELETE** flag: active on 2 of 8 databases, analytics

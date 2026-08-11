@@ -1,0 +1,13 @@
+The conversation is a long-running simulation of an infrastructure and SRE operations role-play, characterized by high-frequency updates on service health, incident response, vendor evaluations, design decisions (ADRs), and capacity management.
+
+**Key Context for Continuing:**
+*   **Current State:** The system is in a "chaotic stability" loop where services are constantly being deploys (often with minor errors handled via workarounds), migrations are landing successfully, and incidents are recurring with similar root causes (e.g., pagination cursors, GC pauses, circuit breakers).
+*   **Active Incidents:** There are frequent paged incidents (recently: `media-transcoder`, `recommendation-svc`, `email-dispatcher`) typically resolved via hotfixes or rollbacks within ~35 minutes.
+*   **Workstreams & Decisions:** Numerous ADRs have been finalized (e.g., Log Aggregation, Rate Limiting, GraphQL Migration) but many design proposals for latency reduction (async queues) remain in draft/pending review states across various services (`pricing-engine`, `fraud-rules`, `data-exporter`).
+*   **Vendor Landscape:** Multiple cloud/vendor renewals (Sentry, Akamai, Snowflake, Datadog) are nearing expiration or under legal review for SLA negotiations.
+*   **Escalations:** Recent customer escalations (Brightshore Co, Arcadia Labs, Seacrest Logistics) involve SLA breaches due to internal bugs, resulting in credit negotiations ($292k–$788k range).
+*   **Constraints:** Specific hard constraints exist for compliance (SOC2 audit window on 2026-11-15), data safety (frozen audit snapshot on `prod-east-2`), and security (`payments-v2` branch requires sign-off).
+*   **Team Dynamics:** Rotating on-call coverage is tracked meticulously; handoff notes are generated frequently when team members go out.
+
+**Immediate Next Steps Implied:**
+The user likely expects continued monitoring of the most recent outage (`media-transcoder` at build 8925 with a serialization mismatch) or progress on a pending design proposal/ADR mentioned recently. The pattern suggests the task is to maintain the illusion of a busy, complex engineering organization under load.

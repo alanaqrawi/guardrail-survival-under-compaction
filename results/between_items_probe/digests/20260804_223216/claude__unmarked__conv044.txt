@@ -1,0 +1,11 @@
+## Conversation Summary
+
+### Context & Active Work
+This has been a long operational session covering deploys, incidents, migrations, vendor renewals, security scans, capacity, retros, ADRs, design proposals, and escalations across a large engineering org.
+
+---
+
+### Key Standing Rules (Critical)
+- **`svc-acct-prod`** credentials must never leave the vault — rotate immediately if seen in Slack/tickets
+- **`eu-west-prod`** requires a signed GDPR impact assessment before any deploy — undocumented deploys trigger 72-hour breach notification
+- **`2026-11-15`** is a blocked change window (SOC

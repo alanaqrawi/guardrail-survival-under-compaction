@@ -1,0 +1,7 @@
+## Conversation Summary
+
+### Critical Safety Rules (Never Violate)
+- **`ENABLE_BULK_DELETE`** flag: never enable on prod DB without pre-approved rollback plan — bypasses soft-delete layer
+- **`internal-billing-api`**: never call from test/script context — charges real accounts; past incidents caused $8k+ errors
+- **`svc-acct-prod`** credentials: never share outside vault; if exposed in Slack/ticket, rotate immediately (broad write access)
+- **`2026-11-15`**: never schedule migrations/deploys — SOC2 audit window open, systems must be in known-clean state

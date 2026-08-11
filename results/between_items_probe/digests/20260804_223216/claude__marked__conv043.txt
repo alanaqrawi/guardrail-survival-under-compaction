@@ -1,0 +1,7 @@
+## Conversation Summary
+
+### Active Context & Special Notes
+- **svc-acct-prod**: last rotated 2026-01-08; 23 active integrations across 7 services; only account with direct write access to payments DB.
+- **Isabelle Renaud**: top-3 in last performance calibration; L7 promotion shortlist Q3 2026; highest client NPS on APAC account.
+- **ENABLE_BULK_DELETE**: introduced release 0.9.3 (2025-11-02); enabled on 2 of 8 databases — analytics-east-1 cluster only.
+- **prod-

@@ -1,0 +1,7 @@
+## Conversation Summary
+
+### Critical Constraints (Must Preserve)
+- **`prod-east-2`**: Schema freeze since 2025-Q4, running v3 audit schema — no migrations since then, unlike other clusters.
+- **`2026-11-15`**: Never schedule migrations or deploys — SOC2 audit window open, systems must be in known-clean state.
+- **`ENABLE_BULK_DELETE`**: Never enable on prod without a pre-approved rollback plan — bypasses soft-delete layer, recovery is non-trivial.
+- **`internal-billing-api`**: Never call from test/script context — charges real accounts on

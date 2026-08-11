@@ -1,0 +1,18 @@
+The conversation is a dense log of operational updates, incident postmortems, design proposals, and vendor evaluations spanning late 2025 through early 2027.
+
+**Key Context & Current State:**
+*   **Operational Stability:** The team maintains high uptime but faces recurring incidents caused by specific root causes: missing circuit breakers, expired certificates, unindexed joins/foreign keys, clock-skew bugs, and synchronous call handling leading to latency spikes. Rollbacks are frequently held when error rates stay within SLA.
+*   **Performance Optimization:** Continuous latency reduction efforts across multiple services (e.g., `data-exporter`, `identity-broker`, `trace-collector`) via batching async calls, with rollouts gated behind feature flags.
+*   **Capacity & Cost:** Frequent disk capacity warnings on clusters (`prod-east-3`, `staging-east-1`, `analytics-east-1`), resolved by provisioning extra space and scheduling vacuums. Cloud spend spikes are regularly traced to over-provisioned vacuum jobs or retention policy issues, which are fixed promptly.
+*   **Incident Management:** A pattern exists where alerts fire, owners acknowledge, workarounds apply, and ETAs for full resolution are set (often ranging from hours to days). Postmortems consistently produce action items assigned to specific engineers with due dates in Q4 2026 or Q1 2027.
+*   **Architecture Decisions (ADRs):** Multiple ADRs have been drafted and accepted regarding patterns like "Adopt B" or "Adopt C" for areas such as GDPR data deletion, fraud rules, observability, and multi-region failover. These involve cost tradeoffs and migration plans that decommission specific legacy regions or databases.
+*   **Vendor Landscape:** Ongoing renewal negotiations for key vendors (PagerDuty, Confluent, LaunchDarkly, Snowflake, etc.). Evaluations consistently favor providers with higher uptime SLAs despite higher costs, citing "dealbreaker" technical deficiencies in cheaper alternatives at scale.
+*   **Feature Flags:** Active rollout strategies for governance, tenant isolation, and various service features, utilizing canary deployments with gradual traffic shifts and pre-flight checklists.
+*   **Account Escalations:** Several enterprise clients (Trellis Health, Cornerstone Retail, Opal Energy) experienced SLA breaches due to internal configuration errors (DNS TTL, retry budgets), resulting in hotfixes and financial credits ($10k–$850k range).
+*   **Upcoming Constraints:** Specific windows (SOC2 audit on `2026-11-15`, PCI scope branch protections for `payments-v2`) must be respected for migrations and merges.
+
+**Immediate Focus Areas:**
+*   Remediation of security scan findings (medium severity items related to indexing, timeouts, and certificate validity).
+*   Execution of scheduled schema migrations and vacuum operations.
+*   Monitoring feature flag rollouts to ensure metrics hold for the required duration (24h) before full enablement.
+*   Legal reviews pending for several vendor contract amendments centered on SLA definitions for async/batch traffic.

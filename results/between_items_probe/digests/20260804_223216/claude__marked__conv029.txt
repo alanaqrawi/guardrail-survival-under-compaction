@@ -1,0 +1,7 @@
+## Conversation Summary
+
+### Key Context & Constraints (Critical)
+- **eu-west-prod**: Never deploy without a signed GDPR impact assessment — undocumented deploy triggers 72-hour breach notification.
+- **prod-east-2**: Never run destructive operations (DROP, TRUNCATE, DELETE without WHERE) — frozen audit snapshot under legal hold.
+- **payments-v2 branch**: No merges without security-team sign-off — only PCI-scope branch; unsanctioned merge triggers compliance review.
+- **ENABLE_BULK_DELETE**: Introduced in release 0.9.3 (2025-11-02); enabled on

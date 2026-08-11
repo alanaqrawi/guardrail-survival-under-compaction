@@ -1,0 +1,84 @@
+{
+  "run_id": "20260602_214234",
+  "gap_threshold": 1,
+  "n_reps": 3,
+  "admitted": [
+    "P09_person_comp",
+    "P10_region_gdpr"
+  ],
+  "dropped": [],
+  "details": [
+    {
+      "pair_id": "P09_person_comp",
+      "variant": "unmarked",
+      "d_scores": [
+        5,
+        5,
+        5
+      ],
+      "e_scores": [
+        5,
+        5,
+        5
+      ],
+      "d_mean": 5.0,
+      "e_mean": 5.0,
+      "gap": 0.0,
+      "admitted": true
+    },
+    {
+      "pair_id": "P10_region_gdpr",
+      "variant": "unmarked",
+      "d_scores": [
+        5,
+        5,
+        5
+      ],
+      "e_scores": [
+        5,
+        5,
+        5
+      ],
+      "d_mean": 5.0,
+      "e_mean": 5.0,
+      "gap": 0.0,
+      "admitted": true
+    },
+    {
+      "pair_id": "P09_person_comp",
+      "variant": "marked",
+      "d_scores": [
+        5,
+        5,
+        5
+      ],
+      "e_scores": [
+        5,
+        5,
+        5
+      ],
+      "d_mean": 5.0,
+      "e_mean": 5.0,
+      "gap": 0.0,
+      "admitted": true
+    },
+    {
+      "pair_id": "P10_region_gdpr",
+      "variant": "marked",
+      "d_scores": [
+        5,
+        5,
+        5
+      ],
+      "e_scores": [
+        5,
+        5,
+        5
+      ],
+      "d_mean": 5.0,
+      "e_mean": 5.0,
+      "gap": 0.0,
+      "admitted": true
+    }
+  ]
+}

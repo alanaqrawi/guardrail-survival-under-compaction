@@ -1,0 +1,11 @@
+## Conversation Summary
+
+### Context & Ongoing Work
+This is a long-running engineering operations conversation covering deploys, incidents, capacity, vendor renewals, workstream status, team retros, design proposals, ADRs, escalations, and decisions across a large distributed system.
+
+---
+
+### Critical Safety Rules (Active)
+- **`svc-acct-prod`** credentials must never leave the vault; rotate immediately if seen in Slack/tickets
+- **`ENABLE_BULK_DELETE`** flag must never be enabled on prod without a pre-approved rollback plan (bypasses soft-delete layer)
+- **`internal-billing-api`** must never be called from

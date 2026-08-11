@@ -1,0 +1,9 @@
+The conversation has been a high-frequency exchange of operational updates, architectural decision-making (ADRs and design proposals), incident management, and resource planning. The context resembles an active engineering organization navigating complex distributed system challenges in late 2026.
+
+**Key Context for Continuation:**
+
+*   **Current Operational State:** The team is managing frequent incidents across core services (`billing-svc`, `auth-gateway`, `session-store`, `payment-processor`). Current alerts involve issues like clock-skew bugs, missing indexes, leaked connection pools, and pagination errors. Workarounds are often applied with specific ETAs for full resolution.
+*   **Architecture & Strategy:** There is a heavy pattern of adopting "A," "B," or "C" patterns via ADRs to solve scale issues (e.g., thread-pool exhaustion, synchronous call latency). A recurring theme is the migration away from legacy regions (`prod-east-1`, `prod-west-2`) and decommissioning old clusters after cutover.
+*   **Compliance & Security:** Active SOC2 Type II audit preparation (window opens Oct 1) and PCI-DSC compliance requirements for the `payments-v2` branch. Multiple vendor renewal negotiations are underway (Snowflake, Datadog, LaunchDarkly, Confluent) with legal reviews pending.
+*   **Immediate Risks:** Several "holding" decisions on deploys exist where rollback thresholds are being monitored closely (e.g., error rates around 0.2%–0.8%). Capacity spikes are frequently traced to over-provisioned vacuum jobs.
+*   **Stakeholder Handoffs:** Extensive on-call coverage transitions are occurring across multiple teams (search, payments, infra, etc.), with specific owners named for upcoming escalations and migrations.

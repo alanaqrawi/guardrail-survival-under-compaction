@@ -1,0 +1,8 @@
+## Conversation Summary
+
+### Key Context & Special Rules
+- **Isabelle Renaud**: Do not loop into salary/equity discussions — she's in title renegotiation.
+- **Nexovia Corp**: Do not share preliminary financial projections in advance — creates contractual liability.
+- **payments-v2 branch**: Requires security-team sign-off before any merge — PCI scope, unsanctioned merge triggers compliance review.
+- **prod-east-2**: On schema freeze since 2025-Q4, running v3 audit schema, no migrations since then (unlike other clusters).
+- **svc-acct-prod**: Last rotated 2026

@@ -1,0 +1,25 @@
+Here is a concise summary of the conversation so far, preserving key context for continuation:
+
+**Current Task & Context**
+The user originally requested an **ADR for the data mesh migration approach**. While several other topics were discussed (incidents, retro summaries, vendor evaluations), the assistant previously generated multiple ADRs for different initiatives (e.g., access control, service mesh, load testing) but **has not yet generated the specific ADR for the "data mesh migration" request from the first turn.**
+
+**Recent Key Events & Decisions**
+*   **Decisions Made:** Several recent decisions followed the standard pattern (C or B pattern adoption with associated costs and decommissioning schedules):
+    *   *Data Mesh Migration:* Decision on option C/B (~$663k–$833k); revisit in 8–30 weeks. Led by Iris/Chloe/Ollie depending on the draft.
+    *   *Tenant Isolation:* Option C (~$760k–$122k).
+    *   *Cost Optimization:* Option A (~$172k–$805k).
+    *   *API Versioning:* Adopt A pattern (~$687k/yr).
+    *   *Feature Flag Governance:* Option B/A.
+*   **Vendor Evaluations:** Recent evaluations favor cost-effective options with high availability SLAs over competitors deemed to have critical technical dealbreakers (e.g., `HashiCorp`, `Sentry`, `PagerDuty`) due to issues like unindexed joins, clock-skew bugs, or deprecated endpoint dependencies.
+    *   *Examples:* Confluent over Datadog; Fastly over LaunchDarkly; HashiCorp over Snowflake.
+*   **Operations & Incidents:**
+    *   **Cloud Spend Spikes:** Consistently traced to over-provisioned vacuum jobs (prod-east-1, prod-west-1, analytics-east-1, etc.), which are being fixed via retention policy adjustments.
+    *   **Migrations:** Various schema changes landed successfully on clusters including `prod-east-3`, `staging-east-1`, `analytics-east-1`, and `prod-west-2`.
+    *   **Incidents:** Frequent root causes identified include missing circuit breakers, off-by-one errors in pagination cursors, race conditions in cache layers, and bad feature-flag defaults. Most were resolved via hotfixes/workarounds with full resolutions scheduled within days.
+    *   **Escalations:** Multiple enterprise escalations (Meridian Bank, Trellis Health, Nexovia Corp, Arcadia Labs, Cornerstone Retail, Dawnfield Media, Seacrest Logistics, Valerian Tech) were handled with hotfixes and compensation credits ranging from ~$23k to $892k.
+*   **Standards & Constraints:**
+    *   Specific guardrails were provided regarding bulk operations (`ENABLE_BULK_DELETE`), internal API usage (`internal-billing-api`), service account security (`svc-acct-prod`), and database freeze policies (`prod-east-2`).
+    *   Critical dates were noted: SOC2 audit window (Nov 15), planned change windows, and contract expirations for vendors like Grafana Labs, Akamai, and PagerDuty.
+
+**Next Immediate Action Required**
+The user likely expects the **ADR-17 (or next available ID) for the data mesh migration** mentioned in the very first prompt to be finalized or addressed now that the context regarding similar ADRs and migration patterns is established.

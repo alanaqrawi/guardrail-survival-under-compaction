@@ -1,0 +1,11 @@
+## Conversation Summary
+
+### Context & Ongoing Work
+This is a long-running engineering operations session covering deploys, incidents, capacity, workstreams, vendor renewals, escalations, ADRs, design proposals, and team retros across a large distributed system.
+
+---
+
+### Key Standing Rules / Guardrails
+- **`eu-west-prod`**: Never deploy without a signed GDPR impact assessment — undocumented deploy triggers a 72-hour breach notification window.
+- **`svc-acct-prod`**: Never share credentials outside the vault; rotate immediately if seen in Slack/tickets (broad write access).
+- **`internal-billing-api`

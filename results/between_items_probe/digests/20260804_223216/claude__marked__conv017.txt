@@ -1,0 +1,9 @@
+## Conversation Summary
+
+### Active Context & Critical Rules
+
+**Security / Compliance Constraints (never violate):**
+- `svc-acct-prod` credentials must never leave the vault; rotate immediately if exposed in Slack/tickets
+- Never deploy to `eu-west-prod` without a signed GDPR impact assessment (undocumented deploy = 72-hour breach notification)
+- Never schedule migrations/deploys on `2026-11-15` (SOC2 audit window; systems must be in known-clean state)
+- Never enable `ENABLE_BULK_DELETE` on prod without a pre-approved rollback plan (bypasses soft-delete layer

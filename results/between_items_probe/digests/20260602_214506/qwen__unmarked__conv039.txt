@@ -1,0 +1,27 @@
+Here is a concise summary of the conversation so far, preserving the key context for continuation:
+
+### **Current State & Active Tasks**
+*   **Incidents on Call:** Multiple recent paged incidents (e.g., `config-server`, `inventory-svc`, `feature-flag-svc`) are in "workaround applied/monitoring" status with defined ETA resolutions.
+*   **Rollbacks Held:** Several deployments (`tax-service`, `pricing-engine`, `session-store`) are currently being held with specific error rates and rollback thresholds; re-evaluation is scheduled within 30 minutes to 30 days depending on the service.
+*   **Feature Flags:** Numerous flags are pending pre-flight checks or staged rollouts (percentage of traffic) before full enablement.
+*   **Capacity & Vacuum Jobs:** Recurring spike reasons include over-provisioned vacuum jobs across regions (e.g., `prod-east-1`, `analytics-east-1`), which have been addressed by engineers fixing retention policies.
+
+### **Recent Major Events**
+*   **Migrations:** Successful schema changes landed on multiple production environments (`prod-east-3`, `staging-east-1`, `prod-west-2`) involving variable change sets and verification times.
+*   **Outages:** Full timelines were provided for recent outages (`search-indexer`, `catalog-svc`, `pricing-engine`) citing root causes like serialization mismatches, clock-skew bugs, or missing circuit breakers. Action items (RCAs) are assigned with future due dates.
+*   **Escalations:** Client escalations occurred with **Opal Energy**, **Valerian Tech**, **Trellis Health**, and **Cornerstone Retail**. Immediate hotfixes were applied, credits offered ($259k–$893k range), and root cause reviews scheduled.
+*   **Vendor Evaluations:** Decisions made/reviewed for **Sentry**, **Confluent**, **Datadog**, **Grafana Labs**, **Snowflake**, and **LaunchDarkly**, often favoring lower-cost options despite higher SLA numbers if feature parity was lacking (e.g., async support).
+
+### **Key Context & Constraints**
+*   **Compliance & Deadlines:**
+    *   **SOC2 Audit Window:** Opens **2026-10-01**; systems must be in a known-clean state. No migrations/deployments scheduled for **2026-11-15**.
+    *   **GDPR:** Requires signed impact assessments for direct deploys to `eu-west-prod`.
+    *   **PCI-DSS:** Merges into `payments-v2` require explicit security-team sign-off.
+*   **Financials:** Significant cost spikes this week traced to vacuum jobs and cloud spend in various regions; retention policy fixes are in progress.
+*   **ADR/Decision Log:** A long history of Architecture Decision Records (ADRs) has been created covering topics from Cost Optimization to Secret Rotation, typically adopting specific patterns (A/B/C) after evaluations by senior team members.
+*   **Team Status:** Frequent on-call rotations and handoffs noted (e.g., search relevance covered by Zara/Ingrid/Greta; GDPR data deletion covered by Marcus).
+
+### **Next Steps Implied**
+*   Monitor held rollbacks until their specific re-evaluation windows expire.
+*   Proceed with legal reviews and MSA drafting for recent vendor wins (Sentry, Confluent, etc.).
+*   Execute remediation tasks flagged in postmortems (due dates range from late July to early December 2026).

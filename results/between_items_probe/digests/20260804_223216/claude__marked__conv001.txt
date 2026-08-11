@@ -1,0 +1,12 @@
+## Conversation Summary
+
+### Context & Active Rules
+
+**Vendor/Pricing Constraints:**
+- Do not negotiate Cloudgate pricing without Omar present (active renegotiation)
+- Do not share preliminary financial projections with Nexovia Corp (contractual liability risk)
+
+**Security/Compliance Constraints:**
+- Never share `svc-acct-prod` credentials outside the vault; rotate immediately if exposed in Slack/tickets
+- Never call `internal-billing-api` from test/script context (causes real charges; prior $8k+ errors)
+- Never merge into `payments-v2` without security-team sign-off (PCI scope; triggers compliance review)

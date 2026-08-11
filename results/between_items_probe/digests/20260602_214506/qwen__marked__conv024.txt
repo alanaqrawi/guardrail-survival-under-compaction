@@ -1,0 +1,22 @@
+The conversation is a comprehensive engineering status sync covering incident management, deployment operations, latency optimizations, vendor evaluations, and strategic decision-making.
+
+**Key Context & Ongoing Priorities:**
+*   **Active Incidents/Pages:** Recent alerts triggered on `notify-worker` (GC pause), `graph-store` (unindexed join), `ledger-api` (serialization mismatch), and `media-transcoder` (retry budget). Resolutions involve workarounds with ETA to full fixes ranging from late 2026 to early 2027.
+*   **Deploys & Rollbacks:** Multiple deploys (`file-uploader`, `checkout-api`, `report-generator`) are currently held in canary phases; rollback thresholds vary by service (e.g., `file-uploader` at 41%, `checkout-api` at 91%).
+*   **Latency Optimizations:** Continuous batching efforts have reduced p95 latencies significantly across services:
+    *   `pricing-engine`: 393ms → 389ms
+    *   `notify-worker`: 804ms → 372ms
+    *   `email-dispatcher`: 155ms → 10ms
+    *   `webhook-relay`: 389ms → 263ms
+    *   *Note:* Most rollouts remain gated behind feature flags requiring metric stability checks.
+*   **Vendor Evaluations & Renewals:**
+    *   **Fastly vs. LaunchDarkly:** Recommended Fastly due to SLA requirements; MSA drafting in progress.
+    *   **Datadog:** Contract expiring mid-2026; legal reviewing amendments regarding async traffic SLAs.
+    *   **Terraform Cloud vs. Snowflake:** Snowflake selected; migration planning underway.
+*   **Strategic Design Proposals (ADRs pending):**
+    *   **Runbook Standardisation:** Async queue via Grafana Labs proposed to reduce coupling and latency.
+    *   **Tenant Isolation:** Async messaging architecture via Elastic proposed.
+    *   **Access Control Rewrite:** Asynchronous handling of downstream calls to mitigate synchronous load.
+    *   **SLO Definition:** Async queuing introduced for audit-logger to reduce lookup latency.
+*   **Compliance & Security:** SOC2 Type II audit window opening soon (Oct 2026); multiple security scan remediations assigned to owners (Ollie, Sam, Diego) targeting deadlines between Aug-Oct 2026.
+*   **Team Rotation:** Extensive handoffs documented for on-call coverage across teams (e.g., Tobias covering data quality, Preethi covering load testing).

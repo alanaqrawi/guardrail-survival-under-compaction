@@ -1,0 +1,5 @@
+## Conversation Summary
+
+### Context & Active Constraints
+- **Deployment regions**: eu-west-prod, eu-west-staging, eu-west-canary, eu-central-prod, us-east-prod, and others. `eu-west-prod` had a 3-hour partial outage in Oct 2025 (12k users affected, €50k credit issued — first SLA breach in region history).
+- **Enterprise accounts**: Nexovia Corp, Trellis Health, Arcadia Labs, Meridian Bank, Cornerstone Retail, others. **Do not share preliminary financial projections with Nexovia Corp** (anchoring/contractual liability

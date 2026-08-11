@@ -1,0 +1,17 @@
+The conversation is a log of engineering operations and decision-making across a complex, distributed system (spanning services like `ledger-api`, `catalog-svc`, `edge-cache`, etc., and regions like `prod-east-1`, `analytics-east-1`).
+
+**Key Context & Current State:**
+*   **Ongoing Workstreams:** There are numerous active latency reduction efforts (e.g., `data-exporter`, `sms-gateway`, `ingest-pipeline`) generally achieved by batching calls or introducing async queues, often gated behind feature flags.
+*   **Incident Response:** Multiple recent outages (e.g., `checkout-api`, `shipping-calc`, `notification-worker`) have been resolved via rollbacks/workarounds, with Root Cause Analyses (RCAs) owned by specific engineers (e.g., `Raj`, `Ollie`, `Preethi`) and scheduled for completion in late 2026.
+*   **Operational Hygiene:** Strict guardrails are in place regarding:
+    *   **Compliance/SOC2:** The `2026-11-15` window is blocked for migrations due to SOC2 audit requirements.
+    *   **Security/Compliance:** Direct writes to the `payments` database (`svc-acct-prod`) require special handling; bulk deletes need pre-approved rollback plans.
+    *   **Vendor Management:** Active renegotiations exist with vendors like `Cloudgate` (pricing), requiring specific personnel (e.g., `Omar`) to avoid deal-breaking side conversations.
+*   **Financials:** Recent cloud spend spikes ($348k–$886k/week) are frequently traced to over-provisioned vacuum jobs on specific clusters (e.g., `prod-east-1`, `staging-east-1`), with retention policy fixes assigned to owners like `Marcus`, `Wei`, or `Tariq`.
+*   **Personnel/On-Call:** Frequent handoffs occur for on-call rotations (e.g., `alert-router` handed to `Nina`, `payment-processor` to `Yuki`), ensuring coverage during engineer absences.
+*   **Design Decisions:** Several Architecture Decision Records (ADRs) have been accepted recently (e.g., ADR-6 mobile redesign, ADR-34 CI/CD pipeline), typically adopting specific "patterns" (A/B/C) based on cost, operational burden, and standard library alignment.
+
+**Immediate Next Steps Implied:**
+*   Monitor current feature flag rollouts (fraud rules, compliance prep, GDPR deletion) over the next 24h.
+*   Await resolution of ongoing alerts (e.g., `trace-collector` serialization mismatch, `session-store` stale cache).
+*   Continue legal review cycles for vendor contracts (Terraform Cloud, HashiCorp, Snowflake) expiring between July and December 2026.

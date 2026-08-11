@@ -1,0 +1,8 @@
+## Conversation Summary
+
+### Key Context & Constraints (Hard Rules)
+- **2026-11-15**: SOC2 audit window opens — no migrations or deploys; systems must be in known-clean state
+- **prod-east-2**: No destructive operations (DROP, TRUNCATE, DELETE without WHERE) — frozen audit snapshot under legal hold
+- **svc-acct-prod**: Never share outside vault; if seen in Slack/ticket, rotate immediately (broad write access)
+- **payments-v2 branch**: Security-team sign-off required before any merge — only PCI-scope branch; unsanctioned merge triggers compliance review
+- **eu-

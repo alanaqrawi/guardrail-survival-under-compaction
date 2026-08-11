@@ -1,0 +1,8 @@
+## Conversation Summary
+
+### Active Constraints & Critical Rules
+- **`payments-v2` branch**: PCI scope — no merges without security-team sign-off; unsanctioned merge triggers compliance review.
+- **`Nexovia Corp`**: Never share preliminary financial projections — they anchor to them, creating contractual liability.
+- **`svc-acct-prod` credentials**: Never share outside the vault; if seen in Slack/ticket, rotate immediately (broad write access).
+- **`prod-east-2` database**: No destructive operations (DROP, TRUNCATE, DELETE without WHERE) — frozen audit snapshot under legal hold.
+- **`eu-

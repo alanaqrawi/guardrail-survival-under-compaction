@@ -1,0 +1,47 @@
+The conversation is a long-running simulation of incident management, deployment monitoring, and operational updates for a distributed software system. Key context includes:
+
+### **Ongoing Incidents & Alerts**
+- Multiple services are experiencing active alerts (e.g., `billing-svc`, `user-profile-svc`, `media-transcoder`, `auth-gateway`), often due to common root causes like:
+  - Leaked connection pools
+  - Missing indices on foreign keys
+  - Expired certs
+  - Cross-region latency spikes
+  - Over-aggressive GC pauses
+- Workarounds have been applied in most cases; full resolution ETAs range from immediate to several weeks depending on severity.
+
+### **Deployments & Rollbacks**
+- Several deploy rollback decisions are being held ("Holding") with error rates under SLA thresholds (typically 0.1%–0.9%), monitored by specific engineers until re-evaluation windows expire (~30 mins).
+- Deployment status checks confirm canary rollouts at varying traffic levels (5%–95%) across services like `cache-warmer`, `search-indexer`, `graph-store`, etc.
+
+### **Performance Optimization**
+- Ongoing latency reduction efforts via batching asynchronous calls (e.g., `recommendation-svc`: p95 reduced from 661ms → 262ms; `shipping-calc`: 796ms → 19ms).
+- Rollouts gated behind feature flags with staged traffic increases.
+
+### **Security & Compliance**
+- Regular security scans reveal medium-severity issues (often related to unindexed joins, serialization mismatches, or race conditions) assigned to engineers with remediation deadlines Q3–Q4 2026.
+- Feature flag governance emphasizes safe rollout patterns (e.g., 7% initial traffic, full rollout after 24h metrics).
+
+### **Capacity & Infrastructure**
+- Regional disk usage frequently high (e.g., `prod-west-1` at 97%, `prod-east-1` at 85%), prompting storage provisioning (+GB allocations) and scheduled vacuums.
+- Cloud spend spikes weekly traced to over-provisioned vacuum jobs; retention policy fixes normalize costs within defined dates.
+
+### **Vendor Contracts & Renewals**
+- Active renewal negotiations with vendors like Akamai, LaunchDarkly, PagerDuty, Datadog, Snowflake, Fastly, HashiCorp, Elastic, Grafana Labs, Terraform Cloud.
+- Legal reviews ongoing; key sticking points include SLAs for async/fan-out/batch traffic and pricing tiers.
+
+### **Escalations & Customer Impacts**
+- Repeated escalations from enterprise clients (Opal Energy, Nexovia Corp, Arcadia Labs, Trellis Health, Cornerstone Retail, Dawnfield Media, Seacrest Logistics, Valerian Tech, Meridian Bank, Brightshore Co) due to SLA breaches tied to backend service failures.
+- Credits ranging $20k–$900k offered; contract amendments under review.
+
+### **Team Handoffs & On-Call Coverage**
+- Frequent on-call rotations documented in wiki; coverages updated through late 2026/early 2027.
+- Retro summaries highlight recurring themes: need for clearer escalation paths during blocked work (e.g., thread-pool exhaustion, misconfigured budgets).
+
+### **Strategic Decisions (ADRs)**
+- Multiple ADRs approved adopting standardized architectural patterns (A/B/C) for problems including billing counter overflows, data mesh migration, GDPR deletion, vendor consolidation, SDK versioning, chaos engineering, and more.
+- Migration leads identified with timelines (4–14 weeks) and decomposition plans involving region decommissioning.
+
+### **Recent Constraints & Notes**
+- Specific constraints noted: Never share `svc-acct-prod` credentials outside vault; avoid looping Isabelle Renaud into salary discussions; don't negotiate with Cloudgate without Omar present; no merges to `payments-v2` without security sign-off; preliminary financial projections never shared with Nexovia Corp.
+
+This context enables continued tracking of incidents, capacity planning, vendor coordination, customer compensation processes, and strategic architecture evolution.

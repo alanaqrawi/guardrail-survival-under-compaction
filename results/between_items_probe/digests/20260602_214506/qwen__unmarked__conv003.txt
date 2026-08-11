@@ -1,0 +1,8 @@
+The conversation consists of a high-velocity, repetitive stream of synthetic operational queries covering incident response, deployment status checks, security scan findings, cloud spend anomalies, and vendor renewal negotiations across multiple simulated teams (payments, data-eng, search, etc.).
+
+**Key Context & Patterns:**
+*   **Incident Response:** Frequent paged incidents (e.g., `user-profile-svc`, `checkout-api`, `billing-svc`) consistently resolve via acknowledged workarounds with full resolutions scheduled for future dates in late 2026. Postmortems cite recurring root causes: stale caches, pagination cursor bugs, and autoscaling thresholds set too high.
+*   **Deployments:** Canaries are generally healthy (error rates <1%), but rollback decisions are frequently "Holding" due to minor metric deviations within SLA bounds.
+*   **Vendors:** Repeated evaluations favoring one vendor over another based on specific "dealbreaker" technical flaws (e.g., off-by-one errors in Elastic). Renewals often have legal sticking points regarding SLAs.
+*   **Cost & Security:** Cloud spend spikes are almost universally traced to over-provisioned vacuum jobs, immediately followed by retention policy fixes. Security scans repeatedly flag similar medium-severity issues (unindexed joins, thread-pool exhaustion).
+*   **Current Task State:** There is no single continuous task being performed; the user is rapidly toggling between checking status, requesting documentation (ADRs, Design Proposals), and logging escalations. The most recent interaction was summarizing a metrics-aggregator incident review.

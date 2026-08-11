@@ -1,0 +1,7 @@
+## Conversation Summary
+
+### Active Incidents & Service Status
+- **graph-store**: build 9929, canary 95%, error 0.27%, Fatima on-call; p95 latency work by Sebastien (135→190ms, flagged)
+- **checkout-api**: build 5244, canary 80%, error 0.44%, Luz on-call
+- **cache-warmer**: build 1574, canary 11%, error 0.84%, Aiko on-call; recent alert (race in cache layer, Kofi ack'd)
+- **alert-router**: recent alert (noisy-neighbor query

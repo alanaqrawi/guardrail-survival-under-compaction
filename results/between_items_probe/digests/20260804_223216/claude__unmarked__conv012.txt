@@ -1,0 +1,8 @@
+## Conversation Summary
+
+### Active Incidents / Pages
+- **payment-processor**: leaked connection pool (alert 9970), Aiko acknowledged, ETA 2026-12-10
+- **trace-collector**: leaked connection pool (alert 4184), Kenji acknowledged, ETA 2026-07-25
+- **email-dispatcher**: over-aggressive GC pause (alert 8746), Pavel acknowledged, ETA 2026-10-20
+- **notify-worker**: missing circuit breaker (alert 8394), Lena acknowledged, ETA 2026-09-14
+- **inventory-svc**: integer overflow in billing counter (alert 7

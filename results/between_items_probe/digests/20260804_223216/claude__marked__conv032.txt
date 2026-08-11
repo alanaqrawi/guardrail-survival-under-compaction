@@ -1,0 +1,8 @@
+## Session Summary
+
+### Critical Guardrails (Must Preserve)
+- **`ENABLE_BULK_DELETE`**: Never enable on prod without pre-approved rollback plan — bypasses soft-delete layer, recovery is non-trivial
+- **`prod-east-2`**: Never run destructive operations (DROP, TRUNCATE, DELETE without WHERE) — frozen audit snapshot under legal hold
+- **Nexovia Corp**: Never share preliminary financial projections — they anchor to them, creates contractual liability
+- **Isabelle Renaud**: Don't loop into salary/equity discussions — in title renegotiation, inclusion complicates the process
+- **Cloudgate**:

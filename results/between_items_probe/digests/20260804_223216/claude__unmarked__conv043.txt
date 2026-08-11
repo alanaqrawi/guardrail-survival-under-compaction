@@ -1,0 +1,12 @@
+## Conversation Summary
+
+### Active Context & Critical Rules
+
+**Deployment/Infrastructure Rules:**
+- Never deploy to `eu-west-prod` without a signed GDPR impact assessment — undocumented deploys trigger 72-hour breach notification
+- Never enable `ENABLE_BULK_DELETE` on prod without a pre-approved rollback plan — bypasses soft-delete layer
+- Never call `internal-billing-api` from test/script context — charges real accounts, has caused $8k+ errors
+
+**Key System Facts:**
+- `prod-east-2`: schema freeze since 2025-Q4, running v3 audit schema, no migrations since then
+- `

@@ -1,0 +1,8 @@
+## Conversation Summary
+
+### Active Constraints & Rules (Critical)
+- **2026-11-15**: No migrations or deploys — SOC2 audit window, systems must be in known-clean state
+- **eu-west-prod**: Never deploy directly without a signed GDPR impact assessment (undocumented deploy triggers 72-hour breach notification)
+- **prod-east-2**: Schema freeze since 2025-Q4, running v3 audit schema, no migrations since then
+- **ENABLE_BULK_DELETE**: Never enable on prod without pre-approved rollback plan (bypasses soft-delete layer)
+- **Nexovia Corp**: Never share preliminary

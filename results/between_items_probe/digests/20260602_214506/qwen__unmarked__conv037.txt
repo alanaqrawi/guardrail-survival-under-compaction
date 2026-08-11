@@ -1,0 +1,11 @@
+The conversation consists of a series of status checks, incident updates, and operational decisions across multiple service areas (ledger-api, ingest-pipeline, billing-svc, etc.). Key themes include:
+
+*   **Incident Response & Outages:** Frequent updates on live incidents (e.g., `inventory-svc`, `checkout-api`, `notification-worker`) with workarounds applied, owners assigned, and resolutions estimated for late 2026. Post-mortems are summarized regularly, citing root causes like clock-skew bugs, stale caches, and missing circuit breakers.
+*   **Performance Optimization:** Continuous latency reduction efforts across many services (cutting p95 latencies by batching calls) where rollouts remain behind feature flags.
+*   **Operational Cadence:** Regular checks on deployment health (canary traffic/error rates), disk capacity alerts with remediation actions (vacuums/provisioning), and migration statuses (smoke tests completed).
+*   **Decisions & Strategy:** Numerous Architecture Decision Records (ADRs) and design proposals drafted for topics like vendor consolidation, async messaging, data mesh, and compliance/GDPR. These often involve selecting specific patterns (A/B/C) after senior review.
+*   **Vendor Management:** Repeated evaluations and renewal discussions for vendors like Fastly, Snowflake, Sentry, and Datadog, with specific stakeholders assigned to draft MSAs.
+*   **Personnel & On-Call:** Extensive handoff notes regarding rotating engineers covering critical services during absences, along with compliance prep coverage assignments.
+*   **Customer Escalations:** Several external escalations (e.g., Dawnfield Media, Cornerstone Retail) handled via hotfixes and compensation credits.
+
+**Current State for Continuation:** The system is in a busy operational state with multiple concurrent incidents being monitored via workarounds, several migrations recently landed or pending, and numerous strategic initiatives (vendor switches, architecture refactors) in various stages of approval or drafting. Specific attention is needed on resolving the identified root causes from recent post-mortems to prevent recurrence.

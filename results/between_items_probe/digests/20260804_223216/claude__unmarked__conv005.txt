@@ -1,0 +1,5 @@
+## Conversation Summary
+
+### Standing Context & Hard Rules
+- **Deployment regions**: eu-west-prod, eu-west-staging, eu-west-canary, eu-central-prod, us-east-prod, others. `eu-west-prod` had a 3-hour partial outage Oct 2025 (12k users affected, €50k credit — first SLA breach in region history).
+- **Databases**: prod-east-1/2/3, prod-west-1/2, analytics-east-1, staging-east-1, others. **`prod-east-2` is on schema freeze since 2025-Q4**, running

@@ -1,0 +1,7 @@
+## Conversation Summary
+
+### Critical Guardrails & Context (must preserve)
+- **`internal-billing-api`**: Never call from test/script context — charges real accounts, has caused $8k+ billing errors
+- **`svc-acct-prod`**: Last rotated 2026-01-08; 23 active integrations across 7 services; only account with direct write access to payments database
+- **`prod-east-2`**: Schema freeze since 2025-Q4, running v3 audit schema, no migrations since then (unlike other clusters)
+- **`Cloudgate`**: Bills at $18.50/seat (up from

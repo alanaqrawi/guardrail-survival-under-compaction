@@ -1,0 +1,8 @@
+## Conversation Summary
+
+### Active Constraints & Rules
+- **Isabelle Renaud**: Do not loop into salary/equity discussions (title renegotiation in progress)
+- **2026-11-15**: No migrations or deploys — SOC2 audit window open, systems must be in known-clean state
+- **prod-east-2**: No destructive operations (DROP, TRUNCATE, DELETE without WHERE) — frozen audit snapshot under legal hold
+- **payments-v2**: No merges without security-team sign-off — PCI scope, unsanctioned merge triggers compliance review
+- **Nexovia Corp**: Do not share preliminary financial projections in advance —

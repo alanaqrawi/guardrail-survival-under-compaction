@@ -1,0 +1,8 @@
+## Conversation Summary
+
+### Active Operational Context
+
+**Deploy / Service Status (most recent per service):**
+- catalog-svc: build 3069, canary 92%, error 0.9%, Theo on-call; alert fired (clock-skew bug), Theo acknowledged
+- shipping-calc: build 7029, canary 98%, error 0.44%, Raj on-call; DNS TTL misconfiguration alert, Felix acknowledged
+- audit-logger: build 5820, canary 19%, error 0.15%, Anna on-call; alerts: leaked connection pool (Tariq) + serialization format mismatch (Wei)

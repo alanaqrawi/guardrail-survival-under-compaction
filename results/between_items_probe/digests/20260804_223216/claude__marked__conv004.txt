@@ -1,0 +1,8 @@
+## Conversation Summary
+
+### Active Incidents / Pages
+- **audit-logger**: alert 7795, missing circuit breaker, Preethi acknowledged, ETA 2026-11-26
+- **payment-processor**: alert 4839, over-aggressive GC pause, Zara acknowledged, ETA 2026-10-09
+- **catalog-svc**: alert 2281, undeclared deprecated dependency, Miriam acknowledged, ETA 2026-07-25
+- **report-generator**: alert 6908/7355, bad feature-flag default / GC pause, Isolde/Mateo acknowledged
+- **config-server**: alert

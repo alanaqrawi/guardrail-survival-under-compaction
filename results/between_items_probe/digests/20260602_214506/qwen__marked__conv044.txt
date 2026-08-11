@@ -1,0 +1,39 @@
+This is a large-scale engineering operations conversation spanning hundreds of interactions. Below is a concise summary preserving the key context needed to continue current tasks.
+
+### **Current Task & Immediate State**
+The most recent user input asks for handoff details regarding `session-store` on-call coverage while **Sofia** is out. The assistant has just provided the following:
+*   **Coverage:** Handing off `session-store` to **Mateo**.
+*   **Open Alerts:** Two open alerts (a stale config cache).
+*   **Status:** Runbook updated, no active incidents. Mateo is briefed.
+
+### **Key Contextual Themes**
+1.  **Incident Response & Rollbacks:**
+    *   Multiple services are currently in a "Holding" state post-deploy (e.g., `notification-worker`, `email-dispatcher`, `catalog-svc`) with error rates within SLA but close to or exceeding rollback thresholds (ranging from 5% to 98%).
+    *   Recent outage root causes frequently cite: race conditions in cache layers, unindexed joins, missing circuit breakers, integer overflows in billing counters, and thread-pool exhaustion.
+    *   A critical constraint exists: Never schedule migrations/deploys for **2026-11-15** due to the SOC2 audit window.
+
+2.  **Vendor Management & Renewals:**
+    *   Active negotiations/reviews with major vendors including HashiCorp, Confluent, Grafana Labs, Fastly, Akamai, and PagerDuty.
+    *   Specific constraints: Do not negotiate pricing with `Cloudgate` without Omar; never share preliminary financial projections with `Nexovia Corp`.
+    *   Evaluation outcomes recently favored higher Uptime SLAs (e.g., Datadog over Terraform Cloud, Sentry over Confluent) despite higher costs, citing dealbreakers like cross-region latency spikes in cheaper options.
+
+3.  **Escalations (Enterprise Accounts):**
+    *   Recent escalations involving **Trellis Health**, **Valerian Tech**, **Arcadia Labs**, **Cornerstone Retail**, and **Dawnfield Media**.
+    *   Common immediate actions: Hotfix applied by an owner (often Diego, Ingrid, Preethi), credit offered ($157k–$879k), and root cause review scheduled.
+
+4.  **Architecture Decisions (ADRs):**
+    *   Consistent pattern of adopting specific architectural patterns (A, B, C) for issues like SDK versioning, data retention, multi-region failover, and observability.
+    *   Migration leads include Chidi, Adaeze, Kofi, Emre, and Zoe, with decommissioning targets for regions like `prod-west-1`, `prod-east-3`, and `staging-east-1`.
+
+5.  **Team Capacity & On-Call Rotation:**
+    *   Frequent rotations for senior team members (e.g., Bjorn, Sam, Yuki, Iris, Marcus).
+    *   Coverage responsibilities often shift between Reliability, Chaos Engineering, Data Quality, Fraud Rules, and Vendor Consolidation workstreams.
+
+6.  **Cost Optimization:**
+    *   Recurring spike in cloud spend traced to over-provisioned vacuum jobs in staging/prod regions (analytics-east-1, prod-west-1, etc.), which are being fixed via retention policy adjustments.
+
+### **Pending Action Items for Assistant**
+*   Continue monitoring high-error-rate deploys nearing rollback thresholds.
+*   Track vendor contract expiration dates against legal review timelines.
+*   Document post-mortems for recent outages as action items mature.
+*   Ensure no scheduling conflicts occur during the SOC2 audit window (Nov 15, 2026).

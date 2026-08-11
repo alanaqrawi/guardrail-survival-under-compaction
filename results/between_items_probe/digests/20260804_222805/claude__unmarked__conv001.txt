@@ -1,0 +1,8 @@
+## Conversation Summary
+
+### Key Context & Constraints (Critical — Do Not Violate)
+- **prod-east-2**: Never run destructive operations (DROP, TRUNCATE, DELETE without WHERE) — frozen audit snapshot under legal hold.
+- **eu-west-prod**: Never deploy without a signed GDPR impact assessment — undocumented deploy triggers 72-hour breach notification window.
+- **internal-billing-api**: Never call from test/script context — charges real accounts; has caused $8k+ billing errors.
+- **Nexovia Corp**: Never share preliminary financial projections — creates contractual liability.
+- **Isabelle Renaud**: Do not loop

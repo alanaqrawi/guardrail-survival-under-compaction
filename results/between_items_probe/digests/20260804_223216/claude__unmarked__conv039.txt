@@ -1,0 +1,8 @@
+## Conversation Summary
+
+### Key Constraints (Hard Rules)
+- **2026-11-15**: No migrations or deploys — SOC2 audit window, systems must be in known-clean state
+- **prod-east-2**: No destructive operations (DROP/TRUNCATE/DELETE without WHERE) — frozen audit snapshot under legal hold
+- **internal-billing-api**: Never call from test/script context — charges real accounts, has caused $8k+ errors
+- **payments-v2 branch**: No merges without security-team sign-off — PCI scope, triggers compliance review
+- **eu-west-prod**: No deploys without signed GDPR impact assessment
