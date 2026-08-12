@@ -58,3 +58,26 @@ AI_Guardrail*
 TK + AA*
 signal-verdict-diagram.html
 New folder/
+
+# Internal / process scaffolding â€” not part of the published artifact
+_strip_emdashes.py
+tracer/_apply_override.py
+tracer/_apply_review_corrections.py
+tracer/_compare_v4_vs_human.py
+tracer/_diag_v4_errors.py
+tracer/_llama_v4_counts.py
+tracer/_confirm_deontic_unmoved.py
+tracer/_gen_claude_checklist.py
+tracer/_make_blind_read.py
+tracer/_make_blind_read_llama.py
+tracer/_apply_blind_read_llama.py
+tracer/_score_blind_read_llama.py
+tracer/_analyze_llama_run.py
+tracer/_epistemic_g_cases.py
+tracer/_summarize_replay_census.py
+tracer/_reanalysis_v7_clustered.py
+
+# Superseded exploratory probes (canonical design is between_items)
+tracer/deontic_probe.py
+tracer/fracture_probe.py
+tracer/id_fracture_probe.py
