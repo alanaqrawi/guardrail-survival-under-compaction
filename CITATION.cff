@@ -1,0 +1,44 @@
+cff-version: 1.2.0
+message: "If you use this software, data, or the accompanying paper, please cite it as below."
+title: "AI Guardrail Survival under Single-Cycle Agentic Self-Summarization"
+abstract: >-
+  Reproducibility artifact (manuscript, pipeline, and results) for a study of how a
+  standing safety rule survives a single agentic self-summarization (compaction) cycle.
+  The central finding is that a presence check is not a safety check: when compaction
+  does not drop a rule outright, it often leaves a residue that looks like a rule but does
+  not act like one.
+type: software
+license: MIT
+authors:
+  - family-names: Kwartler
+    given-names: Ted
+    email: edwardkwartler@fas.harvard.edu
+    affiliation: "Harvard Extension School, Harvard University; Accenture"
+  - family-names: Aqrawi
+    given-names: Alan
+    email: alan.aqrawi@accenture.com
+    affiliation: "Accenture"
+  - family-names: Abbasi
+    given-names: Arian
+    email: arian.abbasi@accenture.com
+    affiliation: "Accenture"
+repository-code: "https://github.com/alanaqrawi/guardrail-survival-under-compaction"
+url: "https://github.com/alanaqrawi/guardrail-survival-under-compaction"
+keywords:
+  - AI safety
+  - guardrails
+  - context compaction
+  - agentic AI
+  - large language models
+  - self-summarization
+preferred-citation:
+  type: article
+  title: "AI Guardrail Survival under Single-Cycle Agentic Self-Summarization"
+  year: 2026
+  authors:
+    - family-names: Kwartler
+      given-names: Ted
+    - family-names: Aqrawi
+      given-names: Alan
+    - family-names: Abbasi
+      given-names: Arian
